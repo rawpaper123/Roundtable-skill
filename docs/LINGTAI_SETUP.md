@@ -64,7 +64,8 @@ Bash:
 ```
 
 The check script reports whether Lingtai appears installed, whether the current
-directory has `.lingtai/`, and how many agent manifests are present.
+directory has `.lingtai/`, how many agent manifests are present, and whether the
+current checkout is only `docs_only` or an `operational_candidate`.
 
 It does not install Lingtai or create agents automatically. Installation and
 OAuth should stay explicit.
