@@ -1,0 +1,124 @@
+# GitHub Launch Checklist
+
+Use this before posting Roundtable Skill publicly on GitHub, Hacker News,
+Product Hunt, X, LinkedIn, or developer communities.
+
+## Repository Metadata
+
+- Repository is public.
+- Description is short and searchable:
+
+```text
+Lingtai-powered expert review loop for coding terminals: scoped plans, bounded waits, checks, and rollback
+```
+
+- Topics include:
+  - `agent-orchestration`
+  - `ai-agents`
+  - `coding-agents`
+  - `developer-tools`
+  - `workflow-automation`
+  - `lingtai`
+  - `codex`
+  - `claude-code`
+
+## README First Screen
+
+- Badges show docs, license, Lingtai requirement, executor neutrality, and Codex
+  skill support.
+- The first paragraph explains:
+  - Lingtai provides expert agents,
+  - the coding terminal stays the Executor,
+  - the Executor owns scope, checks, Git, deploy, and rollback.
+- The 10-second pitch is visible before the first screenshot.
+- The demo image renders.
+- English and Chinese entry points work.
+
+## Conversion Links
+
+Top-level README links should include:
+
+- Quickstart
+- Demo script
+- Why Roundtable
+- Comparison
+- Showcase
+- Adoption
+- Use cases
+- Executor setup
+- Agent roster
+- Troubleshooting
+- FAQ
+- Security
+- Contributing
+
+## Trust Checks
+
+- [SECURITY.md](../SECURITY.md) exists.
+- [CONTRIBUTING.md](../CONTRIBUTING.md) exists.
+- [PUBLIC_RELEASE_CHECKLIST.md](PUBLIC_RELEASE_CHECKLIST.md) exists.
+- Issue templates exist for docs improvements and executor adapters.
+- Docs workflow badge points to the active GitHub Actions workflow.
+- Latest Docs workflow run on `main` is successful.
+
+## Runtime Boundary
+
+- README says Lingtai is required and not bundled.
+- README does not claim real multi-agent execution without Lingtai.
+- `check-roundtable` reports `docs_only` honestly when `.lingtai/` is absent.
+- `.lingtai/`, `.recipe/`, mailbox files, OAuth tokens, logs, and private runtime
+  data are not committed.
+
+## Local Preflight
+
+PowerShell:
+
+```powershell
+git status --short
+git diff --check
+.\scripts\check-roundtable.ps1
+git ls-files | Select-String -Pattern '\.lingtai|\.recipe|mailbox|codex-auth|\.env|\.pem|\.key|\.log'
+```
+
+Bash:
+
+```bash
+git status --short
+git diff --check
+./scripts/check-roundtable.sh
+git ls-files | grep -E '\.lingtai|\.recipe|mailbox|codex-auth|\.env|\.pem|\.key|\.log' || true
+```
+
+The sensitive-path scan should show no committed runtime or secret files.
+
+## Launch Copy
+
+Short version:
+
+```text
+Roundtable Skill adds a Lingtai expert panel around your coding terminal.
+Experts advise; your terminal stays the Executor and owns implementation,
+checks, Git, deploy, and rollback.
+```
+
+Problem line:
+
+```text
+Most agentic coding failures are coordination failures: scope creep, fake green
+checks, silent agents, missing rollback, and unclear ownership.
+```
+
+Call to action:
+
+```text
+Start with QUICKSTART.md, then run the 60-second demo script.
+```
+
+## Do Not Launch If
+
+- the README first screen is stale,
+- docs CI is failing,
+- sensitive-path scan finds runtime or secret files,
+- the repo implies Lingtai is bundled,
+- the demo script claims fake agent replies,
+- rollback instructions are missing.

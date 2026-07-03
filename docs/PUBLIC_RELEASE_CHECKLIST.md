@@ -3,6 +3,8 @@
 Run this before pushing Roundtable Skill to a public repository.
 
 For normal release tagging, also use [MAINTAINER_RELEASE.md](MAINTAINER_RELEASE.md).
+For public GitHub launch readiness, use
+[GITHUB_LAUNCH_CHECKLIST.md](GITHUB_LAUNCH_CHECKLIST.md).
 
 ## Scope
 

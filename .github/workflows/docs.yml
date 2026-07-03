@@ -35,6 +35,7 @@ jobs:
               "docs/LINGTAI_SETUP.md",
               "docs/ROUNDTABLE_PROTOCOL.md",
               "docs/TROUBLESHOOTING.md",
+              "docs/GITHUB_LAUNCH_CHECKLIST.md",
               "docs/MAINTAINER_RELEASE.md",
               "docs/PUBLIC_RELEASE_CHECKLIST.md",
           ]
