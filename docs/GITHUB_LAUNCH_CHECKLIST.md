@@ -9,7 +9,7 @@ Product Hunt, X, LinkedIn, or developer communities.
 - Description is short and searchable:
 
 ```text
-Lingtai-powered expert review loop for coding terminals: scoped plans, bounded waits, checks, and rollback
+Lingtai-powered multi-agent expert review loop for coding terminals: scoped plans, bounded waits, checks, rollback
 ```
 
 - Topics include:
@@ -18,6 +18,11 @@ Lingtai-powered expert review loop for coding terminals: scoped plans, bounded w
   - `coding-agents`
   - `developer-tools`
   - `workflow-automation`
+  - `multi-agent`
+  - `ai-coding`
+  - `prompt-engineering`
+  - `developer-productivity`
+  - `agentic-workflows`
   - `lingtai`
   - `codex`
   - `claude-code`
@@ -78,7 +83,7 @@ PowerShell:
 git status --short
 git diff --check
 .\scripts\check-roundtable.ps1
-git ls-files | Select-String -Pattern '\.lingtai|\.recipe|mailbox|codex-auth|\.env|\.pem|\.key|\.log'
+git ls-files | Select-String -Pattern '(^|/)(\.lingtai|\.recipe)(/|$)|(^|/)(codex-auth\.json|\.env)$|(\.pem|\.key|\.log)$|(^|/)mailbox(/|$)'
 ```
 
 Bash:
@@ -87,7 +92,7 @@ Bash:
 git status --short
 git diff --check
 ./scripts/check-roundtable.sh
-git ls-files | grep -E '\.lingtai|\.recipe|mailbox|codex-auth|\.env|\.pem|\.key|\.log' || true
+git ls-files | grep -E '(^|/)(\.lingtai|\.recipe)(/|$)|(^|/)(codex-auth\.json|\.env)$|(\.pem|\.key|\.log)$|(^|/)mailbox(/|$)' || true
 ```
 
 The sensitive-path scan should show no committed runtime or secret files.

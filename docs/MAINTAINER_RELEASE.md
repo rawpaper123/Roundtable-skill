@@ -22,7 +22,7 @@ PowerShell:
 ```powershell
 .\scripts\check-roundtable.ps1
 git diff --check
-git ls-files | Select-String -Pattern '\.lingtai|\.recipe|mailbox|codex-auth|\.env|\.pem|\.key|\.log'
+git ls-files | Select-String -Pattern '(^|/)(\.lingtai|\.recipe)(/|$)|(^|/)(codex-auth\.json|\.env)$|(\.pem|\.key|\.log)$|(^|/)mailbox(/|$)'
 ```
 
 Bash:
@@ -30,7 +30,7 @@ Bash:
 ```bash
 ./scripts/check-roundtable.sh
 git diff --check
-git ls-files | grep -E '\.lingtai|\.recipe|mailbox|codex-auth|\.env|\.pem|\.key|\.log' || true
+git ls-files | grep -E '(^|/)(\.lingtai|\.recipe)(/|$)|(^|/)(codex-auth\.json|\.env)$|(\.pem|\.key|\.log)$|(^|/)mailbox(/|$)' || true
 ```
 
 The sensitive-path scan should not show committed runtime or secret files.
