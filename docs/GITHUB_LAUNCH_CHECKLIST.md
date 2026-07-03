@@ -45,6 +45,7 @@ Top-level README links should include:
 
 - Quickstart
 - Demo script
+- First run checklist
 - Why Roundtable
 - Comparison
 - Showcase

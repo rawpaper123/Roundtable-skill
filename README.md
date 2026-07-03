@@ -23,7 +23,7 @@ handing repo ownership to autonomous agents.
 [Install](#install-as-a-codex-skill) · [Quickstart](QUICKSTART.md) ·
 [Demo script](docs/DEMO_SCRIPT.md) · [Demo](examples/sanitized-roundtable-run.md) ·
 [Why Roundtable?](docs/WHY_ROUNDTABLE.md) · [Comparison](docs/COMPARISON.md) ·
-[Showcase](docs/SHOWCASE.md) · [Adoption](docs/ADOPTION.md) ·
+[Showcase](docs/SHOWCASE.md) · [First run checklist](docs/FIRST_RUN_CHECKLIST.md) · [Adoption](docs/ADOPTION.md) ·
 [Use cases](docs/USE_CASES.md) · [Executor setup](docs/EXECUTOR_SETUP.md) ·
 [Agent roster](docs/AGENT_ROSTER_GUIDE.md) · [Roadmap](docs/ROADMAP.md) ·
 [Troubleshooting](docs/TROUBLESHOOTING.md) · [FAQ](docs/FAQ.md) ·
@@ -206,6 +206,7 @@ or:
 ```text
 docs/
   SHOWCASE.md
+  FIRST_RUN_CHECKLIST.md
   DEMO_SCRIPT.md
   COMPARISON.md
   ADOPTION.md

@@ -84,6 +84,9 @@ For non-Codex Executors, use the same contract:
 If setup does not match the expected shape, use
 [docs/TROUBLESHOOTING.md](docs/TROUBLESHOOTING.md).
 
+For a pass/fail checklist after your first run, use
+[docs/FIRST_RUN_CHECKLIST.md](docs/FIRST_RUN_CHECKLIST.md).
+
 ## 4. Expected Shape
 
 The first successful run should include:
