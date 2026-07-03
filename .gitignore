@@ -1,0 +1,27 @@
+.DS_Store
+Thumbs.db
+
+# Local agent/runtime state
+.lingtai/
+.recipe/
+.codex/
+.claude/
+
+# Secrets and local env
+.env
+.env.*
+*.pem
+*.key
+*token*
+*secret*
+codex-auth.json
+
+# Logs and temp output
+*.log
+tmp/
+temp/
+dist/
+build/
+node_modules/
+__pycache__/
+*.pyc
