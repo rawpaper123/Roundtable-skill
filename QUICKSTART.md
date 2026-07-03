@@ -21,6 +21,10 @@ This only installs the Codex skill files. Lingtai is still required.
 
 If you already cloned this repository, run the local installer instead:
 
+```powershell
+.\scripts\install-codex-skill.ps1
+```
+
 ```bash
 ./scripts/install-codex-skill.sh
 ```
@@ -62,6 +66,13 @@ If an expert has no actionable concern, they must reply no opinion.
 
 You should see Lingtai expert replies, Executor synthesis, validation, and
 rollback.
+
+Not using Codex? Use the same Executor contract with Claude Code, Cursor,
+Windsurf, Kimi Work, or another coding terminal:
+
+- [docs/EXECUTOR_SETUP.md](docs/EXECUTOR_SETUP.md)
+- [templates/executor/roundtable-executor-prompt.md](templates/executor/roundtable-executor-prompt.md)
+- [examples/executor-adapter-claude-code.md](examples/executor-adapter-claude-code.md)
 
 If setup does not match the expected shape, use
 [docs/TROUBLESHOOTING.md](docs/TROUBLESHOOTING.md).
