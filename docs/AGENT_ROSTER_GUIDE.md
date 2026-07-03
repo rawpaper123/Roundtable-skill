@@ -102,6 +102,7 @@ If an agent does not reply:
 
 ## Related Templates
 
+- [agent-roster-growth.md](../examples/agent-roster-growth.md)
 - [agent-roster.example.md](../templates/lingtai/agent-roster.example.md)
 - [roundtable-agent-template.md](../templates/lingtai/roundtable-agent-template.md)
 - [request-template.md](../templates/lingtai/request-template.md)
