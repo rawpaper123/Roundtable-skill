@@ -27,9 +27,13 @@ jobs:
               "QUICKSTART.md",
               "LICENSE",
               "SECURITY.md",
+              "CHANGELOG.md",
+              "CONTRIBUTING.md",
               "skills/codex/roundtable-skill/SKILL.md",
               "docs/LINGTAI_SETUP.md",
               "docs/ROUNDTABLE_PROTOCOL.md",
+              "docs/MAINTAINER_RELEASE.md",
+              "docs/PUBLIC_RELEASE_CHECKLIST.md",
           ]
           for rel in required:
               if not Path(rel).exists():
@@ -46,7 +50,8 @@ jobs:
                   raise SystemExit(f"secret/runtime-like file committed: {path}")
 
           link_re = re.compile(r"!?\[[^\]]*\]\(([^)]+)\)")
-          for path in list(Path("docs").rglob("*.md")) + list(Path("examples").rglob("*.md")) + [Path("README.md"), Path("README.zh-CN.md"), Path("QUICKSTART.md")]:
+          root_docs = [Path("README.md"), Path("README.zh-CN.md"), Path("QUICKSTART.md"), Path("SECURITY.md"), Path("CHANGELOG.md"), Path("CONTRIBUTING.md")]
+          for path in list(Path("docs").rglob("*.md")) + list(Path("examples").rglob("*.md")) + root_docs:
               text = path.read_text(encoding="utf-8")
               if any(marker in text for marker in ("<<<<<<<", "=======", ">>>>>>>")):
                   raise SystemExit(f"merge marker found: {path}")

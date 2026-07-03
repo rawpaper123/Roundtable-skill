@@ -63,6 +63,7 @@ Before publishing a release:
 
 - run the Docs GitHub Action,
 - run `scripts/check-roundtable.*`,
+- follow [docs/MAINTAINER_RELEASE.md](docs/MAINTAINER_RELEASE.md),
 - inspect tracked files,
 - confirm no `.lingtai/`, `.recipe/`, mailbox, auth, env, key, or log files are tracked,
 - confirm examples use placeholders only,

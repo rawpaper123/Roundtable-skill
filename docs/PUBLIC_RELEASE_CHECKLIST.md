@@ -2,6 +2,8 @@
 
 Run this before pushing Roundtable Skill to a public repository.
 
+For normal release tagging, also use [MAINTAINER_RELEASE.md](MAINTAINER_RELEASE.md).
+
 ## Scope
 
 - Repository is independent from private product repos.
