@@ -1,5 +1,21 @@
 # Changelog
 
+## v0.1.1
+
+Public launch readiness polish.
+
+- Sharper README pitch, badges, and first-screen explanation.
+- More launch docs: demo script, comparison guide, troubleshooting guide, GitHub launch checklist, and post-launch iteration runbook.
+- Executor adapter examples for Codex and Claude Code.
+- Generic executor prompt template for non-Codex coding terminals.
+- Expanded contributing guidance, issue templates, and pull request template.
+- Docs workflow now validates docs, examples, templates, issue templates, PR template, links, merge markers, and secret-like runtime paths.
+- GitHub repository metadata updated for discoverability.
+
+Roundtable Skill still requires Lingtai as the agent runtime. This repository
+does not bundle Lingtai, create agents automatically, or claim real multi-agent
+execution without Lingtai configured.
+
 ## v0.1.0
 
 Initial public release.
