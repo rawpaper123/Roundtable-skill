@@ -52,6 +52,14 @@ Roundtable 把流程拆清楚：
 它简单，是因为协议很小，最终执行仍然留在你正在用的 coding terminal。
 它有效，是因为 Lingtai 提供 agent network，而 Roundtable 让每个参与者都有明确角色和退出条件。
 
+## 30 秒看懂它怎么跑
+
+这里有一个脱敏的端到端运行摘录：
+
+- [examples/sanitized-roundtable-run.md](examples/sanitized-roundtable-run.md)
+
+它展示了完整链路：用户目标、Lingtai 专家回复、Executor 汇总取舍、实现边界、验证和 rollback。
+
 ## 它解决什么问题
 
 - 给可用 agents 动态分配专家方向。
@@ -130,6 +138,7 @@ scripts/
   check-roundtable.ps1
   check-roundtable.sh
 examples/
+  sanitized-roundtable-run.md
   generic-product-goal.md
   release-gate-goal.md
 ```

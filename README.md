@@ -57,6 +57,15 @@ It is simple because it keeps the protocol small and leaves execution in your
 coding terminal. It is effective because Lingtai provides the agent network and
 Roundtable forces every participant to stay in a role.
 
+## See It In 30 Seconds
+
+Read a sanitized end-to-end run:
+
+- [examples/sanitized-roundtable-run.md](examples/sanitized-roundtable-run.md)
+
+It shows the core loop: user goal, Lingtai expert replies, Executor synthesis,
+implementation boundary, validation, and rollback.
+
 ## What It Does
 
 - Assigns task-specific expert angles to configured Lingtai agents.
@@ -135,6 +144,7 @@ scripts/
   check-roundtable.ps1
   check-roundtable.sh
 examples/
+  sanitized-roundtable-run.md
   generic-product-goal.md
   release-gate-goal.md
 ```
