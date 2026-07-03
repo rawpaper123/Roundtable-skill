@@ -12,6 +12,10 @@
 Bring Lingtai-powered expert review into your coding terminal, with one
 Executor accountable for scope, checks, and rollback.
 
+**10-second pitch:** use Roundtable when a risky change needs independent expert
+advice, strict scope control, real checks, and a rollback-ready report, without
+handing repo ownership to autonomous agents.
+
 ![Roundtable Skill terminal preview](assets/roundtable-terminal-demo.svg)
 
 **New here? Start with [QUICKSTART.md](QUICKSTART.md).**
