@@ -1,5 +1,16 @@
 # Changelog
 
+## v0.1.4
+
+README demo cast polish.
+
+- Added a new terminal-style SVG demo cast for the README first screen.
+- Swapped the README and Chinese README preview image to the new demo cast.
+
+Roundtable Skill still requires Lingtai as the agent runtime. This repository
+does not bundle Lingtai or claim real multi-agent execution without Lingtai
+configured.
+
 ## v0.1.3
 
 First-run adoption polish.
