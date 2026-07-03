@@ -1,9 +1,11 @@
 # Quickstart
 
-Goal: clone, install, verify Lingtai, and run your first Roundtable in about 5
-minutes.
+Goal: choose your Executor path, verify Lingtai, and run your first Roundtable
+in about 5 minutes.
 
-## 1. Install The Codex Skill
+## 1. Choose Your Executor Path
+
+If your Executor is Codex, install the Codex skill.
 
 PowerShell:
 
@@ -28,6 +30,12 @@ If you already cloned this repository, run the local installer instead:
 ```bash
 ./scripts/install-codex-skill.sh
 ```
+
+If your Executor is Claude Code, Cursor, Windsurf, Kimi Work, or another coding
+terminal, skip the Codex installer and use:
+
+- [docs/EXECUTOR_SETUP.md](docs/EXECUTOR_SETUP.md)
+- [templates/executor/roundtable-executor-prompt.md](templates/executor/roundtable-executor-prompt.md)
 
 ## 2. Verify Lingtai In Your Target Project
 
@@ -67,8 +75,7 @@ If an expert has no actionable concern, they must reply no opinion.
 You should see Lingtai expert replies, Executor synthesis, validation, and
 rollback.
 
-Not using Codex? Use the same Executor contract with Claude Code, Cursor,
-Windsurf, Kimi Work, or another coding terminal:
+For non-Codex Executors, use the same contract:
 
 - [docs/EXECUTOR_SETUP.md](docs/EXECUTOR_SETUP.md)
 - [templates/executor/roundtable-executor-prompt.md](templates/executor/roundtable-executor-prompt.md)
