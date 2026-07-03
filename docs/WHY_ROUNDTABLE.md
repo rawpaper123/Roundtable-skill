@@ -8,12 +8,28 @@ and owns rollback.
 
 ## Quick Comparison
 
-| Approach | What works | What breaks on serious work |
-| --- | --- | --- |
-| Better prompt | Fast and cheap | One model still plays planner, reviewer, executor, and release owner at once |
-| Single-agent review | Catches obvious issues | Review advice can expand scope, invent concerns, or skip rollback |
-| Checklist | Good for repeated gates | Cannot adapt to the current task or disagree with a weak plan |
-| Roundtable | Dynamic expert angles, no-opinion rule, bounded waits, one Executor | Requires Lingtai setup and at least one real agent |
+| Approach | Best for | What works | What breaks on serious work |
+| --- | --- | --- | --- |
+| Better prompt | Small local edits | Fast, cheap, no setup | One model still plays planner, reviewer, executor, and release owner at once |
+| Single-agent review | Quick second opinion | Catches obvious issues | Advice can expand scope, invent concerns, or skip rollback |
+| Checklist | Repeated gates | Great for known risks | Cannot adapt to the current task or challenge a weak plan |
+| More autonomous agents | Large parallel exploration | Can gather more context | Easy to lose ownership, scope, and rollback |
+| Roundtable | Risky engineering decisions | Dynamic expert angles, no-opinion rule, bounded waits, one Executor | Requires Lingtai setup and at least one real agent |
+
+## Decision Rule
+
+Use the lightest thing that is enough:
+
+```text
+typo -> edit directly
+small bug -> one model plus tests
+known release gate -> checklist
+risky engineering decision -> Roundtable
+```
+
+Roundtable is not a default for every task. It is for the places where a wrong
+merge, fake green check, leaked secret, or scope-expanded refactor costs more
+than the coordination overhead.
 
 ## Concrete Example
 
