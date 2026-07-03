@@ -30,6 +30,7 @@ jobs:
               "CHANGELOG.md",
               "CONTRIBUTING.md",
               "skills/codex/roundtable-skill/SKILL.md",
+              "docs/COMPARISON.md",
               "docs/LINGTAI_SETUP.md",
               "docs/ROUNDTABLE_PROTOCOL.md",
               "docs/TROUBLESHOOTING.md",

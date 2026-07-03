@@ -16,6 +16,8 @@ and owns rollback.
 | More autonomous agents | Large parallel exploration | Can gather more context | Easy to lose ownership, scope, and rollback |
 | Roundtable | Risky engineering decisions | Dynamic expert angles, no-opinion rule, bounded waits, one Executor | Requires Lingtai setup and at least one real agent |
 
+For a fuller buyer's guide, see [COMPARISON.md](COMPARISON.md).
+
 ## Decision Rule
 
 Use the lightest thing that is enough:
