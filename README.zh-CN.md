@@ -94,6 +94,7 @@ orchestrator_state: asleep
 - [examples/terminal-transcript.md](examples/terminal-transcript.md)
 - [examples/sanitized-roundtable-run.md](examples/sanitized-roundtable-run.md)
 - [examples/agent-roster-growth.md](examples/agent-roster-growth.md)
+- [examples/executor-adapter-codex.md](examples/executor-adapter-codex.md)
 
 ## 作为 Codex Skill 安装
 
@@ -205,6 +206,7 @@ examples/
   terminal-transcript.md
   sanitized-roundtable-run.md
   agent-roster-growth.md
+  executor-adapter-codex.md
   generic-product-goal.md
   release-gate-goal.md
 ```

@@ -43,6 +43,9 @@ Trigger:
 Open Roundtable Skill for this task: <your goal>
 ```
 
+For a copy/paste Codex workflow, see
+[executor-adapter-codex.md](../examples/executor-adapter-codex.md).
+
 ## Other Executors
 
 For Claude Code, Cursor, Windsurf, Kimi Work, or another coding terminal, use
