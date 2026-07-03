@@ -100,6 +100,7 @@ orchestrator_state: asleep
 - [examples/terminal-transcript.md](examples/terminal-transcript.md)
 - [examples/sanitized-roundtable-run.md](examples/sanitized-roundtable-run.md)
 - [examples/agent-roster-growth.md](examples/agent-roster-growth.md)
+- [examples/executor-neutral-terminals.md](examples/executor-neutral-terminals.md)
 - [examples/executor-adapter-codex.md](examples/executor-adapter-codex.md)
 - [examples/executor-adapter-claude-code.md](examples/executor-adapter-claude-code.md)
 
@@ -222,6 +223,7 @@ examples/
   terminal-transcript.md
   sanitized-roundtable-run.md
   agent-roster-growth.md
+  executor-neutral-terminals.md
   executor-adapter-codex.md
   executor-adapter-claude-code.md
   generic-product-goal.md

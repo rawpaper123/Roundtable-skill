@@ -37,6 +37,7 @@ terminal, skip the Codex installer and use:
 - [docs/INSTALL_MATRIX.md](docs/INSTALL_MATRIX.md)
 - [docs/EXECUTOR_SETUP.md](docs/EXECUTOR_SETUP.md)
 - [templates/executor/roundtable-executor-prompt.md](templates/executor/roundtable-executor-prompt.md)
+- [examples/executor-neutral-terminals.md](examples/executor-neutral-terminals.md)
 
 ## 2. Verify Lingtai In Your Target Project
 

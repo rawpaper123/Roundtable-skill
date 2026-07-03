@@ -59,6 +59,9 @@ Roundtable as a protocol until executor-specific adapters exist.
 Use the generic prompt template:
 [roundtable-executor-prompt.md](../templates/executor/roundtable-executor-prompt.md).
 
+For short executor-neutral examples, see
+[executor-neutral-terminals.md](../examples/executor-neutral-terminals.md).
+
 Paste a prompt like this into the terminal:
 
 ```text

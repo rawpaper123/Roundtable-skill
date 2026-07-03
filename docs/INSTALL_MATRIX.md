@@ -40,6 +40,7 @@ tmp="$(mktemp -d)" && git clone --depth 1 https://github.com/rawpaper123/Roundta
 Copy the generic Executor prompt into your coding terminal:
 
 - [roundtable-executor-prompt.md](../templates/executor/roundtable-executor-prompt.md)
+- [executor-neutral-terminals.md](../examples/executor-neutral-terminals.md)
 
 Then verify Lingtai in the target project:
 
