@@ -1,5 +1,20 @@
 # Changelog
 
+## v0.1.3
+
+First-run adoption polish.
+
+- Added a first-run checklist for deciding whether Roundtable is operational,
+  docs-only, or blocked.
+- Linked the first-run checklist from README, Chinese README, Quickstart, and
+  the GitHub launch checklist.
+- Made Quickstart start with the Executor choice instead of reading like a
+  Codex-only path.
+
+Roundtable Skill still requires Lingtai as the agent runtime. This repository
+does not bundle Lingtai or claim real multi-agent execution without Lingtai
+configured.
+
 ## v0.1.2
 
 Public adoption polish.
