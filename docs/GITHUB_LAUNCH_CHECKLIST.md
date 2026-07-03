@@ -44,6 +44,7 @@ Lingtai-powered multi-agent expert review loop for coding terminals: scoped plan
 Top-level README links should include:
 
 - Quickstart
+- Install matrix
 - Demo script
 - First run checklist
 - Why Roundtable

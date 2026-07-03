@@ -34,6 +34,7 @@ If you already cloned this repository, run the local installer instead:
 If your Executor is Claude Code, Cursor, Windsurf, Kimi Work, or another coding
 terminal, skip the Codex installer and use:
 
+- [docs/INSTALL_MATRIX.md](docs/INSTALL_MATRIX.md)
 - [docs/EXECUTOR_SETUP.md](docs/EXECUTOR_SETUP.md)
 - [templates/executor/roundtable-executor-prompt.md](templates/executor/roundtable-executor-prompt.md)
 

@@ -8,6 +8,8 @@ Roundtable Skill has two separate parts:
 Roundtable is not a standalone multi-agent runtime. Without Lingtai configured,
 this repository is only a set of docs, templates, and install helpers.
 
+For the shortest setup comparison, see [INSTALL_MATRIX.md](INSTALL_MATRIX.md).
+
 ## Support Matrix
 
 | Executor | Setup path | What is automatic today | What remains manual |
