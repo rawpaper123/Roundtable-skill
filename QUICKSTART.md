@@ -59,5 +59,17 @@ If an expert has no actionable concern, they must reply no opinion.
 You should see Lingtai expert replies, Executor synthesis, validation, and
 rollback.
 
+## 4. Expected Shape
+
+The first successful run should include:
+
+- which Lingtai agents were asked,
+- each agent's expert angle,
+- replies or bounded non-response notes,
+- Executor synthesis,
+- accepted and rejected advice,
+- validation,
+- rollback.
+
 中文：这个流程只安装 Codex skill。Roundtable 真正运行仍然需要 Lingtai、`.lingtai/`
 和至少一个 agent。
