@@ -54,6 +54,9 @@ For a copy/paste Claude Code workflow, see
 For Claude Code, Cursor, Windsurf, Kimi Work, or another coding terminal, use
 Roundtable as a protocol until executor-specific adapters exist.
 
+Use the generic prompt template:
+[roundtable-executor-prompt.md](../templates/executor/roundtable-executor-prompt.md).
+
 Paste a prompt like this into the terminal:
 
 ```text

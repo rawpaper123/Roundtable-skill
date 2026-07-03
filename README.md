@@ -220,6 +220,7 @@ assets/
 skills/
   codex/roundtable-skill/SKILL.md
 templates/
+  executor/roundtable-executor-prompt.md
   lingtai/agent-roster.example.md
   lingtai/request-template.md
   lingtai/roundtable-agent-template.md
