@@ -1,5 +1,18 @@
 # Changelog
 
+## v0.1.5
+
+Install matrix polish.
+
+- Added an install matrix for Codex, Claude Code, Cursor, Windsurf, Kimi Work,
+  and other coding terminals.
+- Linked the install matrix from README, Chinese README, Quickstart, Executor
+  setup, and GitHub launch checklist.
+
+Roundtable Skill still requires Lingtai as the agent runtime. This repository
+does not bundle Lingtai or claim real multi-agent execution without Lingtai
+configured.
+
 ## v0.1.4
 
 README demo cast polish.
