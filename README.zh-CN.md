@@ -73,11 +73,19 @@ Roundtable 把流程拆清楚：
 
 ## 作为 Codex Skill 安装
 
-把 skill 复制到 Codex skills 目录：
+运行安装脚本：
 
 ```powershell
-Copy-Item -Recurse .\skills\codex\roundtable-skill "$env:USERPROFILE\.codex\skills\roundtable-skill"
+.\scripts\install-codex-skill.ps1
 ```
+
+或：
+
+```bash
+./scripts/install-codex-skill.sh
+```
+
+这个脚本只安装 Codex skill 文件。Lingtai 仍然是必需 runtime，需要单独安装和配置。
 
 然后这样触发：
 
@@ -139,6 +147,8 @@ templates/
   lingtai/request-template.md
   lingtai/roundtable-agent-template.md
 scripts/
+  install-codex-skill.ps1
+  install-codex-skill.sh
   check-roundtable.ps1
   check-roundtable.sh
 examples/

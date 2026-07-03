@@ -79,11 +79,20 @@ implementation boundary, validation, and rollback.
 
 ## Install As A Codex Skill
 
-Copy this folder into your Codex skills directory:
+Run the installer:
 
 ```powershell
-Copy-Item -Recurse .\skills\codex\roundtable-skill "$env:USERPROFILE\.codex\skills\roundtable-skill"
+.\scripts\install-codex-skill.ps1
 ```
+
+or:
+
+```bash
+./scripts/install-codex-skill.sh
+```
+
+This only installs the Codex skill files. Lingtai is still required and must be
+installed/configured separately.
 
 Then ask:
 
@@ -145,6 +154,8 @@ templates/
   lingtai/request-template.md
   lingtai/roundtable-agent-template.md
 scripts/
+  install-codex-skill.ps1
+  install-codex-skill.sh
   check-roundtable.ps1
   check-roundtable.sh
 examples/
