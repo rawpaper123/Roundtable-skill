@@ -111,6 +111,7 @@ Read the full sanitized examples:
 - [examples/sanitized-roundtable-run.md](examples/sanitized-roundtable-run.md)
 - [examples/agent-roster-growth.md](examples/agent-roster-growth.md)
 - [examples/executor-adapter-codex.md](examples/executor-adapter-codex.md)
+- [examples/executor-adapter-claude-code.md](examples/executor-adapter-claude-code.md)
 
 ## What It Does
 
@@ -234,6 +235,7 @@ examples/
   sanitized-roundtable-run.md
   agent-roster-growth.md
   executor-adapter-codex.md
+  executor-adapter-claude-code.md
   generic-product-goal.md
   release-gate-goal.md
 ```

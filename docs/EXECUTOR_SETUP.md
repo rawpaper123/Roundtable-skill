@@ -46,6 +46,9 @@ Open Roundtable Skill for this task: <your goal>
 For a copy/paste Codex workflow, see
 [executor-adapter-codex.md](../examples/executor-adapter-codex.md).
 
+For a copy/paste Claude Code workflow, see
+[executor-adapter-claude-code.md](../examples/executor-adapter-claude-code.md).
+
 ## Other Executors
 
 For Claude Code, Cursor, Windsurf, Kimi Work, or another coding terminal, use
