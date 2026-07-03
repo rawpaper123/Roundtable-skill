@@ -55,6 +55,7 @@ Top-level README links should include:
 - Troubleshooting
 - FAQ
 - Security
+- Launch copy
 - Contributing
 
 ## Trust Checks
@@ -100,6 +101,8 @@ git ls-files | grep -E '(^|/)(\.lingtai|\.recipe)(/|$)|(^|/)(codex-auth\.json|\.
 The sensitive-path scan should show no committed runtime or secret files.
 
 ## Launch Copy
+
+Use [LAUNCH_COPY.md](LAUNCH_COPY.md) for copy/paste posts.
 
 Short version:
 

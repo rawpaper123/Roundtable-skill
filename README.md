@@ -27,7 +27,7 @@ handing repo ownership to autonomous agents.
 [Use cases](docs/USE_CASES.md) · [Executor setup](docs/EXECUTOR_SETUP.md) ·
 [Agent roster](docs/AGENT_ROSTER_GUIDE.md) · [Roadmap](docs/ROADMAP.md) ·
 [Troubleshooting](docs/TROUBLESHOOTING.md) · [FAQ](docs/FAQ.md) ·
-[Security](SECURITY.md) · [Launch checklist](docs/GITHUB_LAUNCH_CHECKLIST.md) ·
+[Security](SECURITY.md) · [Launch copy](docs/LAUNCH_COPY.md) · [Launch checklist](docs/GITHUB_LAUNCH_CHECKLIST.md) ·
 [Post-launch](docs/POST_LAUNCH_ITERATION.md) · [Release notes](CHANGELOG.md) ·
 [Contributing](CONTRIBUTING.md)
 
@@ -216,6 +216,7 @@ docs/
   MAINTAINER_RELEASE.md
   PUBLIC_RELEASE_CHECKLIST.md
   GITHUB_LAUNCH_CHECKLIST.md
+  LAUNCH_COPY.md
   POST_LAUNCH_ITERATION.md
   EXECUTOR_SETUP.md
   EXECUTOR_CONTRACT.md

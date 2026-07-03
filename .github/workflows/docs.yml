@@ -36,6 +36,7 @@ jobs:
               "docs/ROUNDTABLE_PROTOCOL.md",
               "docs/TROUBLESHOOTING.md",
               "docs/GITHUB_LAUNCH_CHECKLIST.md",
+              "docs/LAUNCH_COPY.md",
               "docs/POST_LAUNCH_ITERATION.md",
               "docs/MAINTAINER_RELEASE.md",
               "docs/PUBLIC_RELEASE_CHECKLIST.md",
