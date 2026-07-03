@@ -51,7 +51,8 @@ jobs:
 
           link_re = re.compile(r"!?\[[^\]]*\]\(([^)]+)\)")
           root_docs = [Path("README.md"), Path("README.zh-CN.md"), Path("QUICKSTART.md"), Path("SECURITY.md"), Path("CHANGELOG.md"), Path("CONTRIBUTING.md")]
-          for path in list(Path("docs").rglob("*.md")) + list(Path("examples").rglob("*.md")) + root_docs:
+          issue_templates = list(Path(".github/ISSUE_TEMPLATE").glob("*.md"))
+          for path in list(Path("docs").rglob("*.md")) + list(Path("examples").rglob("*.md")) + issue_templates + root_docs:
               text = path.read_text(encoding="utf-8")
               if any(marker in text for marker in ("<<<<<<<", "=======", ">>>>>>>")):
                   raise SystemExit(f"merge marker found: {path}")
