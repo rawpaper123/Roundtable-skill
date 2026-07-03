@@ -2,6 +2,12 @@
 
 中文 | [English](README.md)
 
+[![GitHub stars](https://img.shields.io/github/stars/rawpaper123/Roundtable-skill?style=social)](https://github.com/rawpaper123/Roundtable-skill/stargazers)
+[![License: MIT](https://img.shields.io/badge/license-MIT-black.svg)](LICENSE)
+[![Lingtai required](https://img.shields.io/badge/Lingtai-required-black.svg)](https://github.com/LingTai-AI/lingtai)
+[![Executor neutral](https://img.shields.io/badge/executor-neutral-black.svg)](docs/EXECUTOR_SETUP.md)
+[![Codex skill](https://img.shields.io/badge/Codex-skill-black.svg)](skills/codex/roundtable-skill/SKILL.md)
+
 把 Lingtai 驱动的专家复核带进你的 coding terminal，同时让一个
 Executor 对 scope、验证、Git、发布和 rollback 负责。
 

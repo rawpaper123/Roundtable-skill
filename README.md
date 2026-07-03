@@ -2,6 +2,12 @@
 
 [中文](README.zh-CN.md) | English
 
+[![GitHub stars](https://img.shields.io/github/stars/rawpaper123/Roundtable-skill?style=social)](https://github.com/rawpaper123/Roundtable-skill/stargazers)
+[![License: MIT](https://img.shields.io/badge/license-MIT-black.svg)](LICENSE)
+[![Lingtai required](https://img.shields.io/badge/Lingtai-required-black.svg)](https://github.com/LingTai-AI/lingtai)
+[![Executor neutral](https://img.shields.io/badge/executor-neutral-black.svg)](docs/EXECUTOR_SETUP.md)
+[![Codex skill](https://img.shields.io/badge/Codex-skill-black.svg)](skills/codex/roundtable-skill/SKILL.md)
+
 Bring Lingtai-powered expert review into your coding terminal, with one
 Executor accountable for scope, checks, and rollback.
 
