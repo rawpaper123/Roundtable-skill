@@ -14,7 +14,8 @@ Executor accountable for scope, checks, and rollback.
 [Why Roundtable?](docs/WHY_ROUNDTABLE.md) ·
 [Adoption](docs/ADOPTION.md) · [Use cases](docs/USE_CASES.md) ·
 [Executor setup](docs/EXECUTOR_SETUP.md) · [Roadmap](docs/ROADMAP.md) ·
-[Release notes](CHANGELOG.md) · [Contributing](CONTRIBUTING.md)
+[FAQ](docs/FAQ.md) · [Release notes](CHANGELOG.md) ·
+[Contributing](CONTRIBUTING.md)
 
 Roundtable Skill is an executor-neutral workflow for shipping agentic coding
 changes with discipline: task-specific Lingtai experts advise, while your
@@ -189,6 +190,7 @@ or:
 docs/
   ADOPTION.md
   USE_CASES.md
+  FAQ.md
   EXECUTOR_SETUP.md
   EXECUTOR_CONTRACT.md
   LINGTAI_SETUP.md
