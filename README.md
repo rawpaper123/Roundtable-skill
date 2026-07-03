@@ -12,8 +12,9 @@ Executor accountable for scope, checks, and rollback.
 [Install](#install-as-a-codex-skill) · [Quickstart](QUICKSTART.md) ·
 [Demo](examples/sanitized-roundtable-run.md) ·
 [Why Roundtable?](docs/WHY_ROUNDTABLE.md) ·
-[Executor setup](docs/EXECUTOR_SETUP.md) · [Roadmap](docs/ROADMAP.md) ·
-[Release notes](CHANGELOG.md) · [Contributing](CONTRIBUTING.md)
+[Adoption](docs/ADOPTION.md) · [Executor setup](docs/EXECUTOR_SETUP.md) ·
+[Roadmap](docs/ROADMAP.md) · [Release notes](CHANGELOG.md) ·
+[Contributing](CONTRIBUTING.md)
 
 Roundtable Skill is an executor-neutral workflow for shipping agentic coding
 changes with discipline: task-specific Lingtai experts advise, while your
@@ -186,6 +187,7 @@ or:
 
 ```text
 docs/
+  ADOPTION.md
   EXECUTOR_SETUP.md
   EXECUTOR_CONTRACT.md
   LINGTAI_SETUP.md
