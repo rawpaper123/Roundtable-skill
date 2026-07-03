@@ -10,6 +10,7 @@
 
 [Install](#作为-codex-skill-安装) · [Quickstart](QUICKSTART.md) ·
 [Demo](examples/sanitized-roundtable-run.md) ·
+[Why Roundtable?](docs/WHY_ROUNDTABLE.md) ·
 [Release notes](CHANGELOG.md) · [Contributing](CONTRIBUTING.md)
 
 Roundtable Skill 是一个 executor-neutral 的工程协作工作流。它把你正在使用的
@@ -156,6 +157,7 @@ docs/
   EXECUTOR_CONTRACT.md
   LINGTAI_SETUP.md
   ROUNDTABLE_PROTOCOL.md
+  WHY_ROUNDTABLE.md
 CHANGELOG.md
 CONTRIBUTING.md
 QUICKSTART.md
