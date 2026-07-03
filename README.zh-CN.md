@@ -64,11 +64,35 @@ Roundtable 把流程拆清楚：
 
 ## 30 秒看懂它怎么跑
 
-这里有一个脱敏的端到端运行摘录：
+这个 loop 应该一眼就能看懂：
 
+```text
+用户目标 -> Lingtai 专家组 -> Executor 汇总取舍 -> 最小安全 diff -> 验证 -> 可回滚报告
+```
+
+```text
+安全/隐私专家：合并前补一个负向 auth smoke。
+发布可靠性专家：No opinion from my expert perspective.
+范围控制专家：拒绝登录 UI 重设计，这超出当前范围。
+
+Executor:
+采纳：负向 auth smoke
+拒绝：登录 UI 重设计
+验证：测试通过，diff 范围干净，rollback 已准备
+```
+
+如果 agent 沉默，Roundtable 会先诊断投递，而不是无限等待：
+
+```text
+$ ./scripts/check-lingtai-mailbox.sh
+status: queued_outbox
+orchestrator_state: asleep
+```
+
+完整脱敏示例：
+
+- [examples/terminal-transcript.md](examples/terminal-transcript.md)
 - [examples/sanitized-roundtable-run.md](examples/sanitized-roundtable-run.md)
-
-它展示了完整链路：用户目标、Lingtai 专家回复、Executor 汇总取舍、实现边界、验证和 rollback。
 
 ## 它解决什么问题
 
@@ -180,6 +204,7 @@ scripts/
   check-lingtai-mailbox.ps1
   check-lingtai-mailbox.sh
 examples/
+  terminal-transcript.md
   sanitized-roundtable-run.md
   generic-product-goal.md
   release-gate-goal.md

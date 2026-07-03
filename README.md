@@ -69,12 +69,35 @@ Roundtable forces every participant to stay in a role.
 
 ## See It In 30 Seconds
 
-Read a sanitized end-to-end run:
+The loop should feel concrete:
 
+```text
+User goal -> Lingtai experts -> Executor synthesis -> smallest safe diff -> checks -> rollback
+```
+
+```text
+Security/privacy expert: add a negative auth smoke before merge.
+Release expert: No opinion from my expert perspective.
+Scope reviewer: reject the login redesign; it is out of scope.
+
+Executor:
+accepted: negative auth smoke
+rejected: login redesign
+verified: tests pass, diff scoped, rollback ready
+```
+
+If an agent is silent, Roundtable diagnoses delivery instead of waiting forever:
+
+```text
+$ ./scripts/check-lingtai-mailbox.sh
+status: queued_outbox
+orchestrator_state: asleep
+```
+
+Read the full sanitized examples:
+
+- [examples/terminal-transcript.md](examples/terminal-transcript.md)
 - [examples/sanitized-roundtable-run.md](examples/sanitized-roundtable-run.md)
-
-It shows the core loop: user goal, Lingtai expert replies, Executor synthesis,
-implementation boundary, validation, and rollback.
 
 ## What It Does
 
@@ -187,6 +210,7 @@ scripts/
   check-lingtai-mailbox.ps1
   check-lingtai-mailbox.sh
 examples/
+  terminal-transcript.md
   sanitized-roundtable-run.md
   generic-product-goal.md
   release-gate-goal.md
