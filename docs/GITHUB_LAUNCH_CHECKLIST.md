@@ -57,6 +57,7 @@ Top-level README links should include:
 - [SECURITY.md](../SECURITY.md) exists.
 - [CONTRIBUTING.md](../CONTRIBUTING.md) exists.
 - [PUBLIC_RELEASE_CHECKLIST.md](PUBLIC_RELEASE_CHECKLIST.md) exists.
+- [POST_LAUNCH_ITERATION.md](POST_LAUNCH_ITERATION.md) exists.
 - Issue templates exist for docs improvements and executor adapters.
 - Docs workflow badge points to the active GitHub Actions workflow.
 - Latest Docs workflow run on `main` is successful.

@@ -9,6 +9,7 @@ Roundtable Skill should stay easy to try and hard to misuse.
 - Codex skill package
 - PowerShell and bash Codex installers
 - Quickstart, examples, security notes, issue templates
+- GitHub launch and post-launch iteration checklists
 - Lingtai runtime boundary: required, not bundled
 - setup notes for more Executors: Claude Code, Cursor, Windsurf, Kimi Work
 

@@ -28,7 +28,7 @@ handing repo ownership to autonomous agents.
 [Agent roster](docs/AGENT_ROSTER_GUIDE.md) · [Roadmap](docs/ROADMAP.md) ·
 [Troubleshooting](docs/TROUBLESHOOTING.md) · [FAQ](docs/FAQ.md) ·
 [Security](SECURITY.md) · [Launch checklist](docs/GITHUB_LAUNCH_CHECKLIST.md) ·
-[Release notes](CHANGELOG.md) ·
+[Post-launch](docs/POST_LAUNCH_ITERATION.md) · [Release notes](CHANGELOG.md) ·
 [Contributing](CONTRIBUTING.md)
 
 Roundtable Skill is an executor-neutral workflow for shipping agentic coding
@@ -216,6 +216,7 @@ docs/
   MAINTAINER_RELEASE.md
   PUBLIC_RELEASE_CHECKLIST.md
   GITHUB_LAUNCH_CHECKLIST.md
+  POST_LAUNCH_ITERATION.md
   EXECUTOR_SETUP.md
   EXECUTOR_CONTRACT.md
   LINGTAI_SETUP.md
