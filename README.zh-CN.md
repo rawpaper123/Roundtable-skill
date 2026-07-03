@@ -79,7 +79,19 @@ Roundtable 把流程拆清楚：
 
 ## 作为 Codex Skill 安装
 
-运行安装脚本：
+从 GitHub 直接安装：
+
+```powershell
+$rt = Join-Path $env:TEMP "Roundtable-skill"; Remove-Item -Recurse -Force $rt -ErrorAction SilentlyContinue; git clone --depth 1 https://github.com/rawpaper123/Roundtable-skill.git $rt; & "$rt\scripts\install-codex-skill.ps1"
+```
+
+或：
+
+```bash
+tmp="$(mktemp -d)" && git clone --depth 1 https://github.com/rawpaper123/Roundtable-skill.git "$tmp/Roundtable-skill" && "$tmp/Roundtable-skill/scripts/install-codex-skill.sh"
+```
+
+如果你已经 clone 了本 repo，也可以运行本地脚本：
 
 ```powershell
 .\scripts\install-codex-skill.ps1

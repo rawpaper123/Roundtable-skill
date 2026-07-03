@@ -3,28 +3,29 @@
 Goal: clone, install, verify Lingtai, and run your first Roundtable in about 5
 minutes.
 
-## 1. Clone
+## 1. Install The Codex Skill
 
-```bash
-git clone https://github.com/rawpaper123/Roundtable-skill.git
-cd Roundtable-skill
-```
-
-## 2. Install The Codex Skill
+PowerShell:
 
 ```powershell
-.\scripts\install-codex-skill.ps1
+$rt = Join-Path $env:TEMP "Roundtable-skill"; Remove-Item -Recurse -Force $rt -ErrorAction SilentlyContinue; git clone --depth 1 https://github.com/rawpaper123/Roundtable-skill.git $rt; & "$rt\scripts\install-codex-skill.ps1"
 ```
 
-or:
+Bash:
+
+```bash
+tmp="$(mktemp -d)" && git clone --depth 1 https://github.com/rawpaper123/Roundtable-skill.git "$tmp/Roundtable-skill" && "$tmp/Roundtable-skill/scripts/install-codex-skill.sh"
+```
+
+This only installs the Codex skill files. Lingtai is still required.
+
+If you already cloned this repository, run the local installer instead:
 
 ```bash
 ./scripts/install-codex-skill.sh
 ```
 
-This only installs the Codex skill files. Lingtai is still required.
-
-## 3. Verify Lingtai In Your Target Project
+## 2. Verify Lingtai In Your Target Project
 
 ```powershell
 cd C:\path\to\your-project
@@ -41,7 +42,7 @@ cd /path/to/your-project
 Expected: `lingtai_cli: true`, `dot_lingtai: true`, and `agent_manifests: 1`
 or more.
 
-## 4. Ask Codex
+## 3. Ask Codex
 
 ```text
 Open Roundtable Skill for this task:

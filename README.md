@@ -85,7 +85,19 @@ implementation boundary, validation, and rollback.
 
 ## Install As A Codex Skill
 
-Run the installer:
+Fast path from GitHub:
+
+```powershell
+$rt = Join-Path $env:TEMP "Roundtable-skill"; Remove-Item -Recurse -Force $rt -ErrorAction SilentlyContinue; git clone --depth 1 https://github.com/rawpaper123/Roundtable-skill.git $rt; & "$rt\scripts\install-codex-skill.ps1"
+```
+
+or:
+
+```bash
+tmp="$(mktemp -d)" && git clone --depth 1 https://github.com/rawpaper123/Roundtable-skill.git "$tmp/Roundtable-skill" && "$tmp/Roundtable-skill/scripts/install-codex-skill.sh"
+```
+
+From a local checkout:
 
 ```powershell
 .\scripts\install-codex-skill.ps1
