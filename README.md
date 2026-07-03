@@ -6,6 +6,8 @@ Bring an expert panel into your coding terminal.
 
 ![Roundtable Skill terminal preview](assets/roundtable-terminal-demo.svg)
 
+**New here? Start with [QUICKSTART.md](QUICKSTART.md).**
+
 Roundtable Skill is an executor-neutral workflow for turning one coding agent
 into a disciplined **planner + reviewer + executor loop**. It helps your current
 coding terminal ask the right experts, reject vague advice, implement the
@@ -145,6 +147,7 @@ docs/
   EXECUTOR_CONTRACT.md
   LINGTAI_SETUP.md
   ROUNDTABLE_PROTOCOL.md
+QUICKSTART.md
 assets/
   roundtable-terminal-demo.svg
 skills/
