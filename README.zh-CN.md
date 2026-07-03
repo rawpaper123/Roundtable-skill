@@ -177,6 +177,8 @@ scripts/
   install-codex-skill.sh
   check-roundtable.ps1
   check-roundtable.sh
+  check-lingtai-mailbox.ps1
+  check-lingtai-mailbox.sh
 examples/
   sanitized-roundtable-run.md
   generic-product-goal.md

@@ -71,6 +71,20 @@ an `operational_candidate`.
 It does not install Lingtai or create agents automatically. Installation and
 OAuth should stay explicit.
 
+To inspect mailbox delivery without reading message bodies:
+
+PowerShell:
+
+```powershell
+.\scripts\check-lingtai-mailbox.ps1
+```
+
+Bash:
+
+```bash
+./scripts/check-lingtai-mailbox.sh
+```
+
 ## Troubleshooting
 
 ### Human outbox stays queued
