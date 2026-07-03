@@ -64,6 +64,8 @@ Top-level README links should include:
 - [PUBLIC_RELEASE_CHECKLIST.md](PUBLIC_RELEASE_CHECKLIST.md) exists.
 - [POST_LAUNCH_ITERATION.md](POST_LAUNCH_ITERATION.md) exists.
 - Issue templates exist for docs improvements and executor adapters.
+- A pull request template exists and asks for scope, runtime boundary,
+  validation, and rollback.
 - Docs workflow badge points to the active GitHub Actions workflow.
 - Latest Docs workflow run on `main` is successful.
 
