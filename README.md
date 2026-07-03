@@ -2,7 +2,8 @@
 
 [中文](README.zh-CN.md) | English
 
-Bring an expert panel into your coding terminal.
+Bring Lingtai-powered expert review into your coding terminal, with one
+Executor accountable for scope, checks, and rollback.
 
 ![Roundtable Skill terminal preview](assets/roundtable-terminal-demo.svg)
 
@@ -14,10 +15,10 @@ Bring an expert panel into your coding terminal.
 [Executor setup](docs/EXECUTOR_SETUP.md) · [Roadmap](docs/ROADMAP.md) ·
 [Release notes](CHANGELOG.md) · [Contributing](CONTRIBUTING.md)
 
-Roundtable Skill is an executor-neutral workflow for turning one coding agent
-into a disciplined **planner + reviewer + executor loop**. It helps your current
-coding terminal ask the right experts, reject vague advice, implement the
-smallest safe change, and ship with verification.
+Roundtable Skill is an executor-neutral workflow for shipping agentic coding
+changes with discipline: task-specific Lingtai experts advise, while your
+current coding terminal owns the final plan, implementation, verification, Git,
+deployment, and rollback.
 
 The current coding terminal is the **Executor**. It can be Codex, Claude Code,
 Kimi Work, Cursor, Windsurf, or another agentic terminal. The Executor owns the

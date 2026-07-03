@@ -2,7 +2,8 @@
 
 中文 | [English](README.md)
 
-把专家组带进你的 coding terminal。
+把 Lingtai 驱动的专家复核带进你的 coding terminal，同时让一个 Executor
+明确负责 scope、验证和 rollback。
 
 ![Roundtable Skill terminal preview](assets/roundtable-terminal-demo.svg)
 
@@ -14,10 +15,9 @@
 [Executor setup](docs/EXECUTOR_SETUP.md) · [Roadmap](docs/ROADMAP.md) ·
 [Release notes](CHANGELOG.md) · [Contributing](CONTRIBUTING.md)
 
-Roundtable Skill 是一个 executor-neutral 的工程协作工作流。它把你正在使用的
-coding terminal 变成一个有纪律的 **planner + reviewer + executor loop**：
-先让专家组从不同角度指出问题，再由当前 coding terminal 汇总、取舍、实现、
-验证和准备回滚。
+Roundtable Skill 是一个 executor-neutral 的工程协作工作流，用来更稳地交付
+agentic coding 改动：Lingtai 专家组按任务给出复核意见，而你正在使用的
+coding terminal 负责最终计划、实现、验证、Git、部署和 rollback。
 
 当前正在被用户使用的 coding terminal 是 **Executor**。它可以是 Codex、
 Claude Code、Kimi Work、Cursor、Windsurf，或者其他 agentic coding
