@@ -4,6 +4,8 @@ This is the job Roundtable should be known for:
 
 > Stop a risky merge without turning the task into a giant redesign.
 
+For a shorter copy/paste demo, see [DEMO_SCRIPT.md](DEMO_SCRIPT.md).
+
 ## Situation
 
 A PR touches auth behavior before launch. A normal single-agent review may say

@@ -17,7 +17,7 @@ Executor accountable for scope, checks, and rollback.
 **New here? Start with [QUICKSTART.md](QUICKSTART.md).**
 
 [Install](#install-as-a-codex-skill) · [Quickstart](QUICKSTART.md) ·
-[Demo](examples/sanitized-roundtable-run.md) ·
+[Demo script](docs/DEMO_SCRIPT.md) · [Demo](examples/sanitized-roundtable-run.md) ·
 [Why Roundtable?](docs/WHY_ROUNDTABLE.md) · [Comparison](docs/COMPARISON.md) ·
 [Showcase](docs/SHOWCASE.md) · [Adoption](docs/ADOPTION.md) ·
 [Use cases](docs/USE_CASES.md) · [Executor setup](docs/EXECUTOR_SETUP.md) ·
@@ -201,6 +201,7 @@ or:
 ```text
 docs/
   SHOWCASE.md
+  DEMO_SCRIPT.md
   COMPARISON.md
   ADOPTION.md
   USE_CASES.md

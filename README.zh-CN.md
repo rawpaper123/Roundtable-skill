@@ -17,7 +17,7 @@ Executor 对 scope、验证、Git、发布和 rollback 负责。
 **第一次使用？从 [QUICKSTART.md](QUICKSTART.md) 开始。**
 
 [Install](#作为-codex-skill-安装) · [Quickstart](QUICKSTART.md) ·
-[Demo](examples/sanitized-roundtable-run.md) ·
+[Demo script](docs/DEMO_SCRIPT.md) · [Demo](examples/sanitized-roundtable-run.md) ·
 [Why Roundtable?](docs/WHY_ROUNDTABLE.md) · [Comparison](docs/COMPARISON.md) ·
 [Showcase](docs/SHOWCASE.md) · [Adoption](docs/ADOPTION.md) ·
 [Use cases](docs/USE_CASES.md) · [Executor setup](docs/EXECUTOR_SETUP.md) ·
@@ -174,6 +174,7 @@ Roundtable Skill 需要 Lingtai 才能真正运行专家组。本 repo 不内置
 ```text
 docs/
   SHOWCASE.md
+  DEMO_SCRIPT.md
   COMPARISON.md
   ADOPTION.md
   USE_CASES.md
