@@ -1,0 +1,68 @@
+name: Docs
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate docs
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+          import sys
+
+          required = [
+              "README.md",
+              "README.zh-CN.md",
+              "QUICKSTART.md",
+              "LICENSE",
+              "skills/codex/roundtable-skill/SKILL.md",
+              "docs/LINGTAI_SETUP.md",
+              "docs/ROUNDTABLE_PROTOCOL.md",
+          ]
+          for rel in required:
+              if not Path(rel).exists():
+                  raise SystemExit(f"missing required file: {rel}")
+
+          for path in Path(".").rglob("*"):
+              if ".git" in path.parts or not path.is_file():
+                  continue
+              if path.parts[0] in {".lingtai", ".recipe"}:
+                  raise SystemExit(f"runtime path committed: {path}")
+              if path.name in {".env", "codex-auth.json"}:
+                  raise SystemExit(f"secret-like file committed: {path}")
+              if path.suffix.lower() in {".pem", ".key", ".log"}:
+                  raise SystemExit(f"secret/runtime-like file committed: {path}")
+
+          link_re = re.compile(r"!?\[[^\]]*\]\(([^)]+)\)")
+          for path in list(Path("docs").rglob("*.md")) + list(Path("examples").rglob("*.md")) + [Path("README.md"), Path("README.zh-CN.md"), Path("QUICKSTART.md")]:
+              text = path.read_text(encoding="utf-8")
+              if any(marker in text for marker in ("<<<<<<<", "=======", ">>>>>>>")):
+                  raise SystemExit(f"merge marker found: {path}")
+              if "\ufffd" in text:
+                  raise SystemExit(f"replacement character found: {path}")
+              for match in link_re.finditer(text):
+                  target = match.group(1).split()[0]
+                  if target.startswith(("http://", "https://", "mailto:", "#")):
+                      continue
+                  target = target.split("#", 1)[0]
+                  if not target:
+                      continue
+                  if not (path.parent / target).resolve().exists():
+                      raise SystemExit(f"broken link in {path}: {target}")
+
+          print("docs validation passed")
+          PY
+
+      - name: Roundtable readiness script
+        run: bash scripts/check-roundtable.sh
