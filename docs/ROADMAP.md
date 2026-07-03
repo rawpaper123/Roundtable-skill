@@ -10,10 +10,10 @@ Roundtable Skill should stay easy to try and hard to misuse.
 - PowerShell and bash Codex installers
 - Quickstart, examples, security notes, issue templates
 - Lingtai runtime boundary: required, not bundled
+- setup notes for more Executors: Claude Code, Cursor, Windsurf, Kimi Work
 
 ## Near
 
-- setup notes for more Executors: Claude Code, Cursor, Windsurf, Kimi Work
 - short terminal demo showing goal -> experts -> Executor synthesis -> rollback
 - more sanitized example goals for release gates, production debugging, and docs review
 - stronger readiness diagnostics for Lingtai CLI, `.lingtai/`, and agent manifests

@@ -11,8 +11,8 @@ Bring an expert panel into your coding terminal.
 [Install](#install-as-a-codex-skill) · [Quickstart](QUICKSTART.md) ·
 [Demo](examples/sanitized-roundtable-run.md) ·
 [Why Roundtable?](docs/WHY_ROUNDTABLE.md) ·
-[Roadmap](docs/ROADMAP.md) · [Release notes](CHANGELOG.md) ·
-[Contributing](CONTRIBUTING.md)
+[Executor setup](docs/EXECUTOR_SETUP.md) · [Roadmap](docs/ROADMAP.md) ·
+[Release notes](CHANGELOG.md) · [Contributing](CONTRIBUTING.md)
 
 Roundtable Skill is an executor-neutral workflow for turning one coding agent
 into a disciplined **planner + reviewer + executor loop**. It helps your current
@@ -162,6 +162,7 @@ or:
 
 ```text
 docs/
+  EXECUTOR_SETUP.md
   EXECUTOR_CONTRACT.md
   LINGTAI_SETUP.md
   ROUNDTABLE_PROTOCOL.md

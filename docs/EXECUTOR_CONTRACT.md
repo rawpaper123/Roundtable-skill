@@ -2,6 +2,9 @@
 
 The Executor is the coding terminal currently being used by the human.
 
+For setup details across Codex, Claude Code, Cursor, Windsurf, Kimi Work, and
+other terminals, see [EXECUTOR_SETUP.md](EXECUTOR_SETUP.md).
+
 Examples:
 
 - Codex

@@ -11,8 +11,8 @@
 [Install](#作为-codex-skill-安装) · [Quickstart](QUICKSTART.md) ·
 [Demo](examples/sanitized-roundtable-run.md) ·
 [Why Roundtable?](docs/WHY_ROUNDTABLE.md) ·
-[Roadmap](docs/ROADMAP.md) · [Release notes](CHANGELOG.md) ·
-[Contributing](CONTRIBUTING.md)
+[Executor setup](docs/EXECUTOR_SETUP.md) · [Roadmap](docs/ROADMAP.md) ·
+[Release notes](CHANGELOG.md) · [Contributing](CONTRIBUTING.md)
 
 Roundtable Skill 是一个 executor-neutral 的工程协作工作流。它把你正在使用的
 coding terminal 变成一个有纪律的 **planner + reviewer + executor loop**：
@@ -155,6 +155,7 @@ Roundtable Skill 需要 Lingtai 才能真正运行专家组。本 repo 不内置
 
 ```text
 docs/
+  EXECUTOR_SETUP.md
   EXECUTOR_CONTRACT.md
   LINGTAI_SETUP.md
   ROUNDTABLE_PROTOCOL.md
