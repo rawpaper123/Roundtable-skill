@@ -10,7 +10,8 @@ function Test-Command($Name) {
 
 $repo = Get-Location
 $hasGit = Test-Command "git"
-$hasLingtai = Test-Command "lingtai"
+$lingtaiCommand = if (Test-Command "lingtai") { "lingtai" } elseif (Test-Command "lingtai-tui") { "lingtai-tui" } else { "" }
+$hasLingtai = [bool]$lingtaiCommand
 $hasDotLingtai = Test-Path ".lingtai"
 $skillPath = Join-Path $repo "skills/codex/roundtable-skill/SKILL.md"
 $hasSkill = Test-Path $skillPath
@@ -27,6 +28,7 @@ Write-Host "Roundtable readiness"
 Write-Host "repo: $repo"
 Write-Host "git: $hasGit"
 Write-Host "lingtai_cli: $hasLingtai"
+Write-Host "lingtai_command: $lingtaiCommand"
 Write-Host "dot_lingtai: $hasDotLingtai"
 Write-Host "agent_manifests: $($agents.Count)"
 Write-Host "codex_skill_present: $hasSkill"

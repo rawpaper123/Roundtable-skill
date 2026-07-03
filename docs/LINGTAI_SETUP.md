@@ -63,9 +63,33 @@ Bash:
 ./scripts/check-roundtable.sh
 ```
 
-The check script reports whether Lingtai appears installed, whether the current
-directory has `.lingtai/`, how many agent manifests are present, and whether the
-current checkout is only `docs_only` or an `operational_candidate`.
+The check script reports whether a Lingtai CLI appears installed (`lingtai` or
+`lingtai-tui`), whether the current directory has `.lingtai/`, how many agent
+manifests are present, and whether the current checkout is only `docs_only` or
+an `operational_candidate`.
 
 It does not install Lingtai or create agents automatically. Installation and
 OAuth should stay explicit.
+
+## Troubleshooting
+
+### Human outbox stays queued
+
+If a request stays in `.lingtai/human/mailbox/outbox/<uuid>/`, the orchestrator
+has not claimed it yet.
+
+Check the project from its root:
+
+```bash
+lingtai-tui list .
+```
+
+Then check:
+
+- the orchestrator process exists,
+- its heartbeat is fresh,
+- it is not stuck asleep or suspended,
+- the message is addressed to the orchestrator, not a random worker.
+
+Use a bounded repair only: wake or restart the orchestrator once, then record
+the non-response and continue. Do not wait forever.

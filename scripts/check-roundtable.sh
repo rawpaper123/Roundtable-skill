@@ -10,6 +10,18 @@ has_cmd() {
   command -v "$1" >/dev/null 2>&1
 }
 
+find_lingtai_command() {
+  if has_cmd lingtai; then
+    command -v lingtai
+  elif has_cmd lingtai-tui; then
+    command -v lingtai-tui
+  elif [[ -x "/home/linuxbrew/.linuxbrew/bin/lingtai" ]]; then
+    echo "/home/linuxbrew/.linuxbrew/bin/lingtai"
+  elif [[ -x "/home/linuxbrew/.linuxbrew/bin/lingtai-tui" ]]; then
+    echo "/home/linuxbrew/.linuxbrew/bin/lingtai-tui"
+  fi
+}
+
 repo="$(pwd)"
 has_git=false
 has_lingtai=false
@@ -17,7 +29,8 @@ has_dot_lingtai=false
 has_skill=false
 
 has_cmd git && has_git=true
-has_cmd lingtai && has_lingtai=true
+lingtai_command="$(find_lingtai_command)"
+[[ -n "$lingtai_command" ]] && has_lingtai=true
 [[ -d ".lingtai" ]] && has_dot_lingtai=true
 [[ -f "skills/codex/roundtable-skill/SKILL.md" ]] && has_skill=true
 
@@ -35,6 +48,7 @@ echo "Roundtable readiness"
 echo "repo: $repo"
 echo "git: $has_git"
 echo "lingtai_cli: $has_lingtai"
+echo "lingtai_command: $lingtai_command"
 echo "dot_lingtai: $has_dot_lingtai"
 echo "agent_manifests: $agent_count"
 echo "codex_skill_present: $has_skill"
