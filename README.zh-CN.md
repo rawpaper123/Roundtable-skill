@@ -12,9 +12,9 @@
 [Install](#作为-codex-skill-安装) · [Quickstart](QUICKSTART.md) ·
 [Demo](examples/sanitized-roundtable-run.md) ·
 [Why Roundtable?](docs/WHY_ROUNDTABLE.md) ·
-[Adoption](docs/ADOPTION.md) · [Use cases](docs/USE_CASES.md) ·
-[Executor setup](docs/EXECUTOR_SETUP.md) · [Roadmap](docs/ROADMAP.md) ·
-[FAQ](docs/FAQ.md) · [Release notes](CHANGELOG.md) ·
+[Showcase](docs/SHOWCASE.md) · [Adoption](docs/ADOPTION.md) ·
+[Use cases](docs/USE_CASES.md) · [Executor setup](docs/EXECUTOR_SETUP.md) ·
+[Roadmap](docs/ROADMAP.md) · [FAQ](docs/FAQ.md) · [Release notes](CHANGELOG.md) ·
 [Contributing](CONTRIBUTING.md)
 
 Roundtable Skill 是一个 executor-neutral 的工程协作工作流，用来更稳地交付
@@ -181,6 +181,7 @@ Roundtable Skill 需要 Lingtai 才能真正运行专家组。本 repo 不内置
 
 ```text
 docs/
+  SHOWCASE.md
   ADOPTION.md
   USE_CASES.md
   FAQ.md

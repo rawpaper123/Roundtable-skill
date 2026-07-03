@@ -12,9 +12,9 @@ Executor accountable for scope, checks, and rollback.
 [Install](#install-as-a-codex-skill) · [Quickstart](QUICKSTART.md) ·
 [Demo](examples/sanitized-roundtable-run.md) ·
 [Why Roundtable?](docs/WHY_ROUNDTABLE.md) ·
-[Adoption](docs/ADOPTION.md) · [Use cases](docs/USE_CASES.md) ·
-[Executor setup](docs/EXECUTOR_SETUP.md) · [Roadmap](docs/ROADMAP.md) ·
-[FAQ](docs/FAQ.md) · [Release notes](CHANGELOG.md) ·
+[Showcase](docs/SHOWCASE.md) · [Adoption](docs/ADOPTION.md) ·
+[Use cases](docs/USE_CASES.md) · [Executor setup](docs/EXECUTOR_SETUP.md) ·
+[Roadmap](docs/ROADMAP.md) · [FAQ](docs/FAQ.md) · [Release notes](CHANGELOG.md) ·
 [Contributing](CONTRIBUTING.md)
 
 Roundtable Skill is an executor-neutral workflow for shipping agentic coding
@@ -188,6 +188,7 @@ or:
 
 ```text
 docs/
+  SHOWCASE.md
   ADOPTION.md
   USE_CASES.md
   FAQ.md
