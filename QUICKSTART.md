@@ -42,6 +42,10 @@ cd /path/to/your-project
 Expected: `lingtai_cli: true`, `dot_lingtai: true`, and `agent_manifests: 1`
 or more.
 
+If you only have one agent, start there. See
+[docs/AGENT_ROSTER_GUIDE.md](docs/AGENT_ROSTER_GUIDE.md) for how to grow from
+one agent to a three-agent review panel.
+
 ## 3. Ask Codex
 
 ```text

@@ -14,7 +14,8 @@ Executor accountable for scope, checks, and rollback.
 [Why Roundtable?](docs/WHY_ROUNDTABLE.md) ·
 [Showcase](docs/SHOWCASE.md) · [Adoption](docs/ADOPTION.md) ·
 [Use cases](docs/USE_CASES.md) · [Executor setup](docs/EXECUTOR_SETUP.md) ·
-[Roadmap](docs/ROADMAP.md) · [FAQ](docs/FAQ.md) · [Release notes](CHANGELOG.md) ·
+[Agent roster](docs/AGENT_ROSTER_GUIDE.md) · [Roadmap](docs/ROADMAP.md) ·
+[FAQ](docs/FAQ.md) · [Release notes](CHANGELOG.md) ·
 [Contributing](CONTRIBUTING.md)
 
 Roundtable Skill is an executor-neutral workflow for shipping agentic coding
@@ -191,6 +192,7 @@ docs/
   SHOWCASE.md
   ADOPTION.md
   USE_CASES.md
+  AGENT_ROSTER_GUIDE.md
   FAQ.md
   EXECUTOR_SETUP.md
   EXECUTOR_CONTRACT.md
