@@ -87,6 +87,8 @@ Bash:
 
 ## Troubleshooting
 
+For the full checklist, use [TROUBLESHOOTING.md](TROUBLESHOOTING.md).
+
 ### Human outbox stays queued
 
 If a request stays in `.lingtai/human/mailbox/outbox/<uuid>/`, the orchestrator

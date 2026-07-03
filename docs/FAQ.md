@@ -32,6 +32,8 @@ providers, and private runtime state.
 
 Start with [LINGTAI_SETUP.md](LINGTAI_SETUP.md).
 
+If setup fails, use [TROUBLESHOOTING.md](TROUBLESHOOTING.md).
+
 ## What exactly gets installed by the Codex installer?
 
 Only the Codex skill files:

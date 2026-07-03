@@ -32,6 +32,7 @@ jobs:
               "skills/codex/roundtable-skill/SKILL.md",
               "docs/LINGTAI_SETUP.md",
               "docs/ROUNDTABLE_PROTOCOL.md",
+              "docs/TROUBLESHOOTING.md",
               "docs/MAINTAINER_RELEASE.md",
               "docs/PUBLIC_RELEASE_CHECKLIST.md",
           ]

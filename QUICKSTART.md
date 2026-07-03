@@ -63,6 +63,9 @@ If an expert has no actionable concern, they must reply no opinion.
 You should see Lingtai expert replies, Executor synthesis, validation, and
 rollback.
 
+If setup does not match the expected shape, use
+[docs/TROUBLESHOOTING.md](docs/TROUBLESHOOTING.md).
+
 ## 4. Expected Shape
 
 The first successful run should include:
