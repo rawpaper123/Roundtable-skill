@@ -15,7 +15,7 @@ Executor 对 scope、验证、Git、发布和 rollback 负责。
 **10 秒看懂：** 当一个高风险改动需要独立专家意见、scope 控制、真实验证和可回滚报告时，
 用 Roundtable；但 repo 所有权仍然留在当前 coding terminal 手里。
 
-![Roundtable Skill terminal preview](assets/roundtable-terminal-demo.svg)
+![Roundtable Skill terminal demo cast](assets/roundtable-demo-cast.svg)
 
 **第一次使用？从 [QUICKSTART.md](QUICKSTART.md) 开始。**
 

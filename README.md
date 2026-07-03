@@ -16,7 +16,7 @@ Executor accountable for scope, checks, and rollback.
 advice, strict scope control, real checks, and a rollback-ready report, without
 handing repo ownership to autonomous agents.
 
-![Roundtable Skill terminal preview](assets/roundtable-terminal-demo.svg)
+![Roundtable Skill terminal demo cast](assets/roundtable-demo-cast.svg)
 
 **New here? Start with [QUICKSTART.md](QUICKSTART.md).**
 
