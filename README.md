@@ -22,7 +22,7 @@ Executor accountable for scope, checks, and rollback.
 [Showcase](docs/SHOWCASE.md) · [Adoption](docs/ADOPTION.md) ·
 [Use cases](docs/USE_CASES.md) · [Executor setup](docs/EXECUTOR_SETUP.md) ·
 [Agent roster](docs/AGENT_ROSTER_GUIDE.md) · [Roadmap](docs/ROADMAP.md) ·
-[FAQ](docs/FAQ.md) · [Release notes](CHANGELOG.md) ·
+[FAQ](docs/FAQ.md) · [Security](SECURITY.md) · [Release notes](CHANGELOG.md) ·
 [Contributing](CONTRIBUTING.md)
 
 Roundtable Skill is an executor-neutral workflow for shipping agentic coding

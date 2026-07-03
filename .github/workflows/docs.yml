@@ -26,6 +26,7 @@ jobs:
               "README.zh-CN.md",
               "QUICKSTART.md",
               "LICENSE",
+              "SECURITY.md",
               "skills/codex/roundtable-skill/SKILL.md",
               "docs/LINGTAI_SETUP.md",
               "docs/ROUNDTABLE_PROTOCOL.md",

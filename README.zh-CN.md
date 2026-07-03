@@ -22,7 +22,7 @@ Executor 对 scope、验证、Git、发布和 rollback 负责。
 [Showcase](docs/SHOWCASE.md) · [Adoption](docs/ADOPTION.md) ·
 [Use cases](docs/USE_CASES.md) · [Executor setup](docs/EXECUTOR_SETUP.md) ·
 [Agent roster](docs/AGENT_ROSTER_GUIDE.md) · [Roadmap](docs/ROADMAP.md) ·
-[FAQ](docs/FAQ.md) · [Release notes](CHANGELOG.md) ·
+[FAQ](docs/FAQ.md) · [Security](SECURITY.md) · [Release notes](CHANGELOG.md) ·
 [Contributing](CONTRIBUTING.md)
 
 Roundtable Skill 是一个 executor-neutral 的工程协作工作流。你的当前
