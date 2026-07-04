@@ -1,5 +1,19 @@
 # Changelog
 
+## v0.1.6
+
+Public community readiness polish.
+
+- Linked executor-neutral terminal examples from the main onboarding paths.
+- Grouped README and Chinese README first-screen links by user intent so new
+  users have a clearer path from quickstart to safe operation.
+- Added a Code of Conduct and included it in docs validation.
+- Enabled GitHub Discussions for community questions and setup help.
+
+Roundtable Skill still requires Lingtai as the agent runtime. This repository
+does not bundle Lingtai or claim real multi-agent execution without Lingtai
+configured.
+
 ## v0.1.5
 
 Install matrix polish.
