@@ -1,5 +1,19 @@
 # Changelog
 
+## v0.1.10
+
+Installer smoke release-process polish.
+
+- Added temporary `CODEX_HOME` Codex installer smoke checks to the maintainer
+  release runbook.
+- Added installer smoke coverage to the GitHub launch checklist.
+- Verified both PowerShell and bash install paths without touching the real
+  local Codex setup.
+
+Roundtable Skill still requires Lingtai as the agent runtime. This repository
+does not bundle Lingtai or claim real multi-agent execution without Lingtai
+configured.
+
 ## v0.1.9
 
 First-run fit-check polish.
