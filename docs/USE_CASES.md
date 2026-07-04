@@ -1,121 +1,185 @@
 # Use Cases
 
-Roundtable is for tasks where expert review is cheaper than a bad merge.
+Roundtable is for work where one point of view is too cheap.
 
 It still requires Lingtai. Without Lingtai configured, these prompts are
 templates only.
 
-## 1. Release Gate
+## 1. Development: Release Gate
 
 ```text
-Open Roundtable Skill for this release gate.
+Open Roundtable for this release gate.
 
-Goal: decide whether this PR is safe to merge.
-Expert angles:
-- release reliability
-- security/privacy
-- adversarial scope review
+Goal:
+decide whether this auth PR is safe to merge.
 
-Only report merge blockers, verification gaps, and rollback risks.
-If an expert has no concern, reply no opinion.
+Expert roles:
+- release reliability reviewer: what breaks after deploy
+- security/privacy reviewer: what leaks or violates trust
+- adversarial scope reviewer: what should be rejected as out of scope
+
+Required output:
+- merge blockers
+- verification gaps
+- rollback risk
+- no unrelated redesign ideas
 ```
 
-## 2. Production Bug
+## 2. Development: Production Bug
 
 ```text
-Open Roundtable Skill for this production bug.
+Open Roundtable for this production bug.
 
-Goal: identify the smallest root-cause fix and avoid fake recovery.
-Expert angles:
-- runtime reliability
-- data integrity
-- user trust
+Goal:
+identify the smallest root-cause fix and avoid fake recovery.
 
-Required output: root cause, smallest fix, validation, rollback.
+Expert roles:
+- runtime reliability reviewer: what is actually failing in production
+- data integrity reviewer: what state may be stale, missing, or corrupted
+- user trust reviewer: what fake recovery or vague errors would damage trust
+
+Required output:
+- likely root cause
+- smallest fix
+- validation command
+- rollback path
 ```
 
-## 3. Database Migration
+## 3. Research: Multi-Perspective Brief
 
 ```text
-Open Roundtable Skill for this database migration.
+Open Roundtable for this research question.
 
-Goal: review migration safety before applying it.
-Expert angles:
-- schema/data integrity
-- deployment/rollback
-- application compatibility
+Goal:
+avoid a single-perspective summary.
 
-Reject unrelated product changes. Do not print secrets or DB URLs.
+Expert roles:
+- practitioner: what field experience sees that papers often miss
+- scholar: what peer-reviewed evidence really says
+- skeptic: the strongest counterargument
+- economist: who benefits from the current narrative
+- historian: which past patterns look similar
+
+Step 1:
+Each role gives:
+- two-sentence position
+- strongest evidence
+- the one thing only this role would notice
+
+Step 2:
+Build a contradiction map:
+- direct conflicts
+- strongest and weakest evidence
+- one question that would resolve the biggest conflict
+- claims all roles agree on
+- topics no role mentioned
+
+Step 3:
+Produce:
+- one CEO-level summary paragraph
+- five ranked findings
+- one hidden connection across roles
+- one action recommendation
+- one frontier question
+
+Step 4:
+Ask the roles to peer-review the brief:
+- confidence score for each finding
+- weakest claim
+- overrepresented perspective
+- missing sixth perspective
+- what a strict reviewer would ask to change
 ```
 
-## 4. Auth Or Permission Change
+## 4. Daily Decision
 
 ```text
-Open Roundtable Skill for this auth change.
+Open Roundtable for this personal decision.
 
-Goal: prevent access-control regressions.
-Expert angles:
-- security/privacy
-- negative testing
-- release reliability
+Goal:
+choose the option I can actually live with next month.
 
-Require at least one negative smoke check before merge.
+Expert roles:
+- practical friend: what I can actually live with
+- budget/time reviewer: what this costs in money, attention, and schedule
+- risk reviewer: what is reversible and what is not
+- contrarian: what assumption sounds true but may be false
+
+Required output:
+- best option
+- option that sounds good but will likely fail
+- hidden cost
+- one thing to decide today
+- one thing to postpone
 ```
 
-## 5. Architecture Slice
+## 5. Business Plan
 
 ```text
-Open Roundtable Skill for this architecture slice.
+Open Roundtable for this business plan.
 
-Goal: choose the smallest durable design that satisfies the current product need.
-Expert angles:
-- backend/API contract
-- operations/observability
-- scope control
+Goal:
+find the assumptions that would break this plan before I spend money on it.
 
-Separate must-have now from follow-up ideas.
+Expert roles:
+- customer reality: why a buyer would care or ignore it
+- operator: what will be painful to run every week
+- finance reviewer: unit economics, cash timing, hidden cost
+- go-to-market reviewer: channel and conversion bottleneck
+- legal/risk reviewer: claims, compliance, reputation
+
+Required output:
+- strongest reason this can work
+- strongest reason it can fail
+- missing data
+- cheapest validation step
+- decision: proceed, revise, or stop
 ```
 
-## 6. Public Launch Readiness
+## 6. Product Strategy
 
 ```text
-Open Roundtable Skill for this launch readiness check.
+Open Roundtable for this product decision.
 
-Goal: decide what blocks public launch.
-Expert angles:
-- product trust
-- security/privacy
-- support/runbook clarity
+Goal:
+decide whether this feature should be built now.
 
-Output only launch blockers, not general polish.
+Expert roles:
+- target user advocate: whether this solves a real user problem
+- product strategy reviewer: whether it fits the current direction
+- engineering cost reviewer: what it costs to build and maintain
+- trust/safety reviewer: how it can harm user trust
+- launch sequencing reviewer: what should happen before or after it
+
+Required output:
+- user value
+- risk to trust
+- implementation cost
+- launch blocker
+- smallest useful version
 ```
 
-## 7. AI Or Agent Behavior Change
+## 7. Writing Or Public Narrative
 
 ```text
-Open Roundtable Skill for this AI behavior change.
+Open Roundtable for this public announcement.
 
-Goal: keep user-visible behavior real, testable, and rollback-ready.
-Expert angles:
-- eval coverage
-- user trust
-- adversarial failure modes
+Goal:
+make the message clear, credible, and not overclaimed.
 
-No fake-success paths. Record uncertain behavior as risk.
-```
+Expert roles:
+- target reader: whether the message lands
+- technical accuracy reviewer: what is overstated or unsupported
+- skepticism reviewer: what sounds inflated
+- distribution/channel reviewer: what fits this platform
+- editor: what to cut
 
-## 8. Docs Or API Contract Review
-
-```text
-Open Roundtable Skill for this docs/API review.
-
-Goal: make the documented behavior match the actual implementation.
-Expert angles:
-- API contract accuracy
-- developer onboarding
-- scope control
-
-Do not request code changes unless the docs reveal a real blocker.
+Required output:
+- what is clear
+- what sounds inflated
+- what proof is missing
+- what to cut
+- final suggested copy
 ```
 
 ## Bad Fits
@@ -125,4 +189,5 @@ Do not open Roundtable for:
 - typo fixes
 - one-line copy edits
 - mechanical formatting
-- changes with one obvious check and no real rollback risk
+- tasks with one obvious check and no real rollback or decision risk
+- tasks where Lingtai is not configured but you need real expert replies

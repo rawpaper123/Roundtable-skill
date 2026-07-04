@@ -1,7 +1,7 @@
 # Quickstart
 
-Goal: choose your Executor path, verify Lingtai, and run your first Roundtable
-in about 5 minutes.
+Goal: fetch Roundtable, choose your Executor path, verify Lingtai, and run your
+first Roundtable in about 5 minutes.
 
 ## 0. 60-Second Fit Check
 
@@ -10,42 +10,48 @@ Before installing or running anything, answer:
 1. Is this task risky enough that independent expert advice would help?
 2. Is Lingtai configured, or are you ready to configure it before claiming a
    real expert-panel run?
-3. Is one coding terminal ready to own scope, checks, Git, and rollback?
+3. Is one Executor ready to own the final decision, validation, and rollback?
 
 If any answer is "no", do not force Roundtable. Use the docs as a reference,
 or come back when the task has enough release, security, data, architecture, or
 user-trust risk to justify the loop.
 
-## 1. Choose Your Executor Path
+## 1. Install Or Fetch The Roundtable Pack
 
-If your Executor is Codex, install the Codex skill.
+Run the universal setup command first. It installs the native Codex skill when
+Codex is available. For Claude Code, Cursor, Windsurf, Kimi Work, and other
+coding agents, it prints the executor-neutral prompt and readiness path.
 
 PowerShell:
 
 ```powershell
-$rt = Join-Path $env:TEMP "Roundtable-skill"; Remove-Item -Recurse -Force $rt -ErrorAction SilentlyContinue; git clone --depth 1 https://github.com/rawpaper123/Roundtable-skill.git $rt; & "$rt\scripts\install-codex-skill.ps1"
+$rt = Join-Path $env:TEMP "Roundtable-skill"; Remove-Item -Recurse -Force $rt -ErrorAction SilentlyContinue; git clone --depth 1 https://github.com/rawpaper123/Roundtable-skill.git $rt; & "$rt\scripts\install-roundtable.ps1"
 ```
 
 Bash:
 
 ```bash
-tmp="$(mktemp -d)" && git clone --depth 1 https://github.com/rawpaper123/Roundtable-skill.git "$tmp/Roundtable-skill" && "$tmp/Roundtable-skill/scripts/install-codex-skill.sh"
+tmp="$(mktemp -d)" && git clone --depth 1 https://github.com/rawpaper123/Roundtable-skill.git "$tmp/Roundtable-skill" && "$tmp/Roundtable-skill/scripts/install-roundtable.sh"
 ```
-
-This only installs the Codex skill files. Lingtai is still required.
 
 If you already cloned this repository, run the local installer instead:
 
 ```powershell
-.\scripts\install-codex-skill.ps1
+.\scripts\install-roundtable.ps1
 ```
 
 ```bash
-./scripts/install-codex-skill.sh
+./scripts/install-roundtable.sh
 ```
 
-If your Executor is Claude Code, Cursor, Windsurf, Kimi Work, or another coding
-terminal, skip the Codex installer and use:
+There is no universal native skill format across all coding agents yet.
+Roundtable therefore provides:
+
+- a native Codex skill installer,
+- an executor-neutral protocol prompt for other agents,
+- Lingtai readiness checks shared by every Executor.
+
+For Executor-specific notes, use:
 
 - [docs/INSTALL_MATRIX.md](docs/INSTALL_MATRIX.md)
 - [docs/EXECUTOR_SETUP.md](docs/EXECUTOR_SETUP.md)
@@ -93,9 +99,9 @@ Executor is the coding terminal I am using now.
 Lingtai agents advise; the Executor owns implementation, verification, Git, and rollback.
 
 Assign expert angles:
-- product trust
-- security/privacy
-- adversarial scope review
+- user/trust voice: what would feel wrong to the user
+- evidence voice: what checks or facts prove this is safe
+- adversarial scope voice: what should be rejected as unnecessary
 
 If an expert has no actionable concern, they must reply no opinion.
 ```
@@ -126,6 +132,3 @@ The first successful run should include:
 - accepted and rejected advice,
 - validation,
 - rollback.
-
-中文：这个流程只安装 Codex skill。Roundtable 真正运行仍然需要 Lingtai、`.lingtai/`
-和至少一个 agent。

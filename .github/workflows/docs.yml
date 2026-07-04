@@ -83,3 +83,9 @@ jobs:
 
       - name: Roundtable readiness script
         run: bash scripts/check-roundtable.sh
+
+      - name: Universal installer smoke
+        run: |
+          tmp="$(mktemp -d)"
+          CODEX_HOME="$tmp/codex-home" bash scripts/install-roundtable.sh codex
+          test -f "$tmp/codex-home/skills/roundtable-skill/SKILL.md"

@@ -9,17 +9,18 @@ Product Hunt, X, LinkedIn, or developer communities.
 - Description is short and searchable:
 
 ```text
-Lingtai-powered multi-agent expert review loop for coding terminals: scoped plans, bounded waits, checks, rollback
+Lingtai-powered roundtable workflow for multi-perspective AI review: temporary experts, disagreement maps, accountable execution
 ```
 
 - Topics include:
   - `agent-orchestration`
   - `ai-agents`
-  - `coding-agents`
+  - `multi-agent-system`
+  - `decision-making`
+  - `research`
   - `developer-tools`
   - `workflow-automation`
   - `multi-agent`
-  - `ai-coding`
   - `prompt-engineering`
   - `developer-productivity`
   - `agentic-workflows`
@@ -33,8 +34,8 @@ Lingtai-powered multi-agent expert review loop for coding terminals: scoped plan
   skill support.
 - The first paragraph explains:
   - Lingtai provides expert agents,
-  - the coding terminal stays the Executor,
-  - the Executor owns scope, checks, Git, deploy, and rollback.
+  - expert roles are temporary and task-specific,
+  - the Executor owns the final decision, validation, and rollback.
 - The 10-second pitch is visible before the first screenshot.
 - The demo image renders.
 - English and Chinese entry points work.
@@ -83,7 +84,7 @@ crowded row. They should include:
   validation, and rollback.
 - Docs workflow badge points to the active GitHub Actions workflow.
 - Latest Docs workflow run on `main` is successful.
-- Codex installer smoke passes with a temporary `CODEX_HOME`.
+- Universal installer smoke passes with a temporary `CODEX_HOME`.
 
 ## Runtime Boundary
 
@@ -101,6 +102,7 @@ PowerShell:
 git status --short
 git diff --check
 .\scripts\check-roundtable.ps1
+$env:CODEX_HOME = Join-Path $env:TEMP "roundtable-codex-home"; Remove-Item -Recurse -Force $env:CODEX_HOME -ErrorAction SilentlyContinue; .\scripts\install-roundtable.ps1 -Executor codex; Test-Path "$env:CODEX_HOME\skills\roundtable-skill\SKILL.md"
 git ls-files | Select-String -Pattern '(^|/)(\.lingtai|\.recipe)(/|$)|(^|/)(codex-auth\.json|\.env)$|(\.pem|\.key|\.log)$|(^|/)mailbox(/|$)'
 ```
 
@@ -110,6 +112,7 @@ Bash:
 git status --short
 git diff --check
 ./scripts/check-roundtable.sh
+tmp="$(mktemp -d)" && CODEX_HOME="$tmp/codex-home" ./scripts/install-roundtable.sh codex && test -f "$tmp/codex-home/skills/roundtable-skill/SKILL.md"
 git ls-files | grep -E '(^|/)(\.lingtai|\.recipe)(/|$)|(^|/)(codex-auth\.json|\.env)$|(\.pem|\.key|\.log)$|(^|/)mailbox(/|$)' || true
 ```
 
@@ -122,16 +125,16 @@ Use [LAUNCH_COPY.md](LAUNCH_COPY.md) for copy/paste posts.
 Short version:
 
 ```text
-Roundtable Skill adds a Lingtai expert panel around your coding terminal.
-Experts advise; your terminal stays the Executor and owns implementation,
-checks, Git, deploy, and rollback.
+Roundtable Skill turns one-agent work into a Lingtai-powered expert meeting.
+Temporary experts review from different angles; one Executor owns the final
+decision, validation, and rollback.
 ```
 
 Problem line:
 
 ```text
-Most agentic coding failures are coordination failures: scope creep, fake green
-checks, silent agents, missing rollback, and unclear ownership.
+Most AI-assisted work fails when one model plans, reviews, and decides alone:
+blind spots stay hidden, evidence goes unchecked, and nobody owns the final call.
 ```
 
 Call to action:

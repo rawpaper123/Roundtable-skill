@@ -35,15 +35,15 @@ git ls-files | grep -E '(^|/)(\.lingtai|\.recipe)(/|$)|(^|/)(codex-auth\.json|\.
 
 The sensitive-path scan should not show committed runtime or secret files.
 
-Run the Codex installer against a temporary `CODEX_HOME` so the public install
-path is smoke-tested without touching your real Codex setup.
+Run the universal installer against a temporary `CODEX_HOME` so the public
+install path is smoke-tested without touching your real Codex setup.
 
 PowerShell:
 
 ```powershell
 $root = Join-Path $env:TEMP ("roundtable-install-smoke-" + [guid]::NewGuid().ToString("N"))
 $env:CODEX_HOME = Join-Path $root "codex-home"
-.\scripts\install-codex-skill.ps1
+.\scripts\install-roundtable.ps1 -Executor codex
 Test-Path (Join-Path $env:CODEX_HOME "skills\roundtable-skill\SKILL.md")
 Remove-Item Env:\CODEX_HOME
 Remove-Item -Recurse -Force $root
@@ -53,7 +53,7 @@ Bash:
 
 ```bash
 root="$(mktemp -d)"
-CODEX_HOME="$root/codex-home" ./scripts/install-codex-skill.sh
+CODEX_HOME="$root/codex-home" ./scripts/install-roundtable.sh codex
 test -f "$root/codex-home/skills/roundtable-skill/SKILL.md"
 rm -rf "$root"
 ```

@@ -14,25 +14,30 @@ For the shortest setup comparison, see [INSTALL_MATRIX.md](INSTALL_MATRIX.md).
 
 | Executor | Setup path | What is automatic today | What remains manual |
 | --- | --- | --- | --- |
-| Codex | Use `scripts/install-codex-skill.*` | Installs the local Codex skill files | Lingtai installation, agent roster, OAuth/login, and task-specific expert assignment |
-| Claude Code | Use the protocol docs and prompt template | Nothing repo-specific yet | Copy the Roundtable prompt, connect to an existing Lingtai setup, and keep Claude Code as Executor |
-| Cursor | Use the protocol docs and prompt template | Nothing repo-specific yet | Copy the Roundtable prompt, connect to an existing Lingtai setup, and keep Cursor as Executor |
-| Windsurf | Use the protocol docs and prompt template | Nothing repo-specific yet | Copy the Roundtable prompt, connect to an existing Lingtai setup, and keep Windsurf as Executor |
-| Kimi Work | Use the protocol docs and prompt template | Nothing repo-specific yet | Copy the Roundtable prompt, connect to an existing Lingtai setup, and keep Kimi Work as Executor |
+| Codex | Use `scripts/install-roundtable.*` or `scripts/install-codex-skill.*` | Installs the local Codex skill files | Lingtai installation, agent roster, OAuth/login, and task-specific expert assignment |
+| Claude Code | Use `scripts/install-roundtable.*` and the protocol prompt | Repo fetch, prompt path, readiness path | Native Claude adapter, Lingtai setup, prompt paste, and Executor discipline |
+| Cursor | Use `scripts/install-roundtable.*` and the protocol prompt | Repo fetch, prompt path, readiness path | Native Cursor adapter, Lingtai setup, prompt paste, and Executor discipline |
+| Windsurf | Use `scripts/install-roundtable.*` and the protocol prompt | Repo fetch, prompt path, readiness path | Native Windsurf adapter, Lingtai setup, prompt paste, and Executor discipline |
+| Kimi Work | Use `scripts/install-roundtable.*` and the protocol prompt | Repo fetch, prompt path, readiness path | Native Kimi Work adapter, Lingtai setup, prompt paste, and Executor discipline |
 
-## Codex Setup
+## Universal Setup
 
-Install the Codex skill from GitHub:
+Fetch Roundtable and run the setup wrapper:
 
 ```powershell
-$rt = Join-Path $env:TEMP "Roundtable-skill"; Remove-Item -Recurse -Force $rt -ErrorAction SilentlyContinue; git clone --depth 1 https://github.com/rawpaper123/Roundtable-skill.git $rt; & "$rt\scripts\install-codex-skill.ps1"
+$rt = Join-Path $env:TEMP "Roundtable-skill"; Remove-Item -Recurse -Force $rt -ErrorAction SilentlyContinue; git clone --depth 1 https://github.com/rawpaper123/Roundtable-skill.git $rt; & "$rt\scripts\install-roundtable.ps1"
 ```
 
 or:
 
 ```bash
-tmp="$(mktemp -d)" && git clone --depth 1 https://github.com/rawpaper123/Roundtable-skill.git "$tmp/Roundtable-skill" && "$tmp/Roundtable-skill/scripts/install-codex-skill.sh"
+tmp="$(mktemp -d)" && git clone --depth 1 https://github.com/rawpaper123/Roundtable-skill.git "$tmp/Roundtable-skill" && "$tmp/Roundtable-skill/scripts/install-roundtable.sh"
 ```
+
+The wrapper installs a native Codex skill when Codex is available. Other
+Executors receive the protocol prompt path and readiness check. This is a
+portable setup path, not a fake claim that all terminals share one native skill
+format.
 
 Then configure Lingtai separately:
 

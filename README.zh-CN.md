@@ -1,4 +1,4 @@
-# Roundtable Skill 🪑
+# Roundtable Skill
 
 中文 | [English](README.md)
 
@@ -9,277 +9,201 @@
 [![Executor neutral](https://img.shields.io/badge/executor-neutral-black.svg)](docs/EXECUTOR_SETUP.md)
 [![Codex skill](https://img.shields.io/badge/Codex-skill-black.svg)](skills/codex/roundtable-skill/SKILL.md)
 
-把 Lingtai 驱动的专家复核带进你的 coding terminal，同时让一个
-Executor 对 scope、验证、Git、发布和 rollback 负责。
+Roundtable Skill 的意思就是“圆桌会议”。
 
-**10 秒看懂：** 当一个高风险改动需要独立专家意见、scope 控制、真实验证和可回滚报告时，
-用 Roundtable；但 repo 所有权仍然留在当前 coding terminal 手里。
+它把一个原本由单个 AI 完成的任务，变成一场有主持人、有专家、有交叉审查的圆桌讨论。执行者先根据任务内容，为不同 Lingtai Agent 临时分配专家身份；专家从各自角度审查计划、证据和执行进展；最后由执行者综合意见、做出取舍，并负责交付结果。
+
+适合那些“一个模型自己想、自己审、自己交付”不够稳的任务：代码合并、研究简报、商业计划、产品决策、日常重大选择，或者任何需要多角度审查的复杂问题。
 
 ![Roundtable Skill terminal demo cast](assets/roundtable-demo-cast.svg)
 
-**第一次使用？先看 [QUICKSTART.md](QUICKSTART.md) 的 60 秒适配判断。**
+**第一次使用？先看 [Quickstart](QUICKSTART.md) 的 60 秒适配判断。**
 
-**先从这里开始：** [Quickstart](QUICKSTART.md) ·
-[Install matrix](docs/INSTALL_MATRIX.md) · [Demo script](docs/DEMO_SCRIPT.md) ·
-[First run checklist](docs/FIRST_RUN_CHECKLIST.md)
+## 它解决什么问题
 
-**理解它：** [Why Roundtable?](docs/WHY_ROUNDTABLE.md) ·
-[Comparison](docs/COMPARISON.md) · [Showcase](docs/SHOWCASE.md) ·
-[Demo](examples/sanitized-roundtable-run.md) · [Use cases](docs/USE_CASES.md) ·
-[Adoption](docs/ADOPTION.md)
+单个 AI 很容易给出听起来顺畅、但视角单一的答案。
 
-**安全运行：** [Install](#作为-codex-skill-安装) ·
-[Executor setup](docs/EXECUTOR_SETUP.md) ·
-[Agent roster](docs/AGENT_ROSTER_GUIDE.md) ·
-[Troubleshooting](docs/TROUBLESHOOTING.md) · [FAQ](docs/FAQ.md) ·
-[Security](SECURITY.md)
+Roundtable 做的事情很简单：把不同视角放到同一张桌上。实践者会指出一线经验里真正麻烦的地方，怀疑者会追问最强反例，安全审查者会盯住权限和泄露风险，财务视角会看激励和成本，历史视角会提醒你这类问题以前怎么失败过。
 
-**发布和维护：** [Launch copy](docs/LAUNCH_COPY.md) ·
-[Launch checklist](docs/GITHUB_LAUNCH_CHECKLIST.md) ·
-[Post-launch](docs/POST_LAUNCH_ITERATION.md) · [Roadmap](docs/ROADMAP.md) ·
-[Release notes](CHANGELOG.md) · [Contributing](CONTRIBUTING.md)
+这些专家身份不是固定人设。每次任务开始时重新分配，任务结束后就收回。下次任务换一组更合适的视角。
 
-**需要帮助？** 可以在
-[Discussions](https://github.com/rawpaper123/Roundtable-skill/discussions/1)
-提问，或打开
-[Setup help issue](https://github.com/rawpaper123/Roundtable-skill/issues/new?template=setup_help.md)。
+## 核心能力
 
-Roundtable Skill 是一个 executor-neutral 的工程协作工作流。你的当前
-coding terminal 是 **Executor**，可以是 Codex、Claude Code、Kimi Work、
-Cursor、Windsurf，或其他 agentic coding terminal。Lingtai agents 只负责
-按任务给出专家意见；Executor 负责最终取舍、实现、验证、PR、部署和回滚。
+- 🪑 **圆桌审查**：让多个 Lingtai Agent 按任务临时扮演不同专家。
+- 🔍 **发现盲区**：让专家审查初始计划、证据和执行过程，而不只是附和。
+- ⚖️ **整理冲突**：把互相矛盾的判断、证据强弱和关键问题摊开。
+- ✅ **保留负责人**：执行者仍然负责最终取舍、验证、提交和回滚。
+- 🧯 **处理沉默 Agent**：不无限等待；记录问题，做一次安全修复，然后继续推进。
 
-Roundtable 建立在 [Lingtai](https://github.com/LingTai-AI/lingtai) agent
-runtime 之上。本 repo 不内置 Lingtai。没有配置 Lingtai 时，这个 repo 只是
-协议、模板和安装辅助，不是可运行的多 agent Roundtable。
+## 技术栈
 
-## 适合谁？
+- Markdown 文档和提示词模板
+- Codex Skill 包：`skills/codex/roundtable-skill`
+- PowerShell / Bash 安装与检查脚本
+- Lingtai 作为外部 Agent 运行时
+- GitHub Actions 文档校验
 
-适合：
+这个仓库不内置 Lingtai。没有配置 Lingtai 时，它只是文档和模板，不能假装已经运行了真实专家组。
 
-- release、安全、数据、架构、用户信任相关任务；
-- 单模型自审自答不够可靠的任务；
-- 需要明确 scope、真实验证和 rollback 的任务。
+## 快速开始
 
-不适合：
-
-- typo 或一行文案修改；
-- 普通低风险 docs 小修；
-- 没配置 Lingtai 却需要真实专家回复的场景。
-
-## 为什么值得用？
-
-很多 AI coding 失败，不是语法失败，而是协作失败：
-
-- planner 把任务越扩越大；
-- reviewer 为了显得有用，硬造修改意见；
-- executor 没有验证生产现实就说完成；
-- 某个 agent 沉默后，整个流程卡死；
-- 没有人真正负责 rollback。
-
-Roundtable 用一个小协议解决这些问题：
-
-- 🧭 **动态专家角色**：每次任务重新分配专家方向，不把 agent 永久绑定到某个身份。
-- 🧑‍⚖️ **Executor 最终仲裁**：专家只建议，真正执行和合并由当前 coding terminal 负责。
-- ✅ **无意见规则**：没有真实意见就回复“无意见”，不硬造建议。
-- ⏱️ **有边界等待**：不无限等 agent。
-- 🛠️ **沉默 agent 及时修复**：检查投递/心跳，安全唤醒一次，仍失败就记录并继续。
-- 🔒 **默认保护 secrets**：runtime、mailbox、token 不进 repo。
-- 🔁 **带 rollback 意识交付**：重要任务必须说明验证和回滚。
-
-## 和普通 prompt 有什么区别？
-
-普通 prompt 往往让一个模型同时做 planner、critic、executor、release
-manager。小任务还能撑住，任务一复杂就容易失控。
-
-Roundtable 把流程拆清楚：
-
-```text
-用户目标 -> Lingtai 专家组 -> Executor 汇总取舍 -> 最小安全 diff -> 验证 -> 可回滚报告
-```
-
-它有效，是因为 Lingtai 提供 agent network，而 Roundtable 让每个参与者都有
-明确角色、退出条件和责任边界。
-
-## 30 秒看懂
-
-```text
-安全/隐私专家：合并前补一个负向 auth smoke。
-发布可靠性专家：No opinion from my expert perspective.
-范围控制专家：拒绝登录 UI 重设计，这超出当前 release gate。
-
-Executor:
-accepted: 负向 auth smoke
-rejected: 登录 UI 重设计
-verified: tests pass, diff scoped, rollback ready
-```
-
-如果 agent 沉默，Roundtable 会先诊断投递，而不是无限等待：
-
-```text
-$ ./scripts/check-lingtai-mailbox.sh
-status: queued_outbox
-orchestrator_state: asleep
-```
-
-完整示例：
-
-- [examples/terminal-transcript.md](examples/terminal-transcript.md)
-- [examples/sanitized-roundtable-run.md](examples/sanitized-roundtable-run.md)
-- [examples/agent-roster-growth.md](examples/agent-roster-growth.md)
-- [examples/executor-neutral-terminals.md](examples/executor-neutral-terminals.md)
-- [examples/executor-adapter-codex.md](examples/executor-adapter-codex.md)
-- [examples/executor-adapter-claude-code.md](examples/executor-adapter-claude-code.md)
-
-## 作为 Codex Skill 安装
-
-从 GitHub 直接安装：
+用一个命令先拿到 Roundtable 包，并自动选择合适的执行者路径。检测到 Codex 时，会安装原生 Codex Skill；其他 coding agent 则使用同一套 Roundtable 协议提示词和 Lingtai 检查流程。
 
 ```powershell
-$rt = Join-Path $env:TEMP "Roundtable-skill"; Remove-Item -Recurse -Force $rt -ErrorAction SilentlyContinue; git clone --depth 1 https://github.com/rawpaper123/Roundtable-skill.git $rt; & "$rt\scripts\install-codex-skill.ps1"
+$rt = Join-Path $env:TEMP "Roundtable-skill"; Remove-Item -Recurse -Force $rt -ErrorAction SilentlyContinue; git clone --depth 1 https://github.com/rawpaper123/Roundtable-skill.git $rt; & "$rt\scripts\install-roundtable.ps1"
 ```
-
-或：
 
 ```bash
-tmp="$(mktemp -d)" && git clone --depth 1 https://github.com/rawpaper123/Roundtable-skill.git "$tmp/Roundtable-skill" && "$tmp/Roundtable-skill/scripts/install-codex-skill.sh"
+tmp="$(mktemp -d)" && git clone --depth 1 https://github.com/rawpaper123/Roundtable-skill.git "$tmp/Roundtable-skill" && "$tmp/Roundtable-skill/scripts/install-roundtable.sh"
 ```
 
-如果已经 clone 本 repo，也可以运行本地脚本：
+然后在目标项目里配置 Lingtai，并检查是否可以运行：
 
 ```powershell
-.\scripts\install-codex-skill.ps1
+.\scripts\check-roundtable.ps1 -RequireLingtai
 ```
-
-或：
 
 ```bash
-./scripts/install-codex-skill.sh
+./scripts/check-roundtable.sh --require-lingtai
 ```
 
-这个脚本只安装 Codex skill 文件。Lingtai 仍然是必需 runtime，需要单独安装和配置。
+如果检查结果是 `docs_only`，说明还不能运行真实圆桌。先配置 Lingtai 和至少一个 Agent，不要伪造专家回复。
 
-然后这样触发：
+目前不同 coding agent 没有统一的原生 Skill 标准，所以这里不会假装“所有终端都能装同一种原生 Skill”。Roundtable 提供的是：Codex 原生安装器，加上一套执行终端中立的协议提示词。Claude Code、Cursor、Windsurf、Kimi Work 或其他 agent 都可以按这套协议运行。关键不是 Codex，而是：有一个负责最终交付的执行者，并且至少有一个可触达的 Lingtai Agent。
+
+完整说明：
+
+- [Quickstart](QUICKSTART.md)
+- [Lingtai 设置](docs/LINGTAI_SETUP.md)
+- [安装路径对照](docs/INSTALL_MATRIX.md)
+- [首次运行检查](docs/FIRST_RUN_CHECKLIST.md)
+- [问题排查](docs/TROUBLESHOOTING.md)
+
+## 使用场景
+
+### 开发任务
 
 ```text
-开启 Roundtable Skill 去完成这件事：<你的目标>
+为这个发布关卡开启 Roundtable。
+
+角色：
+- 发布可靠性审查者
+- 安全与隐私审查者
+- 范围控制审查者
+
+目标：
+判断这个权限相关 PR 是否可以合并。
 ```
 
-或：
+### 研究任务
 
 ```text
-Use Roundtable Skill. Assign dynamic expert angles. If an expert has no concern, they must reply no opinion.
+为这个研究问题开启 Roundtable。
+
+角色：
+- 实践者
+- 学者
+- 怀疑者
+- 经济学家
+- 历史学家
+
+每个角色给出：
+1. 两句话核心立场
+2. 最强证据
+3. 只有这个视角才会提醒我的那件事
+
+最后产出：
+- 矛盾地图
+- 按可靠性排序的关键发现
+- 隐藏关联
+- 行动建议
+- 一个能改变结论的前沿问题
 ```
 
-## 适合先用在哪些场景？
-
-当任务重要到不适合只靠一个 agent 自说自话时，就适合开启 Roundtable：
-
-- release gate
-- 生产问题排查
-- 数据库 / auth 改动
-- 架构切片
-- public launch readiness
-- 安全 / 隐私复核
-- 影响用户信任的产品流程
-
-## Lingtai 设置
-
-Roundtable Skill 需要 Lingtai 才能真正运行专家组。本 repo 不内置 Lingtai。
-
-- Lingtai GitHub: <https://github.com/LingTai-AI/lingtai>
-- 设置说明: [docs/LINGTAI_SETUP.md](docs/LINGTAI_SETUP.md)
-
-检查本地是否具备 Roundtable 运行条件：
-
-```powershell
-.\scripts\check-roundtable.ps1
-```
-
-或：
-
-```bash
-./scripts/check-roundtable.sh
-```
-
-## 目录结构
+### 日常决策
 
 ```text
-docs/
-  SHOWCASE.md
-  FIRST_RUN_CHECKLIST.md
-  INSTALL_MATRIX.md
-  DEMO_SCRIPT.md
-  COMPARISON.md
-  ADOPTION.md
-  USE_CASES.md
-  AGENT_ROSTER_GUIDE.md
-  TROUBLESHOOTING.md
-  FAQ.md
-  MAINTAINER_RELEASE.md
-  PUBLIC_RELEASE_CHECKLIST.md
-  GITHUB_LAUNCH_CHECKLIST.md
-  LAUNCH_COPY.md
-  POST_LAUNCH_ITERATION.md
-  EXECUTOR_SETUP.md
-  EXECUTOR_CONTRACT.md
-  LINGTAI_SETUP.md
-  ROUNDTABLE_PROTOCOL.md
-  WHY_ROUNDTABLE.md
-  ROADMAP.md
-CHANGELOG.md
-CONTRIBUTING.md
-QUICKSTART.md
-assets/
-  roundtable-terminal-demo.svg
-skills/
-  codex/roundtable-skill/SKILL.md
-templates/
-  executor/roundtable-executor-prompt.md
-  lingtai/agent-roster.example.md
-  lingtai/request-template.md
-  lingtai/roundtable-agent-template.md
-scripts/
-  install-codex-skill.ps1
-  install-codex-skill.sh
-  check-roundtable.ps1
-  check-roundtable.sh
-  check-lingtai-mailbox.ps1
-  check-lingtai-mailbox.sh
-examples/
-  terminal-transcript.md
-  sanitized-roundtable-run.md
-  agent-roster-growth.md
-  executor-neutral-terminals.md
-  executor-adapter-codex.md
-  executor-adapter-claude-code.md
-  generic-product-goal.md
-  release-gate-goal.md
+为这个个人选择开启 Roundtable。
+
+角色：
+- 现实朋友
+- 预算审查者
+- 风险审查者
+- 时间规划者
+- 反对者
+
+目标：
+选出一个下个月真的能执行的方案，而不是听起来最漂亮的方案。
 ```
 
-## 核心规则
-
-如果专家从自己的专家角度没有可执行意见，也必须回复：
+### 商业计划
 
 ```text
-No opinion from my expert perspective.
+为这个商业计划开启 Roundtable。
+
+角色：
+- 客户视角
+- 运营视角
+- 财务视角
+- 增长视角
+- 法务与风险视角
+
+目标：
+在花钱之前，找出最可能让这个计划失败的假设。
 ```
 
-沉默会被视为 runtime 问题：记录它，做一次有边界的安全修复，然后如果仍然不可用，
-就继续任务并在报告中说明。
+更多示例见 [Use cases](docs/USE_CASES.md)、[Showcase](docs/SHOWCASE.md)、[Demo script](docs/DEMO_SCRIPT.md)。
+
+## 基本流程
+
+1. 执行者先看清任务和现有证据。
+2. 执行者给可用的 Lingtai Agent 分配临时专家角色。
+3. 专家回复必须修复的问题、风险，或者明确说“从我的角度看没有其他意见”。
+4. 执行者整理分歧，决定采纳什么、拒绝什么。
+5. 执行者完成实际交付，或者产出最终简报。
+6. 执行者报告证据、验证结果、剩余风险；如果涉及代码，还要说明回滚方式。
+
+## 适合第一次尝试的任务
+
+先用低风险但真实的任务试：
+
+- 合并前审查一个小 PR
+- 压测一份研究总结
+- 审查一份发布清单
+- 批判一份商业计划
+- 比较两个产品方向
+
+第一次不要拿生产数据删除、密钥操作、不可逆迁移、高风险业务决策来试。
+
+## 重要链接
+
+- [为什么需要 Roundtable](docs/WHY_ROUNDTABLE.md)
+- [和普通提示词的区别](docs/COMPARISON.md)
+- [Agent 阵容指南](docs/AGENT_ROSTER_GUIDE.md)
+- [执行者设置](docs/EXECUTOR_SETUP.md)
+- [安全说明](SECURITY.md)
+- [贡献指南](CONTRIBUTING.md)
+- [更新记录](CHANGELOG.md)
+
+需要帮助可以去 [Discussions](https://github.com/rawpaper123/Roundtable-skill/discussions/1)，也可以提交 [setup help issue](https://github.com/rawpaper123/Roundtable-skill/issues/new?template=setup_help.md)。
+
+## 参与贡献
+
+好的贡献应该让 Roundtable 更容易被真实项目使用：更清楚的安装路径、更稳定的执行者适配、更安全的示例、更锋利的使用场景提示词。可以先看 [贡献指南](CONTRIBUTING.md)，也可以直接提交一个具体的 first-run 问题。
 
 ## 安全边界
 
 不要提交：
 
 - `.lingtai/`
+- `.recipe/`
 - mailbox 文件
 - OAuth token
 - `codex-auth.json`
-- private key
-- log
-- 项目 secrets
-- runtime data
+- 私钥
+- 日志
+- 项目密钥
+- 运行时数据
 
 ## License
 

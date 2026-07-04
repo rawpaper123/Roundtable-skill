@@ -1,4 +1,4 @@
-# Roundtable Skill 🪑
+# Roundtable Skill
 
 [中文](README.zh-CN.md) | English
 
@@ -9,298 +9,199 @@
 [![Executor neutral](https://img.shields.io/badge/executor-neutral-black.svg)](docs/EXECUTOR_SETUP.md)
 [![Codex skill](https://img.shields.io/badge/Codex-skill-black.svg)](skills/codex/roundtable-skill/SKILL.md)
 
-Bring Lingtai-powered expert review into your coding terminal, with one
-Executor accountable for scope, checks, and rollback.
+Roundtable Skill turns a single-agent task into a small expert meeting.
+The Executor assigns temporary expert roles to available Lingtai agents, collects their reviews, maps disagreements, then decides what to do next.
 
-**10-second pitch:** use Roundtable when a risky change needs independent expert
-advice, strict scope control, real checks, and a rollback-ready report, without
-handing repo ownership to autonomous agents.
+It works best when one model thinking alone is too narrow: release gates, research briefs, strategy decisions, business plans, product reviews, and other work where missing one angle can change the answer.
 
 ![Roundtable Skill terminal demo cast](assets/roundtable-demo-cast.svg)
 
-**New here? Start with the [QUICKSTART.md](QUICKSTART.md) 60-second fit check.**
-
-**Start here:** [Quickstart](QUICKSTART.md) ·
-[Install matrix](docs/INSTALL_MATRIX.md) · [Demo script](docs/DEMO_SCRIPT.md) ·
-[First run checklist](docs/FIRST_RUN_CHECKLIST.md)
-
-**Understand it:** [Why Roundtable?](docs/WHY_ROUNDTABLE.md) ·
-[Comparison](docs/COMPARISON.md) · [Showcase](docs/SHOWCASE.md) ·
-[Demo](examples/sanitized-roundtable-run.md) · [Use cases](docs/USE_CASES.md) ·
-[Adoption](docs/ADOPTION.md)
-
-**Run it safely:** [Install](#install-as-a-codex-skill) ·
-[Executor setup](docs/EXECUTOR_SETUP.md) ·
-[Agent roster](docs/AGENT_ROSTER_GUIDE.md) ·
-[Troubleshooting](docs/TROUBLESHOOTING.md) · [FAQ](docs/FAQ.md) ·
-[Security](SECURITY.md)
-
-**Publish and maintain:** [Launch copy](docs/LAUNCH_COPY.md) ·
-[Launch checklist](docs/GITHUB_LAUNCH_CHECKLIST.md) ·
-[Post-launch](docs/POST_LAUNCH_ITERATION.md) · [Roadmap](docs/ROADMAP.md) ·
-[Release notes](CHANGELOG.md) · [Contributing](CONTRIBUTING.md)
-
-**Need help?** Ask in
-[Discussions](https://github.com/rawpaper123/Roundtable-skill/discussions/1)
-or open a
-[Setup help issue](https://github.com/rawpaper123/Roundtable-skill/issues/new?template=setup_help.md).
-
-Roundtable Skill is an executor-neutral workflow for shipping agentic coding
-changes with discipline: task-specific Lingtai experts advise, while your
-current coding terminal owns the final plan, implementation, verification, Git,
-deployment, and rollback.
-
-The current coding terminal is the **Executor**. It can be Codex, Claude Code,
-Kimi Work, Cursor, Windsurf, or another agentic terminal. The Executor owns the
-final implementation, verification, Git state, pull request, deployment, and
-rollback. Roundtable agents advise; they do not override the user or the
-Executor.
-
-Roundtable Skill is built on
-[Lingtai](https://github.com/LingTai-AI/lingtai) as the agent runtime. This
-repository does not bundle Lingtai. Without Lingtai configured, this repository
-only provides readable docs and templates; it cannot run a working multi-agent
-Roundtable.
-
-## Who Should Use This?
-
-Use Roundtable when:
-
-- the task has release, security, data, architecture, or user-trust risk,
-- one model reviewing itself is not enough,
-- you need scoped advice, real checks, and rollback.
-
-Do not use it for:
-
-- typo fixes,
-- one-line docs edits,
-- tasks where Lingtai is not configured and you need real expert replies.
-
-## Why Use It?
-
-Most agentic coding failures are not syntax failures. They are coordination
-failures:
-
-- the planner expands scope,
-- the reviewer invents concerns,
-- the executor ships without verifying production reality,
-- one silent agent blocks the whole loop,
-- nobody owns rollback.
-
-Roundtable Skill fixes that with a small protocol:
-
-- 🧭 **Dynamic expert roles** - pick the right reviewers for this task, not fixed personas forever.
-- 🧑‍⚖️ **Executor as final arbiter** - experts advise, your coding terminal decides and ships.
-- ✅ **No-opinion rule** - experts can say "no concerns" instead of inventing work.
-- ⏱️ **Bounded waiting** - no infinite agent loops.
-- 🛠️ **Repair silent agents once** - check delivery/liveness, wake once, then continue.
-- 🔒 **No secrets by design** - runtime state and tokens stay out of the repo.
-- 🔁 **Rollback-first delivery** - every serious change ends with validation and rollback.
-
-## Why Switch From A Normal Prompt?
-
-A normal prompt asks one model to be planner, critic, implementer, and release
-manager at the same time. That works for small tasks, then gets messy.
-
-Roundtable makes the loop explicit:
-
-```text
-User goal -> expert panel -> executor synthesis -> implementation -> verification -> rollback-ready report
-```
-
-It is simple because it keeps the protocol small and leaves execution in your
-coding terminal. It is effective because Lingtai provides the agent network and
-Roundtable forces every participant to stay in a role.
-
-## See It In 30 Seconds
-
-The loop should feel concrete:
-
-```text
-User goal -> Lingtai experts -> Executor synthesis -> smallest safe diff -> checks -> rollback
-```
-
-```text
-Security/privacy expert: add a negative auth smoke before merge.
-Release expert: No opinion from my expert perspective.
-Scope reviewer: reject the login redesign; it is out of scope.
-
-Executor:
-accepted: negative auth smoke
-rejected: login redesign
-verified: tests pass, diff scoped, rollback ready
-```
-
-If an agent is silent, Roundtable diagnoses delivery instead of waiting forever:
-
-```text
-$ ./scripts/check-lingtai-mailbox.sh
-status: queued_outbox
-orchestrator_state: asleep
-```
-
-Read the full sanitized examples:
-
-- [examples/terminal-transcript.md](examples/terminal-transcript.md)
-- [examples/sanitized-roundtable-run.md](examples/sanitized-roundtable-run.md)
-- [examples/agent-roster-growth.md](examples/agent-roster-growth.md)
-- [examples/executor-neutral-terminals.md](examples/executor-neutral-terminals.md)
-- [examples/executor-adapter-codex.md](examples/executor-adapter-codex.md)
-- [examples/executor-adapter-claude-code.md](examples/executor-adapter-claude-code.md)
+**First time here? Start with the [Quickstart](QUICKSTART.md) 60-second fit check.**
 
 ## What It Does
 
-- Assigns task-specific expert angles to configured Lingtai agents.
-- Requests concise planner or review feedback.
-- Requires no-opinion replies instead of invented suggestions.
-- Uses bounded waits and one bounded repair attempt for non-responsive agents.
-- Keeps the Executor as final arbiter and implementation owner.
-- Protects scope, secrets, Git hygiene, and rollback discipline.
+- 🪑 **Runs a real roundtable**: each Lingtai agent gets a temporary expert role for this task only.
+- 🔍 **Finds blind spots**: agents review the first plan, the evidence, and the Executor's progress from different angles.
+- ⚖️ **Maps disagreement**: conflicting claims, weak evidence, and missing perspectives are made explicit.
+- ✅ **Keeps one owner**: the Executor still owns the final decision, implementation, verification, Git state, and rollback when code is involved.
+- 🧯 **Handles silent agents**: no infinite waiting; record the non-response, try one safe repair, then continue with evidence.
 
-## Install As A Codex Skill
+## Why It Exists
 
-Fast path from GitHub:
+A single agent can sound confident while missing the point.
 
-```powershell
-$rt = Join-Path $env:TEMP "Roundtable-skill"; Remove-Item -Recurse -Force $rt -ErrorAction SilentlyContinue; git clone --depth 1 https://github.com/rawpaper123/Roundtable-skill.git $rt; & "$rt\scripts\install-codex-skill.ps1"
-```
+Roundtable adds structured disagreement. A practitioner may catch what the paper ignores. A skeptic may find the strongest counterexample. A security reviewer may block a risky merge. A finance voice may notice incentives that the product voice missed.
 
-or:
+The roles are not permanent identities. They are assigned for the current task and discarded when the task ends.
 
-```bash
-tmp="$(mktemp -d)" && git clone --depth 1 https://github.com/rawpaper123/Roundtable-skill.git "$tmp/Roundtable-skill" && "$tmp/Roundtable-skill/scripts/install-codex-skill.sh"
-```
+## Tech Stack
 
-From a local checkout:
+- Markdown docs and prompt templates
+- Codex skill package under `skills/codex/roundtable-skill`
+- PowerShell and Bash install/readiness scripts
+- Lingtai as the required external agent runtime
+- GitHub Actions docs validation
 
-```powershell
-.\scripts\install-codex-skill.ps1
-```
+This repo does not bundle Lingtai and does not claim real multi-agent execution without Lingtai configured.
 
-or:
+## Quickstart
 
-```bash
-./scripts/install-codex-skill.sh
-```
-
-This only installs the Codex skill files. Lingtai is still required and must be
-installed/configured separately.
-
-Then ask:
-
-```text
-Open Roundtable Skill for this task: <your goal>
-```
-
-or:
-
-```text
-Use Roundtable Skill. Assign dynamic expert angles. If an expert has no concern, they must reply no opinion.
-```
-
-## Best First Use Case
-
-Use it when a task is too important for a single-agent monologue:
-
-- release gates
-- production debugging
-- database or auth changes
-- architecture slices
-- public launch readiness
-- security/privacy review
-- product flows where user trust matters
-
-## Lingtai Setup
-
-Roundtable Skill requires Lingtai for real expert-panel execution. It does not
-bundle Lingtai. Install and configure Lingtai separately:
-
-- Lingtai GitHub: <https://github.com/LingTai-AI/lingtai>
-- Setup guide: [docs/LINGTAI_SETUP.md](docs/LINGTAI_SETUP.md)
-
-Check local readiness:
+Use one command to fetch the Roundtable pack and choose the right Executor
+path. Codex gets a native skill install when available; other coding agents use
+the same Roundtable protocol prompt and Lingtai readiness checks.
 
 ```powershell
-.\scripts\check-roundtable.ps1
+$rt = Join-Path $env:TEMP "Roundtable-skill"; Remove-Item -Recurse -Force $rt -ErrorAction SilentlyContinue; git clone --depth 1 https://github.com/rawpaper123/Roundtable-skill.git $rt; & "$rt\scripts\install-roundtable.ps1"
 ```
-
-or:
 
 ```bash
-./scripts/check-roundtable.sh
+tmp="$(mktemp -d)" && git clone --depth 1 https://github.com/rawpaper123/Roundtable-skill.git "$tmp/Roundtable-skill" && "$tmp/Roundtable-skill/scripts/install-roundtable.sh"
 ```
 
-## Repository Layout
+Then configure Lingtai in the target project and check readiness:
+
+```powershell
+.\scripts\check-roundtable.ps1 -RequireLingtai
+```
+
+```bash
+./scripts/check-roundtable.sh --require-lingtai
+```
+
+If the check reports `docs_only`, do not fake expert replies. Configure Lingtai and at least one agent first.
+
+There is no universal native "skill" format across all coding agents yet.
+Roundtable therefore ships a native Codex installer plus an executor-neutral
+protocol prompt for Claude Code, Cursor, Windsurf, Kimi Work, and other agents.
+The important requirement is not Codex; it is a working Executor plus at least
+one reachable Lingtai agent.
+
+Full setup:
+
+- [Quickstart](QUICKSTART.md)
+- [Lingtai setup](docs/LINGTAI_SETUP.md)
+- [Install matrix](docs/INSTALL_MATRIX.md)
+- [First run checklist](docs/FIRST_RUN_CHECKLIST.md)
+- [Troubleshooting](docs/TROUBLESHOOTING.md)
+
+## Use Cases
+
+### Development
 
 ```text
-docs/
-  SHOWCASE.md
-  FIRST_RUN_CHECKLIST.md
-  INSTALL_MATRIX.md
-  DEMO_SCRIPT.md
-  COMPARISON.md
-  ADOPTION.md
-  USE_CASES.md
-  AGENT_ROSTER_GUIDE.md
-  TROUBLESHOOTING.md
-  FAQ.md
-  MAINTAINER_RELEASE.md
-  PUBLIC_RELEASE_CHECKLIST.md
-  GITHUB_LAUNCH_CHECKLIST.md
-  LAUNCH_COPY.md
-  POST_LAUNCH_ITERATION.md
-  EXECUTOR_SETUP.md
-  EXECUTOR_CONTRACT.md
-  LINGTAI_SETUP.md
-  ROUNDTABLE_PROTOCOL.md
-  WHY_ROUNDTABLE.md
-  ROADMAP.md
-CHANGELOG.md
-CONTRIBUTING.md
-QUICKSTART.md
-assets/
-  roundtable-terminal-demo.svg
-skills/
-  codex/roundtable-skill/SKILL.md
-templates/
-  executor/roundtable-executor-prompt.md
-  lingtai/agent-roster.example.md
-  lingtai/request-template.md
-  lingtai/roundtable-agent-template.md
-scripts/
-  install-codex-skill.ps1
-  install-codex-skill.sh
-  check-roundtable.ps1
-  check-roundtable.sh
-  check-lingtai-mailbox.ps1
-  check-lingtai-mailbox.sh
-examples/
-  terminal-transcript.md
-  sanitized-roundtable-run.md
-  agent-roster-growth.md
-  executor-neutral-terminals.md
-  executor-adapter-codex.md
-  executor-adapter-claude-code.md
-  generic-product-goal.md
-  release-gate-goal.md
+Open Roundtable for this release gate.
+
+Roles:
+- release reliability reviewer
+- security/privacy reviewer
+- adversarial scope reviewer
+
+Goal:
+decide whether this auth PR is safe to merge.
 ```
 
-## Core Rule
-
-If an expert has no actionable concern, it must still reply:
+### Research
 
 ```text
-No opinion from my expert perspective.
+Open Roundtable for this research question.
+
+Roles:
+- practitioner
+- scholar
+- skeptic
+- economist
+- historian
+
+Ask each role for:
+1. two-sentence position
+2. strongest evidence
+3. the one thing only this role would notice
+
+Then produce:
+- contradiction map
+- ranked findings
+- hidden connection
+- action recommendation
+- frontier question
 ```
 
-Silence is treated as a runtime issue: record it, attempt one bounded safe
-repair, then continue if the agent remains unavailable.
+### Daily Decision
 
-## Safety
+```text
+Open Roundtable for this personal decision.
+
+Roles:
+- practical friend
+- budget reviewer
+- risk reviewer
+- time planner
+- contrarian
+
+Goal:
+choose the option I can actually live with next month, not the one that only sounds good today.
+```
+
+### Business Plan
+
+```text
+Open Roundtable for this business plan.
+
+Roles:
+- customer voice
+- operator
+- finance reviewer
+- go-to-market reviewer
+- legal/risk reviewer
+
+Goal:
+find the assumptions that would break this plan before I spend money on it.
+```
+
+More examples: [Use cases](docs/USE_CASES.md), [Showcase](docs/SHOWCASE.md), [Demo script](docs/DEMO_SCRIPT.md).
+
+## Core Protocol
+
+1. Executor inspects the task and current evidence.
+2. Executor assigns temporary expert roles to available Lingtai agents.
+3. Agents reply with must-fix issues, concerns, or `No opinion from my expert perspective.`
+4. Executor maps conflicts and decides what advice to accept or reject.
+5. Executor performs the work or produces the final brief.
+6. Executor reports evidence, validation, remaining risk, and rollback when relevant.
+
+## Good First Task
+
+Use Roundtable first on a real but low-risk task:
+
+- review a small PR before merge,
+- pressure-test a research summary,
+- review a launch checklist,
+- critique a business plan,
+- compare two product directions.
+
+Do not use the first run for secrets, production data deletion, irreversible migrations, or high-stakes decisions without human review.
+
+## Links
+
+- [Why Roundtable?](docs/WHY_ROUNDTABLE.md)
+- [Comparison](docs/COMPARISON.md)
+- [Agent roster guide](docs/AGENT_ROSTER_GUIDE.md)
+- [Executor setup](docs/EXECUTOR_SETUP.md)
+- [Security](SECURITY.md)
+- [Contributing](CONTRIBUTING.md)
+- [Release notes](CHANGELOG.md)
+
+Need help? Use [Discussions](https://github.com/rawpaper123/Roundtable-skill/discussions/1) or open a [setup help issue](https://github.com/rawpaper123/Roundtable-skill/issues/new?template=setup_help.md).
+
+## Contributing
+
+Good contributions make Roundtable easier to run in real projects: clearer setup paths, better executor adapters, safer examples, and sharper use-case prompts. Start with [CONTRIBUTING.md](CONTRIBUTING.md) or open an issue if a first run gets stuck.
+
+## Safety Boundary
 
 Do not commit:
 
 - `.lingtai/`
+- `.recipe/`
 - mailbox files
 - OAuth tokens
 - `codex-auth.json`

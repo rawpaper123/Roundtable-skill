@@ -1,5 +1,31 @@
 # Changelog
 
+## v0.1.11
+
+Roundtable positioning rewrite.
+
+- Reframed README and Chinese README around the roundtable metaphor,
+  temporary task-specific expert roles, and one accountable Executor.
+- Added universal setup wrappers so the first Quickstart path is Executor
+  neutral: Codex can install a native skill, while other coding agents get the
+  protocol prompt and readiness path.
+- Added CI and maintainer smoke coverage for the universal installer wrapper.
+- Upgraded the Roundtable protocol with expert-angle design rules so normal
+  tasks stay lightweight but still use useful, complementary perspectives.
+- Added a dedicated research mode for multi-perspective scan, contradiction
+  mapping, synthesis brief, and peer review without making that heavy workflow
+  mandatory for every task.
+- Expanded examples beyond development into research, daily decisions,
+  business plans, product strategy, and public writing.
+- Updated the Codex skill contract so Roundtable can produce a bounded
+  implementation plan, research brief, decision memo, or public narrative.
+- Updated launch copy and GitHub launch checklist to match the broader
+  multi-perspective workflow positioning.
+
+Roundtable Skill still requires Lingtai as the agent runtime. This repository
+does not bundle Lingtai or claim real multi-agent execution without Lingtai
+configured.
+
 ## v0.1.10
 
 Installer smoke release-process polish.

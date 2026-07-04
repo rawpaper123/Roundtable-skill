@@ -1,7 +1,7 @@
 # Launch Copy
 
-Use these snippets when sharing Roundtable Skill on GitHub, X, LinkedIn,
-Hacker News, newsletters, or developer communities.
+Use these snippets when sharing Roundtable Skill on GitHub, Product Hunt, X,
+LinkedIn, Hacker News, newsletters, or developer communities.
 
 Roundtable Skill requires Lingtai. Do not imply that this repository runs a
 real expert panel without Lingtai configured.
@@ -11,44 +11,43 @@ real expert panel without Lingtai configured.
 English:
 
 ```text
-Roundtable Skill wraps your coding terminal with a Lingtai expert panel, while your terminal stays accountable for scope, checks, Git, and rollback.
+Roundtable Skill turns one-agent work into a Lingtai-powered expert meeting: temporary roles, disagreement maps, one accountable Executor.
 ```
 
 Chinese:
 
 ```text
-Roundtable Skill 把 Lingtai 专家组接到你的 coding terminal 旁边，但执行、验证、Git 和 rollback 仍由当前终端负责。
+Roundtable Skill 把单个 AI 任务变成一场 Lingtai 圆桌会议：临时专家、多角度审查、整理分歧，最后由一个执行者负责交付。
 ```
 
 ## GitHub Short Description
 
 ```text
-Lingtai-powered multi-agent expert review loop for coding terminals: scoped plans, bounded waits, checks, rollback
+Lingtai-powered roundtable workflow for multi-perspective AI review: temporary experts, disagreement maps, accountable execution
 ```
 
 ## Three Short Launch Angles
 
-Use one of these when you need a sharper first post.
-
-### Scope Control
+### Multi-Perspective Review
 
 ```text
-I built Roundtable Skill for agentic coding tasks where scope creep is the real bug.
+I built Roundtable Skill for tasks where one AI perspective is not enough.
 
-Lingtai agents advise from task-specific expert angles.
-Your coding terminal stays the Executor and owns the final diff, checks, Git, and rollback.
+Lingtai agents take temporary expert roles, review the plan from different angles, surface disagreement, then step out of those roles.
+
+One Executor still owns the final decision.
 
 https://github.com/rawpaper123/Roundtable-skill
 ```
 
-### Fake Green Checks
+### Research And Strategy
 
 ```text
-Most AI coding failures I care about are not syntax failures.
+Roundtable Skill is not just for code review.
 
-They are fake-green failures: no real checks, unclear owner, no rollback.
+Use it for research briefs, business plans, product decisions, and risky implementation work.
 
-Roundtable Skill wraps a Lingtai expert panel around your coding terminal, while the terminal stays accountable for shipping.
+The loop is simple: assign temporary expert roles, collect disagreement, synthesize, verify, decide.
 
 https://github.com/rawpaper123/Roundtable-skill
 ```
@@ -56,9 +55,9 @@ https://github.com/rawpaper123/Roundtable-skill
 ### Silent Agents
 
 ```text
-What should happen when one agent goes silent?
+What should happen when one AI agent goes silent?
 
-Roundtable Skill gives coding terminals a small protocol: bounded waits, one repair attempt, no-opinion replies, Executor-owned verification, rollback-ready report.
+Roundtable Skill gives the Executor a small protocol: bounded waits, one repair attempt, no-opinion replies, validation, and a recovery path.
 
 Built on Lingtai.
 
@@ -72,11 +71,11 @@ English:
 ```text
 I released Roundtable Skill.
 
-It adds a Lingtai expert panel around your coding terminal.
+It turns one-agent work into a Lingtai-powered roundtable.
 
-Experts advise. Your terminal stays the Executor: scope, implementation, checks, Git, deploy, rollback.
+Agents take temporary expert roles, review from different angles, surface disagreement, then hand the decision back to one Executor.
 
-Built for risky coding changes where one model reviewing itself is not enough.
+Useful for code, research, strategy, business plans, and other work where one model reviewing itself is not enough.
 
 https://github.com/rawpaper123/Roundtable-skill
 ```
@@ -86,11 +85,11 @@ Chinese:
 ```text
 我发布了 Roundtable Skill。
 
-它把 Lingtai 专家组接到你的 coding terminal 旁边。
+它把单个 AI 任务变成一场 Lingtai 圆桌会议。
 
-专家负责建议；当前终端仍是 Executor，负责 scope、实现、验证、Git、发布和 rollback。
+不同 Agent 临时扮演不同专家，从各自角度审查计划、证据和执行进展，再把决定权交回一个执行者。
 
-适合那些不能只靠一个模型自问自答的高风险代码任务。
+适合代码审查、研究简报、商业计划、产品决策，以及任何不适合只靠一个模型自问自答的复杂任务。
 
 https://github.com/rawpaper123/Roundtable-skill
 ```
@@ -100,28 +99,33 @@ https://github.com/rawpaper123/Roundtable-skill
 English:
 
 ```text
-Agentic coding often fails for coordination reasons, not syntax reasons:
+AI-assisted work often fails for coordination reasons.
 
-- scope expands silently
-- the reviewer invents concerns
-- the executor claims success without real checks
-- one silent agent blocks the whole loop
-- rollback is nobody's job
+The planner expands the task.
+The reviewer invents work to sound useful.
+One agent goes silent.
+Evidence is assumed instead of checked.
+Nobody owns the final decision.
 
-Roundtable Skill is a small protocol for fixing that.
+Roundtable Skill is a small protocol for this.
 
-It uses Lingtai as the expert-agent runtime and keeps your current coding terminal as the Executor. Experts advise from task-specific angles; the Executor owns the final plan, implementation, verification, Git, deploy, and rollback.
+It uses Lingtai as the expert-agent runtime. Agents take temporary roles for the current task, review from different angles, and surface disagreements. The Executor owns the final decision, validation, and rollback.
+
+You can use the same pattern for:
+- code release gates
+- research briefs
+- product strategy
+- business plans
+- daily decisions with real tradeoffs
 
 The repo includes:
 - Codex skill package
 - executor-neutral templates
-- Codex and Claude Code adapter examples
 - Lingtai setup guide
+- use-case prompts
 - troubleshooting guide
 - release and launch checklists
 - sanitized demo transcripts
-
-It is intentionally boring: scoped plans, bounded waits, no-opinion replies, no fake success, and rollback-ready reports.
 
 GitHub:
 https://github.com/rawpaper123/Roundtable-skill
@@ -130,28 +134,33 @@ https://github.com/rawpaper123/Roundtable-skill
 Chinese:
 
 ```text
-很多 agentic coding 失败，不是因为语法，而是因为协作：
+很多 AI 协作失败，不是因为模型不会写，而是因为没有人负责组织讨论。
 
-- scope 越做越大
-- reviewer 为了显得有用而硬造意见
-- executor 没有真实验证就说完成
-- 一个 agent 沉默后整个流程卡住
-- 没有人真正负责 rollback
+计划越做越大。
+审查者为了显得有用，硬造意见。
+某个 Agent 沉默后，流程卡住。
+证据没有被真正检查。
+最后也没人负责取舍。
 
-Roundtable Skill 是一个很小的协议，用来解决这些问题。
+Roundtable Skill 做的是一件很朴素的事：把任务放到一张圆桌上。
 
-它用 Lingtai 作为专家 agent runtime，同时让你当前的 coding terminal 继续担任 Executor。专家只按任务角度给建议；最终计划、实现、验证、Git、发布和 rollback 仍由 Executor 负责。
+Lingtai Agent 按当前任务临时扮演不同专家，从不同角度审查计划、证据和执行进展；执行者负责整理分歧、做出取舍，并完成最终交付。
 
-repo 里包括：
-- Codex skill package
-- executor-neutral 模板
-- Codex / Claude Code adapter 示例
+它可以用于：
+- 代码发布审查
+- 研究简报
+- 产品策略
+- 商业计划
+- 有真实取舍的日常决策
+
+仓库里包含：
+- Codex Skill 包
+- 执行者模板
 - Lingtai 设置指南
-- troubleshooting guide
-- release / launch checklist
-- 脱敏 demo transcript
-
-它刻意保持克制：明确 scope、有边界等待、允许专家说“没有意见”、不假装成功、每次交付都带 rollback。
+- 多场景用例提示词
+- 问题排查文档
+- 发布检查清单
+- 脱敏示例
 
 GitHub:
 https://github.com/rawpaper123/Roundtable-skill
@@ -162,37 +171,29 @@ https://github.com/rawpaper123/Roundtable-skill
 Title options:
 
 ```text
-Show HN: Roundtable Skill - a Lingtai expert-panel workflow for coding terminals
-Show HN: I built a Roundtable workflow for agentic coding reviews
-Roundtable Skill: scoped multi-agent review around your coding terminal
+Show HN: Roundtable Skill - Lingtai-powered multi-perspective AI review
+Show HN: I built a Roundtable workflow for temporary AI expert panels
+Roundtable Skill: assign AI agents temporary expert roles, then synthesize disagreement
 ```
 
 Body:
 
 ```text
-I built Roundtable Skill, a workflow skill for running a bounded expert-panel loop around a coding terminal.
+I built Roundtable Skill, a workflow skill for running a bounded expert-panel loop with Lingtai agents.
 
-It is built on Lingtai for the expert-agent runtime. The coding terminal stays the Executor and owns implementation, checks, Git state, deploy, and rollback.
+The idea is simple: instead of asking one model to plan, critique, and decide alone, assign temporary expert roles to available agents. They review the task from different angles, surface conflicts, and hand the decision back to one Executor.
 
-The problem it tries to solve is not "more agents". It is coordination:
-- who owns scope?
-- who decides when advice is wrong?
-- what happens when an agent is silent?
-- how do you avoid fake green checks?
-- who owns rollback?
+This is useful for code review, but not limited to code. I also use the pattern for research briefs, business plans, product decisions, and other work where one perspective is too narrow.
 
-The protocol is intentionally small:
-- assign task-specific expert angles
-- ask for concise advice
-- allow "no opinion" replies
-- wait with bounds
-- repair silent agents once
-- let the Executor synthesize and ship
-- end with verification and rollback
+The protocol covers:
+- temporary expert roles
+- no-opinion replies
+- bounded waits
+- one repair attempt for silent agents
+- disagreement mapping
+- Executor-owned validation and rollback
 
-The repo includes a Codex skill, executor templates, Lingtai setup docs, adapter examples, troubleshooting docs, and sanitized transcripts.
-
-Feedback especially welcome from people building with Codex, Claude Code, Cursor, Windsurf, Kimi Work, or other coding terminals.
+The repo includes a Codex skill, executor templates, Lingtai setup docs, use-case prompts, troubleshooting docs, and sanitized transcripts.
 
 GitHub:
 https://github.com/rawpaper123/Roundtable-skill
@@ -209,37 +210,37 @@ Roundtable Skill
 Tagline:
 
 ```text
-Lingtai expert panels for coding terminals, with scope, checks, and rollback kept in one Executor.
+Lingtai-powered roundtables for multi-perspective AI review.
 ```
 
 Short description:
 
 ```text
-Roundtable Skill gives agentic coding work a small operating protocol: task-specific Lingtai experts advise, your coding terminal remains the Executor, silent agents get bounded repair, and every serious change ends with validation plus rollback.
+Roundtable Skill lets available Lingtai agents take temporary expert roles, review a task from different angles, map disagreement, and hand the final decision back to one accountable Executor.
 ```
 
 Maker comment:
 
 ```text
-I built Roundtable Skill after seeing the same failure pattern in agentic coding: not bad syntax, but bad coordination.
+I built Roundtable Skill because single-agent work can be too smooth.
 
-The planner expands scope, the reviewer invents work, one agent goes silent, tests are assumed instead of checked, and nobody owns rollback.
+One model can produce a confident answer while missing the practitioner view, the skeptic view, the money trail, the safety risk, or the historical pattern.
 
-Roundtable keeps the loop small:
-- Lingtai provides the expert agents.
-- Your current coding terminal stays the Executor.
-- Expert roles are assigned per task.
-- "No opinion" is an allowed expert response.
-- Non-responsive agents get one bounded repair attempt.
-- The Executor owns the final diff, checks, Git, deploy, and rollback.
+Roundtable keeps the protocol small:
+- assign temporary expert roles
+- collect each role's strongest view
+- map conflicts and missing perspectives
+- allow "no opinion" replies
+- repair silent agents once
+- let one Executor make the final call
 
-It is intentionally not a hosted platform and it does not bundle Lingtai. It is a reusable skill/protocol for people already using agentic coding terminals and wanting a safer expert-review loop.
+It is intentionally not a hosted platform and it does not bundle Lingtai. It is a reusable skill/protocol for people who want a safer multi-agent review loop around real work.
 ```
 
 Best audience tags:
 
 ```text
-developer tools, AI agents, coding agents, workflow automation, productivity
+AI agents, developer tools, productivity, research, workflow automation
 ```
 
 ## Developer Community Reply
@@ -250,7 +251,7 @@ prompt:
 ```text
 The point is not "more agents".
 
-Roundtable is about ownership boundaries: experts advise, one Executor decides, checks, ships, and owns rollback. The protocol also handles boring failure modes that big prompts usually ignore: scope creep, silent agents, fake-green checks, and no-opinion reviewers inventing work.
+Roundtable is about structured disagreement. Each agent gets a temporary role, reviews from that angle, and then steps out of the role. The Executor maps conflicts, rejects bad advice, verifies what matters, and owns the final decision.
 ```
 
 ## Do Not Say
@@ -264,5 +265,5 @@ Roundtable is about ownership boundaries: experts advise, one Executor decides, 
 ## Strong CTA
 
 ```text
-Start with QUICKSTART.md, run the 60-second demo script, then try it on one risky PR before using it on production changes.
+Start with QUICKSTART.md, run the 60-second fit check, then try Roundtable on one real task where a second perspective would change the answer.
 ```
