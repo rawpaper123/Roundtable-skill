@@ -20,17 +20,25 @@ handing repo ownership to autonomous agents.
 
 **New here? Start with [QUICKSTART.md](QUICKSTART.md).**
 
-[Install](#install-as-a-codex-skill) · [Quickstart](QUICKSTART.md) ·
-[Install matrix](docs/INSTALL_MATRIX.md) ·
-[Demo script](docs/DEMO_SCRIPT.md) · [Demo](examples/sanitized-roundtable-run.md) ·
-[Why Roundtable?](docs/WHY_ROUNDTABLE.md) · [Comparison](docs/COMPARISON.md) ·
-[Showcase](docs/SHOWCASE.md) · [First run checklist](docs/FIRST_RUN_CHECKLIST.md) · [Adoption](docs/ADOPTION.md) ·
-[Use cases](docs/USE_CASES.md) · [Executor setup](docs/EXECUTOR_SETUP.md) ·
-[Agent roster](docs/AGENT_ROSTER_GUIDE.md) · [Roadmap](docs/ROADMAP.md) ·
+**Start here:** [Quickstart](QUICKSTART.md) ·
+[Install matrix](docs/INSTALL_MATRIX.md) · [Demo script](docs/DEMO_SCRIPT.md) ·
+[First run checklist](docs/FIRST_RUN_CHECKLIST.md)
+
+**Understand it:** [Why Roundtable?](docs/WHY_ROUNDTABLE.md) ·
+[Comparison](docs/COMPARISON.md) · [Showcase](docs/SHOWCASE.md) ·
+[Demo](examples/sanitized-roundtable-run.md) · [Use cases](docs/USE_CASES.md) ·
+[Adoption](docs/ADOPTION.md)
+
+**Run it safely:** [Install](#install-as-a-codex-skill) ·
+[Executor setup](docs/EXECUTOR_SETUP.md) ·
+[Agent roster](docs/AGENT_ROSTER_GUIDE.md) ·
 [Troubleshooting](docs/TROUBLESHOOTING.md) · [FAQ](docs/FAQ.md) ·
-[Security](SECURITY.md) · [Launch copy](docs/LAUNCH_COPY.md) · [Launch checklist](docs/GITHUB_LAUNCH_CHECKLIST.md) ·
-[Post-launch](docs/POST_LAUNCH_ITERATION.md) · [Release notes](CHANGELOG.md) ·
-[Contributing](CONTRIBUTING.md)
+[Security](SECURITY.md)
+
+**Publish and maintain:** [Launch copy](docs/LAUNCH_COPY.md) ·
+[Launch checklist](docs/GITHUB_LAUNCH_CHECKLIST.md) ·
+[Post-launch](docs/POST_LAUNCH_ITERATION.md) · [Roadmap](docs/ROADMAP.md) ·
+[Release notes](CHANGELOG.md) · [Contributing](CONTRIBUTING.md)
 
 Roundtable Skill is an executor-neutral workflow for shipping agentic coding
 changes with discipline: task-specific Lingtai experts advise, while your

@@ -41,7 +41,8 @@ Lingtai-powered multi-agent expert review loop for coding terminals: scoped plan
 
 ## Conversion Links
 
-Top-level README links should include:
+Top-level README links should be grouped by user intent rather than shown as one
+crowded row. They should include:
 
 - Quickstart
 - Install matrix

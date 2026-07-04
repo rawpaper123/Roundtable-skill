@@ -19,17 +19,25 @@ Executor 对 scope、验证、Git、发布和 rollback 负责。
 
 **第一次使用？从 [QUICKSTART.md](QUICKSTART.md) 开始。**
 
-[Install](#作为-codex-skill-安装) · [Quickstart](QUICKSTART.md) ·
-[Install matrix](docs/INSTALL_MATRIX.md) ·
-[Demo script](docs/DEMO_SCRIPT.md) · [Demo](examples/sanitized-roundtable-run.md) ·
-[Why Roundtable?](docs/WHY_ROUNDTABLE.md) · [Comparison](docs/COMPARISON.md) ·
-[Showcase](docs/SHOWCASE.md) · [First run checklist](docs/FIRST_RUN_CHECKLIST.md) · [Adoption](docs/ADOPTION.md) ·
-[Use cases](docs/USE_CASES.md) · [Executor setup](docs/EXECUTOR_SETUP.md) ·
-[Agent roster](docs/AGENT_ROSTER_GUIDE.md) · [Roadmap](docs/ROADMAP.md) ·
+**先从这里开始：** [Quickstart](QUICKSTART.md) ·
+[Install matrix](docs/INSTALL_MATRIX.md) · [Demo script](docs/DEMO_SCRIPT.md) ·
+[First run checklist](docs/FIRST_RUN_CHECKLIST.md)
+
+**理解它：** [Why Roundtable?](docs/WHY_ROUNDTABLE.md) ·
+[Comparison](docs/COMPARISON.md) · [Showcase](docs/SHOWCASE.md) ·
+[Demo](examples/sanitized-roundtable-run.md) · [Use cases](docs/USE_CASES.md) ·
+[Adoption](docs/ADOPTION.md)
+
+**安全运行：** [Install](#作为-codex-skill-安装) ·
+[Executor setup](docs/EXECUTOR_SETUP.md) ·
+[Agent roster](docs/AGENT_ROSTER_GUIDE.md) ·
 [Troubleshooting](docs/TROUBLESHOOTING.md) · [FAQ](docs/FAQ.md) ·
-[Security](SECURITY.md) · [Launch copy](docs/LAUNCH_COPY.md) · [Launch checklist](docs/GITHUB_LAUNCH_CHECKLIST.md) ·
-[Post-launch](docs/POST_LAUNCH_ITERATION.md) · [Release notes](CHANGELOG.md) ·
-[Contributing](CONTRIBUTING.md)
+[Security](SECURITY.md)
+
+**发布和维护：** [Launch copy](docs/LAUNCH_COPY.md) ·
+[Launch checklist](docs/GITHUB_LAUNCH_CHECKLIST.md) ·
+[Post-launch](docs/POST_LAUNCH_ITERATION.md) · [Roadmap](docs/ROADMAP.md) ·
+[Release notes](CHANGELOG.md) · [Contributing](CONTRIBUTING.md)
 
 Roundtable Skill 是一个 executor-neutral 的工程协作工作流。你的当前
 coding terminal 是 **Executor**，可以是 Codex、Claude Code、Kimi Work、
