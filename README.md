@@ -75,10 +75,12 @@ This repo ships install scripts, a native Codex skill package, executor-neutral 
 Give this to the coding agent you already use. It should choose the right install path for that terminal:
 
 ```text
-Install https://github.com/rawpaper123/Roundtable-skill for this project and run the first readiness check. After installation, tell me whether Lingtai is detected, whether a real roundtable can run, and what is still missing if it cannot.
+Install https://github.com/rawpaper123/Roundtable-skill for this project and run the first readiness check. If Lingtai is missing, guide me through installing it. If no Lingtai agent is available, guide me to create or connect at least one. Start with the minimum viable mode: this coding agent as Executor plus one reachable Lingtai agent. If I want the strongest mode, explain which extra provider/API-backed agents to add, but never ask me to paste secrets into chat and never claim a real roundtable ran until the agents reply.
 ```
 
 If the check reports `docs_only`, do not fake expert replies. Configure Lingtai and at least one agent first.
+
+Minimum viable mode is one Executor plus one reachable Lingtai agent. Stronger mode adds more agents from different providers only after the user explicitly configures credentials in the proper local/runtime environment.
 
 There is no universal native "skill" format across all coding agents yet.
 Roundtable therefore ships a native Codex installer plus an executor-neutral

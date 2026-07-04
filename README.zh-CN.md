@@ -77,10 +77,12 @@ Roundtable 不是把一段固定提示词塞给模型。它更像一个轻量的
 把下面这句话交给你正在使用的 coding agent，它会自动选择适合当前终端的安装路径：
 
 ```text
-帮我安装 https://github.com/rawpaper123/Roundtable-skill，并在当前项目里完成首次检查。安装后告诉我：是否检测到 Lingtai、是否能启动真实圆桌、如果不能还缺什么。
+帮我安装 https://github.com/rawpaper123/Roundtable-skill，并在当前项目里完成首次检查。如果没有 Lingtai，请引导我安装；如果没有可用的 Lingtai Agent，请引导我创建或连接至少一个。先用最小可用模式启动：当前 coding agent 作为执行者，加上一个可触达的 Lingtai Agent。如果我要最强模式，再说明可以补哪些不同 provider/API 支持的 Agent；但不要让我把密钥粘贴在聊天里，也不要在 Agent 没有真实回复前声称已经开过圆桌。
 ```
 
 如果首次检查结果是 `docs_only`，说明还不能运行真实圆桌。先配置 Lingtai 和至少一个 Agent，不要伪造专家回复。
+
+最小可用模式是一个执行者加一个可触达的 Lingtai Agent。更强模式是在用户明确把凭证配置到正确的本地或运行环境后，再接入不同 provider 的多个 Agent。
 
 目前不同 coding agent 没有统一的原生 Skill 标准，所以这里不会假装“所有终端都能装同一种原生 Skill”。Roundtable 提供的是：Codex 原生安装器，加上一套执行终端中立的协议提示词。Claude Code、Cursor、Windsurf、Kimi Work 或其他 agent 都可以按这套协议运行。关键不是 Codex，而是：有一个负责最终交付的执行者，并且至少有一个可触达的 Lingtai Agent。
 

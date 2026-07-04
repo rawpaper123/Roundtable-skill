@@ -10,6 +10,8 @@ README onboarding polish.
   Roundtable actually runs.
 - Replaced long homepage install commands with a one-line start prompt that can
   be handed to any coding agent.
+- Clarified first-run setup: guide Lingtai installation, start with one reachable
+  agent, and add provider/API-backed agents only through proper credential setup.
 
 ## v0.1.14
 
