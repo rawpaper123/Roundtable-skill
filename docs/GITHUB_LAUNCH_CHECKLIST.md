@@ -77,6 +77,7 @@ crowded row. They should include:
 - README and troubleshooting link to the welcome/setup discussion.
 - Launch copy includes short posts for scope creep, fake-green checks, and
   silent-agent failure modes.
+- Launch copy includes Product Hunt / directory submission fields.
 - A pull request template exists and asks for scope, runtime boundary,
   validation, and rollback.
 - Docs workflow badge points to the active GitHub Actions workflow.

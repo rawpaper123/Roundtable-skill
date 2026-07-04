@@ -198,6 +198,61 @@ GitHub:
 https://github.com/rawpaper123/Roundtable-skill
 ```
 
+## Product Hunt / Directory Submission
+
+Name:
+
+```text
+Roundtable Skill
+```
+
+Tagline:
+
+```text
+Lingtai expert panels for coding terminals, with scope, checks, and rollback kept in one Executor.
+```
+
+Short description:
+
+```text
+Roundtable Skill gives agentic coding work a small operating protocol: task-specific Lingtai experts advise, your coding terminal remains the Executor, silent agents get bounded repair, and every serious change ends with validation plus rollback.
+```
+
+Maker comment:
+
+```text
+I built Roundtable Skill after seeing the same failure pattern in agentic coding: not bad syntax, but bad coordination.
+
+The planner expands scope, the reviewer invents work, one agent goes silent, tests are assumed instead of checked, and nobody owns rollback.
+
+Roundtable keeps the loop small:
+- Lingtai provides the expert agents.
+- Your current coding terminal stays the Executor.
+- Expert roles are assigned per task.
+- "No opinion" is an allowed expert response.
+- Non-responsive agents get one bounded repair attempt.
+- The Executor owns the final diff, checks, Git, deploy, and rollback.
+
+It is intentionally not a hosted platform and it does not bundle Lingtai. It is a reusable skill/protocol for people already using agentic coding terminals and wanting a safer expert-review loop.
+```
+
+Best audience tags:
+
+```text
+developer tools, AI agents, coding agents, workflow automation, productivity
+```
+
+## Developer Community Reply
+
+Use this when someone asks why this needs a protocol instead of one bigger
+prompt:
+
+```text
+The point is not "more agents".
+
+Roundtable is about ownership boundaries: experts advise, one Executor decides, checks, ships, and owns rollback. The protocol also handles boring failure modes that big prompts usually ignore: scope creep, silent agents, fake-green checks, and no-opinion reviewers inventing work.
+```
+
 ## Do Not Say
 
 - "Works without Lingtai."
