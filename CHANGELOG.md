@@ -1,5 +1,18 @@
 # Changelog
 
+## Unreleased
+
+README language navigation polish.
+
+- Changed the top Chinese link in the English README to jump to an in-page
+  Chinese overview instead of sending users directly to the `README.zh-CN.md`
+  blob page.
+- Kept the full Chinese README and Chinese setup docs linked from that overview.
+- Replaced public README tech-stack lists with a clearer explanation of how
+  Roundtable actually runs.
+- Replaced long homepage install commands with a one-line start prompt that can
+  be handed to any coding agent.
+
 ## v0.1.14
 
 Ancient-style visual refresh and use-case rewrite.

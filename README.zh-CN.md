@@ -62,43 +62,29 @@ Roundtable 做的事情很简单：把不同视角放到同一张桌上。实践
 - ✅ **保留负责人**：执行者仍然负责最终取舍、验证、提交和回滚。
 - 🧯 **处理沉默 Agent**：不无限等待；记录问题，做一次安全修复，然后继续推进。
 
-## 技术栈
+## 它怎么运行
 
-- Markdown 文档和提示词模板
-- Codex Skill 包：`skills/codex/roundtable-skill`
-- PowerShell / Bash 安装与检查脚本
-- Lingtai 作为外部 Agent 运行时
-- GitHub Actions 文档校验
+Roundtable 不是把一段固定提示词塞给模型。它更像一个轻量的圆桌流程包：
 
-这个仓库不内置 Lingtai。没有配置 Lingtai 时，它只是文档和模板，不能假装已经运行了真实专家组。
+- **执行者**读任务、看证据、决定这次需要哪些专家视角。
+- **Lingtai Agent**承担临时专家身份，指出风险、反例、缺口，或者明确说“没有其他意见”。
+- **执行者**综合分歧，完成实际交付，并给出验证和回滚路径。
 
-## 快速开始
+这个仓库提供安装脚本、Codex Skill 包、执行者中立协议、检查清单和示例文档；真实多 Agent 运行依赖外部 Lingtai。没有配置 Lingtai 时，它不会假装已经开过专家圆桌。
 
-用一个命令先拿到 Roundtable 包，并自动选择合适的执行者路径。检测到 Codex 时，会安装原生 Codex Skill；其他 coding agent 则使用同一套 Roundtable 协议提示词和 Lingtai 检查流程。
+## 一键启动
 
-```powershell
-$rt = Join-Path $env:TEMP "Roundtable-skill"; Remove-Item -Recurse -Force $rt -ErrorAction SilentlyContinue; git clone --depth 1 https://github.com/rawpaper123/Roundtable-skill.git $rt; & "$rt\scripts\install-roundtable.ps1"
+把下面这句话交给你正在使用的 coding agent，它会自动选择适合当前终端的安装路径：
+
+```text
+帮我安装 https://github.com/rawpaper123/Roundtable-skill，并在当前项目里完成首次检查。安装后告诉我：是否检测到 Lingtai、是否能启动真实圆桌、如果不能还缺什么。
 ```
 
-```bash
-tmp="$(mktemp -d)" && git clone --depth 1 https://github.com/rawpaper123/Roundtable-skill.git "$tmp/Roundtable-skill" && "$tmp/Roundtable-skill/scripts/install-roundtable.sh"
-```
-
-然后在目标项目里配置 Lingtai，并检查是否可以运行：
-
-```powershell
-.\scripts\check-roundtable.ps1 -RequireLingtai
-```
-
-```bash
-./scripts/check-roundtable.sh --require-lingtai
-```
-
-如果检查结果是 `docs_only`，说明还不能运行真实圆桌。先配置 Lingtai 和至少一个 Agent，不要伪造专家回复。
+如果首次检查结果是 `docs_only`，说明还不能运行真实圆桌。先配置 Lingtai 和至少一个 Agent，不要伪造专家回复。
 
 目前不同 coding agent 没有统一的原生 Skill 标准，所以这里不会假装“所有终端都能装同一种原生 Skill”。Roundtable 提供的是：Codex 原生安装器，加上一套执行终端中立的协议提示词。Claude Code、Cursor、Windsurf、Kimi Work 或其他 agent 都可以按这套协议运行。关键不是 Codex，而是：有一个负责最终交付的执行者，并且至少有一个可触达的 Lingtai Agent。
 
-完整说明：
+需要手动命令、路径说明或排障时，再看完整文档：
 
 - [一键启动](QUICKSTART.zh-CN.md)
 - [Lingtai 设置](docs/LINGTAI_SETUP.zh-CN.md)
