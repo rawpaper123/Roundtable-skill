@@ -31,7 +31,7 @@ The Executor assigns temporary expert roles to available Lingtai agents, collect
 
 It works best when one model thinking alone is too narrow: release gates, research briefs, strategy decisions, business plans, product reviews, and other work where missing one angle can change the answer.
 
-![Roundtable Skill expert roundtable](assets/roundtable-hero.png)
+![Roundtable Skill expert roster](assets/roundtable-agent-roster.en.png)
 
 **First time here? Start with the [Quickstart](QUICKSTART.md) 60-second fit check.**
 
@@ -56,15 +56,9 @@ for a research brief, a release reviewer for a deploy gate, and a customer voice
 for a business plan. The value comes from choosing useful tension, not from
 locking agents into permanent personas.
 
-![Roundtable Skill agent roster](assets/roundtable-agent-roster.png)
-
-![Roundtable Skill role collision](assets/roundtable-role-collision.png)
-
 The point is not "more agents." The point is the right tension: different roles
 pull on the same problem until weak assumptions, missing evidence, and useful
 next steps become visible.
-
-![Roundtable Skill blind spot map](assets/roundtable-blindspot-map.png)
 
 ## Tech Stack
 
@@ -118,78 +112,35 @@ Full setup:
 
 ## Use Cases
 
-### Development
+Users do not need to hand-pick expert roles. The Executor reads the task,
+chooses the smallest useful panel, asks for concerns or no-opinion, then owns
+the final decision. The icons below mark common lead perspectives; the actual
+panel is assigned per task.
 
-```text
-Open Roundtable for this release gate.
+<table>
+  <tr>
+    <td width="95"><img src="assets/agents/engineering.png" width="54" alt="Engineering expert"><br><strong>Development</strong></td>
+    <td>Release gates, production bugs, migrations, and risky refactors.</td>
+    <td><img src="assets/agents/practice.png" width="30" alt="Practice expert"> <img src="assets/agents/history.png" width="30" alt="History expert"> Reliability, security, data integrity, rollback.</td>
+  </tr>
+  <tr>
+    <td><img src="assets/agents/contrarian.png" width="54" alt="Contrarian expert"><br><strong>Research</strong></td>
+    <td>Questions where evidence conflicts or one summary would be too narrow.</td>
+    <td><img src="assets/agents/practice.png" width="30" alt="Practice expert"> <img src="assets/agents/history.png" width="30" alt="History expert"> Practitioner, scholar, skeptic, incentives, history.</td>
+  </tr>
+  <tr>
+    <td><img src="assets/agents/business.png" width="54" alt="Business expert"><br><strong>Business</strong></td>
+    <td>Plans, launches, pricing, partnerships, and go-to-market choices.</td>
+    <td><img src="assets/agents/divergent.png" width="30" alt="Divergent expert"> <img src="assets/agents/execution.png" width="30" alt="Execution expert"> Customer reality, operator cost, finance, legal/risk.</td>
+  </tr>
+  <tr>
+    <td><img src="assets/agents/user-lead.png" width="54" alt="User lead"><br><strong>Daily</strong></td>
+    <td>Personal decisions where reversibility, time, and tradeoffs matter.</td>
+    <td><img src="assets/agents/execution.png" width="30" alt="Execution expert"> <img src="assets/agents/divergent.png" width="30" alt="Divergent expert"> Practical friend, budget/time, risk, contrarian.</td>
+  </tr>
+</table>
 
-Roles:
-- release reliability reviewer
-- security/privacy reviewer
-- adversarial scope reviewer
-
-Goal:
-decide whether this auth PR is safe to merge.
-```
-
-### Research
-
-```text
-Open Roundtable for this research question.
-
-Roles:
-- practitioner
-- scholar
-- skeptic
-- economist
-- historian
-
-Ask each role for:
-1. two-sentence position
-2. strongest evidence
-3. the one thing only this role would notice
-
-Then produce:
-- contradiction map
-- ranked findings
-- hidden connection
-- action recommendation
-- frontier question
-```
-
-### Daily Decision
-
-```text
-Open Roundtable for this personal decision.
-
-Roles:
-- practical friend
-- budget reviewer
-- risk reviewer
-- time planner
-- contrarian
-
-Goal:
-choose the option I can actually live with next month, not the one that only sounds good today.
-```
-
-### Business Plan
-
-```text
-Open Roundtable for this business plan.
-
-Roles:
-- customer voice
-- operator
-- finance reviewer
-- go-to-market reviewer
-- legal/risk reviewer
-
-Goal:
-find the assumptions that would break this plan before I spend money on it.
-```
-
-More examples: [Use cases](docs/USE_CASES.md), [Showcase](docs/SHOWCASE.md), [Demo script](docs/DEMO_SCRIPT.md).
+More patterns: [Use cases](docs/USE_CASES.md), [Showcase](docs/SHOWCASE.md), [Demo script](docs/DEMO_SCRIPT.md).
 
 ## Core Protocol
 

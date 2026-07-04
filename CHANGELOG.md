@@ -1,5 +1,22 @@
 # Changelog
 
+## v0.1.14
+
+Ancient-style visual refresh and use-case rewrite.
+
+- Replaced the modern character assets with ancient-style Roundtable visuals.
+- Added English and Chinese expert-roster images so README screenshots use the
+  right language for the selected README.
+- Split the eight expert heads into transparent role icons for scenario tables.
+- Reworked README use cases from prompt blocks into visual scenario logic:
+  Executor chooses the expert panel; users do not hand-pick roles.
+- Used the transparent expert heads inside the scenario table to make common
+  lead and supporting perspectives easier to scan.
+
+Roundtable Skill still requires Lingtai as the agent runtime. This repository
+does not bundle Lingtai or claim real multi-agent execution without Lingtai
+configured.
+
 ## v0.1.13
 
 README hero copy polish.

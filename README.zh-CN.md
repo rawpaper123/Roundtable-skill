@@ -46,13 +46,13 @@ Roundtable 做的事情很简单：把不同视角放到同一张桌上。实践
 
 同一组 Agent 可以在不同任务里重新排座位：今天是研究里的怀疑者，明天是发布前的可靠性审查者，后天是商业计划里的客户视角。真正重要的不是角色数量，而是这些角度能不能互相补位、互相拉扯。
 
-![Roundtable Skill 角色阵容](assets/roundtable-agent-roster.png)
+![Roundtable Skill 角色阵容](assets/roundtable-agent-roster.zh-CN.png)
 
-![Roundtable Skill 角色对撞](assets/roundtable-role-collision.png)
+![Roundtable Skill 角色对撞](assets/roundtable-role-collision.zh-CN.png)
 
 重点不是“Agent 越多越好”，而是让真正互补的角色之间产生张力。不同视角一起拉扯同一个问题，薄弱假设、缺失证据和下一步行动才会浮出来。
 
-![Roundtable Skill 盲区地图](assets/roundtable-blindspot-map.png)
+![Roundtable Skill 盲区地图](assets/roundtable-blindspot-map.zh-CN.png)
 
 ## 核心能力
 
@@ -108,78 +108,32 @@ tmp="$(mktemp -d)" && git clone --depth 1 https://github.com/rawpaper123/Roundta
 
 ## 使用场景
 
-### 开发任务
+用户不需要自己手动挑专家。执行者会先读任务，再选择最小但有效的专家组合；专家只负责指出问题或明确没有意见，最终取舍仍由执行者负责。下面的头像代表常见主导视角，真实专家组会按任务临时生成。
 
-```text
-为这个发布关卡开启 Roundtable。
+<table>
+  <tr>
+    <td width="95"><img src="assets/agents/engineering.png" width="54" alt="工程专家"><br><strong>开发</strong></td>
+    <td>发布关卡、线上 bug、迁移、危险重构。</td>
+    <td><img src="assets/agents/practice.png" width="30" alt="实践专家"> <img src="assets/agents/history.png" width="30" alt="历史专家"> 可靠性、安全、数据一致性、回滚。</td>
+  </tr>
+  <tr>
+    <td><img src="assets/agents/contrarian.png" width="54" alt="对立专家"><br><strong>研究</strong></td>
+    <td>证据互相冲突，单一摘要容易偏的问题。</td>
+    <td><img src="assets/agents/practice.png" width="30" alt="实践专家"> <img src="assets/agents/history.png" width="30" alt="历史专家"> 实践者、学者、怀疑者、利益结构、历史类比。</td>
+  </tr>
+  <tr>
+    <td><img src="assets/agents/business.png" width="54" alt="商业专家"><br><strong>商业</strong></td>
+    <td>计划、发布、定价、合作、增长选择。</td>
+    <td><img src="assets/agents/divergent.png" width="30" alt="发散专家"> <img src="assets/agents/execution.png" width="30" alt="执行专家"> 客户现实、运营成本、财务、法务/风险。</td>
+  </tr>
+  <tr>
+    <td><img src="assets/agents/user-lead.png" width="54" alt="用户领队"><br><strong>日常</strong></td>
+    <td>需要认真权衡成本、时间、可逆性的个人选择。</td>
+    <td><img src="assets/agents/execution.png" width="30" alt="执行专家"> <img src="assets/agents/divergent.png" width="30" alt="发散专家"> 现实朋友、预算/时间、风险、反对者。</td>
+  </tr>
+</table>
 
-角色：
-- 发布可靠性审查者
-- 安全与隐私审查者
-- 范围控制审查者
-
-目标：
-判断这个权限相关 PR 是否可以合并。
-```
-
-### 研究任务
-
-```text
-为这个研究问题开启 Roundtable。
-
-角色：
-- 实践者
-- 学者
-- 怀疑者
-- 经济学家
-- 历史学家
-
-每个角色给出：
-1. 两句话核心立场
-2. 最强证据
-3. 只有这个视角才会提醒我的那件事
-
-最后产出：
-- 矛盾地图
-- 按可靠性排序的关键发现
-- 隐藏关联
-- 行动建议
-- 一个能改变结论的前沿问题
-```
-
-### 日常决策
-
-```text
-为这个个人选择开启 Roundtable。
-
-角色：
-- 现实朋友
-- 预算审查者
-- 风险审查者
-- 时间规划者
-- 反对者
-
-目标：
-选出一个下个月真的能执行的方案，而不是听起来最漂亮的方案。
-```
-
-### 商业计划
-
-```text
-为这个商业计划开启 Roundtable。
-
-角色：
-- 客户视角
-- 运营视角
-- 财务视角
-- 增长视角
-- 法务与风险视角
-
-目标：
-在花钱之前，找出最可能让这个计划失败的假设。
-```
-
-更多示例见 [Use cases](docs/USE_CASES.md)、[Showcase](docs/SHOWCASE.md)、[Demo script](docs/DEMO_SCRIPT.md)。
+更多场景逻辑见 [Use cases](docs/USE_CASES.md)、[Showcase](docs/SHOWCASE.md)、[Demo script](docs/DEMO_SCRIPT.md)。
 
 ## 基本流程
 
