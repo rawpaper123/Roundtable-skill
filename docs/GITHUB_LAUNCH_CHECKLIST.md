@@ -74,6 +74,8 @@ crowded row. They should include:
 - Setup help issue template exists for first-run blockers.
 - GitHub Discussions is enabled for community questions and setup help.
 - README and troubleshooting link to the welcome/setup discussion.
+- Launch copy includes short posts for scope creep, fake-green checks, and
+  silent-agent failure modes.
 - A pull request template exists and asks for scope, runtime boundary,
   validation, and rollback.
 - Docs workflow badge points to the active GitHub Actions workflow.

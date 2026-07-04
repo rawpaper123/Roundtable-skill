@@ -26,6 +26,45 @@ Roundtable Skill 把 Lingtai 专家组接到你的 coding terminal 旁边，但�
 Lingtai-powered multi-agent expert review loop for coding terminals: scoped plans, bounded waits, checks, rollback
 ```
 
+## Three Short Launch Angles
+
+Use one of these when you need a sharper first post.
+
+### Scope Control
+
+```text
+I built Roundtable Skill for agentic coding tasks where scope creep is the real bug.
+
+Lingtai agents advise from task-specific expert angles.
+Your coding terminal stays the Executor and owns the final diff, checks, Git, and rollback.
+
+https://github.com/rawpaper123/Roundtable-skill
+```
+
+### Fake Green Checks
+
+```text
+Most AI coding failures I care about are not syntax failures.
+
+They are fake-green failures: no real checks, unclear owner, no rollback.
+
+Roundtable Skill wraps a Lingtai expert panel around your coding terminal, while the terminal stays accountable for shipping.
+
+https://github.com/rawpaper123/Roundtable-skill
+```
+
+### Silent Agents
+
+```text
+What should happen when one agent goes silent?
+
+Roundtable Skill gives coding terminals a small protocol: bounded waits, one repair attempt, no-opinion replies, Executor-owned verification, rollback-ready report.
+
+Built on Lingtai.
+
+https://github.com/rawpaper123/Roundtable-skill
+```
+
 ## X / Short Post
 
 English:
