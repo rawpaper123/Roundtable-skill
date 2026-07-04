@@ -172,20 +172,6 @@ tmp="$(mktemp -d)" && git clone --depth 1 https://github.com/rawpaper123/Roundta
 
 好的贡献应该让 Roundtable 更容易被真实项目使用：更清楚的安装路径、更稳定的执行者适配、更安全的示例、更锋利的使用场景提示词。可以先看 [贡献指南](CONTRIBUTING.md)，也可以直接提交一个具体的 first-run 问题。
 
-## 安全边界
-
-不要提交：
-
-- `.lingtai/`
-- `.recipe/`
-- mailbox 文件
-- OAuth token
-- `codex-auth.json`
-- 私钥
-- 日志
-- 项目密钥
-- 运行时数据
-
 ## License
 
 MIT

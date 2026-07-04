@@ -179,20 +179,6 @@ Need help? Use [Discussions](https://github.com/rawpaper123/Roundtable-skill/dis
 
 Good contributions make Roundtable easier to run in real projects: clearer setup paths, better executor adapters, safer examples, and sharper use-case prompts. Start with [CONTRIBUTING.md](CONTRIBUTING.md) or open an issue if a first run gets stuck.
 
-## Safety Boundary
-
-Do not commit:
-
-- `.lingtai/`
-- `.recipe/`
-- mailbox files
-- OAuth tokens
-- `codex-auth.json`
-- private keys
-- logs
-- project secrets
-- runtime data
-
 ## License
 
 MIT
