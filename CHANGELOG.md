@@ -1,5 +1,18 @@
 # Changelog
 
+## v0.1.13
+
+README hero copy polish.
+
+- Updated the English README hero to use a memorable product positioning line:
+  "Your AI expert roundtable."
+- Updated the Chinese README hero to match the same structure with a native
+  positioning line and short explanatory sentence.
+
+Roundtable Skill still requires Lingtai as the agent runtime. This repository
+does not bundle Lingtai or claim real multi-agent execution without Lingtai
+configured.
+
 ## v0.1.12
 
 Chinese docs and role roster polish.

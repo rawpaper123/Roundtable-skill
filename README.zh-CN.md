@@ -5,7 +5,12 @@
 <h1 align="center">Roundtable Skill</h1>
 
 <p align="center">
-  基于 Lingtai 的多视角 Agent 圆桌工作流。
+  <strong>你的 AI 圆桌专家组。</strong>
+</p>
+
+<p align="center">
+  基于 Lingtai，把一次任务临时组织成多视角专家审查，
+  让计划被质疑、盲区被看见、交付仍然有人负责。
 </p>
 
 <p align="center">

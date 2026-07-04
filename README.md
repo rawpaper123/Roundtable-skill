@@ -5,7 +5,12 @@
 <h1 align="center">Roundtable Skill</h1>
 
 <p align="center">
-  Lingtai-powered expert roundtable for multi-perspective AI review.
+  <strong>Your AI expert roundtable.</strong>
+</p>
+
+<p align="center">
+  Turn one model's answer into a task-specific panel of Lingtai agents that
+  challenges plans, maps blind spots, and keeps one Executor accountable for delivery.
 </p>
 
 <p align="center">
