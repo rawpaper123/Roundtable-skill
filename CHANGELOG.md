@@ -1,5 +1,22 @@
 # Changelog
 
+## v0.1.7
+
+First-run support polish.
+
+- Made Quickstart explicitly executor-neutral instead of implying Codex is the
+  only supported Executor.
+- Added the `docs_only` recovery path to Quickstart so users know to configure
+  Lingtai and at least one agent before claiming a real Roundtable run.
+- Added a setup help issue template for install, readiness, and first-run
+  blockers without asking users to paste secrets or private runtime data.
+- Created and linked a welcome/setup discussion for public setup questions and
+  first Roundtable run reports.
+
+Roundtable Skill still requires Lingtai as the agent runtime. This repository
+does not bundle Lingtai or claim real multi-agent execution without Lingtai
+configured.
+
 ## v0.1.6
 
 Public community readiness polish.
