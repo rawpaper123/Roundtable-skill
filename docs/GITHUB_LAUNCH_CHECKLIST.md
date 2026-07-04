@@ -83,6 +83,7 @@ crowded row. They should include:
   validation, and rollback.
 - Docs workflow badge points to the active GitHub Actions workflow.
 - Latest Docs workflow run on `main` is successful.
+- Codex installer smoke passes with a temporary `CODEX_HOME`.
 
 ## Runtime Boundary
 
