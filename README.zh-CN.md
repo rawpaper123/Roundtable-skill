@@ -39,6 +39,11 @@ Executor 对 scope、验证、Git、发布和 rollback 负责。
 [Post-launch](docs/POST_LAUNCH_ITERATION.md) · [Roadmap](docs/ROADMAP.md) ·
 [Release notes](CHANGELOG.md) · [Contributing](CONTRIBUTING.md)
 
+**需要帮助？** 可以在
+[Discussions](https://github.com/rawpaper123/Roundtable-skill/discussions/1)
+提问，或打开
+[Setup help issue](https://github.com/rawpaper123/Roundtable-skill/issues/new?template=setup_help.md)。
+
 Roundtable Skill 是一个 executor-neutral 的工程协作工作流。你的当前
 coding terminal 是 **Executor**，可以是 Codex、Claude Code、Kimi Work、
 Cursor、Windsurf，或其他 agentic coding terminal。Lingtai agents 只负责

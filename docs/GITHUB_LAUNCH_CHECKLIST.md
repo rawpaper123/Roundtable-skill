@@ -73,6 +73,7 @@ crowded row. They should include:
 - Issue templates exist for docs improvements and executor adapters.
 - Setup help issue template exists for first-run blockers.
 - GitHub Discussions is enabled for community questions and setup help.
+- README and troubleshooting link to the welcome/setup discussion.
 - A pull request template exists and asks for scope, runtime boundary,
   validation, and rollback.
 - Docs workflow badge points to the active GitHub Actions workflow.

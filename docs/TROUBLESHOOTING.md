@@ -140,7 +140,12 @@ text.
 
 ## Still Stuck?
 
-Open a `Setup help` issue with:
+For public setup questions, use the
+[Welcome discussion](https://github.com/rawpaper123/Roundtable-skill/discussions/1).
+
+For a structured first-run blocker, open a
+[`Setup help` issue](https://github.com/rawpaper123/Roundtable-skill/issues/new?template=setup_help.md)
+with:
 
 - operating system,
 - Executor terminal,

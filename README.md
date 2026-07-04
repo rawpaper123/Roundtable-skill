@@ -40,6 +40,11 @@ handing repo ownership to autonomous agents.
 [Post-launch](docs/POST_LAUNCH_ITERATION.md) · [Roadmap](docs/ROADMAP.md) ·
 [Release notes](CHANGELOG.md) · [Contributing](CONTRIBUTING.md)
 
+**Need help?** Ask in
+[Discussions](https://github.com/rawpaper123/Roundtable-skill/discussions/1)
+or open a
+[Setup help issue](https://github.com/rawpaper123/Roundtable-skill/issues/new?template=setup_help.md).
+
 Roundtable Skill is an executor-neutral workflow for shipping agentic coding
 changes with discipline: task-specific Lingtai experts advise, while your
 current coding terminal owns the final plan, implementation, verification, Git,
