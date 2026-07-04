@@ -60,11 +60,14 @@ If you only have one agent, start there. See
 [docs/AGENT_ROSTER_GUIDE.md](docs/AGENT_ROSTER_GUIDE.md) for how to grow from
 one agent to a three-agent review panel.
 
-## 3. Ask Codex
+## 3. Ask Your Executor
 
 ```text
-Open Roundtable Skill for this task:
+Use Roundtable Skill / Roundtable protocol for this task:
 review this one-line change before I ship it.
+
+Executor is the coding terminal I am using now.
+Lingtai agents advise; the Executor owns implementation, verification, Git, and rollback.
 
 Assign expert angles:
 - product trust
@@ -77,7 +80,7 @@ If an expert has no actionable concern, they must reply no opinion.
 You should see Lingtai expert replies, Executor synthesis, validation, and
 rollback.
 
-For non-Codex Executors, use the same contract:
+For executor-specific examples, use:
 
 - [docs/EXECUTOR_SETUP.md](docs/EXECUTOR_SETUP.md)
 - [templates/executor/roundtable-executor-prompt.md](templates/executor/roundtable-executor-prompt.md)
