@@ -18,7 +18,7 @@ handing repo ownership to autonomous agents.
 
 ![Roundtable Skill terminal demo cast](assets/roundtable-demo-cast.svg)
 
-**New here? Start with [QUICKSTART.md](QUICKSTART.md).**
+**New here? Start with the [QUICKSTART.md](QUICKSTART.md) 60-second fit check.**
 
 **Start here:** [Quickstart](QUICKSTART.md) ·
 [Install matrix](docs/INSTALL_MATRIX.md) · [Demo script](docs/DEMO_SCRIPT.md) ·

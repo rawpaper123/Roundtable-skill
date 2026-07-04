@@ -17,7 +17,7 @@ Executor 对 scope、验证、Git、发布和 rollback 负责。
 
 ![Roundtable Skill terminal demo cast](assets/roundtable-demo-cast.svg)
 
-**第一次使用？从 [QUICKSTART.md](QUICKSTART.md) 开始。**
+**第一次使用？先看 [QUICKSTART.md](QUICKSTART.md) 的 60 秒适配判断。**
 
 **先从这里开始：** [Quickstart](QUICKSTART.md) ·
 [Install matrix](docs/INSTALL_MATRIX.md) · [Demo script](docs/DEMO_SCRIPT.md) ·
