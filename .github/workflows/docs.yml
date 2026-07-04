@@ -26,6 +26,7 @@ jobs:
               "README.zh-CN.md",
               "QUICKSTART.md",
               "LICENSE",
+              "CODE_OF_CONDUCT.md",
               "SECURITY.md",
               "CHANGELOG.md",
               "CONTRIBUTING.md",
