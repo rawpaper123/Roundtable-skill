@@ -14,7 +14,7 @@
 </p>
 
 <p align="center">
-  <a href="#中文速览">中文速览</a> · English
+  <a href="README.zh-CN.md">中文</a> · English
 </p>
 
 <p align="center">
@@ -34,25 +34,6 @@ It works best when one model thinking alone is too narrow: release gates, resear
 ![Roundtable Skill expert roster](assets/roundtable-agent-roster.en.png)
 
 **First time here? Start with the [Quickstart](QUICKSTART.md) 60-second fit check.**
-
-<a id="中文速览"></a>
-
-## 中文速览
-
-Roundtable Skill 是一个基于 Lingtai 的“AI 圆桌专家组”工作流。执行者会根据任务临时选择专家视角，让不同 Agent 审查计划、指出盲区、提出反对意见或明确表示没有意见；最后仍由一个执行者负责交付、验证和回滚。
-
-- 适合：发布关卡、研究简报、商业计划、产品决策、重要日常选择。
-- 不适合：错别字、一行文案、机械格式化、没有真实风险的小任务。
-- 关键边界：没有配置 Lingtai 时，这个仓库只是文档和模板，不会假装跑了真实专家组。
-
-中文完整文档：
-
-- [完整中文 README](README.zh-CN.md)
-- [一键启动](QUICKSTART.zh-CN.md)
-- [Lingtai 设置](docs/LINGTAI_SETUP.zh-CN.md)
-- [安装路径对照](docs/INSTALL_MATRIX.zh-CN.md)
-- [首次运行检查](docs/FIRST_RUN_CHECKLIST.zh-CN.md)
-- [问题排查](docs/TROUBLESHOOTING.zh-CN.md)
 
 ## What It Does
 

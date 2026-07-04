@@ -2,12 +2,10 @@
 
 ## Unreleased
 
-README language navigation polish.
+README onboarding polish.
 
-- Changed the top Chinese link in the English README to jump to an in-page
-  Chinese overview instead of sending users directly to the `README.zh-CN.md`
-  blob page.
-- Kept the full Chinese README and Chinese setup docs linked from that overview.
+- Kept the top Chinese link in the English README pointed at the full
+  `README.zh-CN.md` page.
 - Replaced public README tech-stack lists with a clearer explanation of how
   Roundtable actually runs.
 - Replaced long homepage install commands with a one-line start prompt that can
