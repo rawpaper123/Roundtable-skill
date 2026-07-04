@@ -10,6 +10,8 @@ Roundtable positioning rewrite.
   neutral: Codex can install a native skill, while other coding agents get the
   protocol prompt and readiness path.
 - Added CI and maintainer smoke coverage for the universal installer wrapper.
+- Added visual README assets that explain the expert roundtable, role
+  collision, and blind-spot mapping concepts.
 - Upgraded the Roundtable protocol with expert-angle design rules so normal
   tasks stay lightweight but still use useful, complementary perspectives.
 - Added a dedicated research mode for multi-perspective scan, contradiction

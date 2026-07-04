@@ -15,7 +15,7 @@ Roundtable Skill 的意思就是“圆桌会议”。
 
 适合那些“一个模型自己想、自己审、自己交付”不够稳的任务：代码合并、研究简报、商业计划、产品决策、日常重大选择，或者任何需要多角度审查的复杂问题。
 
-![Roundtable Skill terminal demo cast](assets/roundtable-demo-cast.svg)
+![Roundtable Skill 圆桌会议](assets/roundtable-hero.png)
 
 **第一次使用？先看 [Quickstart](QUICKSTART.md) 的 60 秒适配判断。**
 
@@ -26,6 +26,12 @@ Roundtable Skill 的意思就是“圆桌会议”。
 Roundtable 做的事情很简单：把不同视角放到同一张桌上。实践者会指出一线经验里真正麻烦的地方，怀疑者会追问最强反例，安全审查者会盯住权限和泄露风险，财务视角会看激励和成本，历史视角会提醒你这类问题以前怎么失败过。
 
 这些专家身份不是固定人设。每次任务开始时重新分配，任务结束后就收回。下次任务换一组更合适的视角。
+
+![Roundtable Skill 角色对撞](assets/roundtable-role-collision.png)
+
+重点不是“Agent 越多越好”，而是让真正互补的角色之间产生张力。不同视角一起拉扯同一个问题，薄弱假设、缺失证据和下一步行动才会浮出来。
+
+![Roundtable Skill 盲区地图](assets/roundtable-blindspot-map.png)
 
 ## 核心能力
 

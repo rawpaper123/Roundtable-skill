@@ -14,7 +14,7 @@ The Executor assigns temporary expert roles to available Lingtai agents, collect
 
 It works best when one model thinking alone is too narrow: release gates, research briefs, strategy decisions, business plans, product reviews, and other work where missing one angle can change the answer.
 
-![Roundtable Skill terminal demo cast](assets/roundtable-demo-cast.svg)
+![Roundtable Skill expert roundtable](assets/roundtable-hero.png)
 
 **First time here? Start with the [Quickstart](QUICKSTART.md) 60-second fit check.**
 
@@ -33,6 +33,14 @@ A single agent can sound confident while missing the point.
 Roundtable adds structured disagreement. A practitioner may catch what the paper ignores. A skeptic may find the strongest counterexample. A security reviewer may block a risky merge. A finance voice may notice incentives that the product voice missed.
 
 The roles are not permanent identities. They are assigned for the current task and discarded when the task ends.
+
+![Roundtable Skill role collision](assets/roundtable-role-collision.png)
+
+The point is not "more agents." The point is the right tension: different roles
+pull on the same problem until weak assumptions, missing evidence, and useful
+next steps become visible.
+
+![Roundtable Skill blind spot map](assets/roundtable-blindspot-map.png)
 
 ## Tech Stack
 

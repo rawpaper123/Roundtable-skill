@@ -2,6 +2,8 @@
 
 Roundtable is for work where one more prompt is not enough.
 
+![Roundtable Skill expert roundtable](../assets/roundtable-hero.png)
+
 It is not a replacement for your coding terminal. It is a Lingtai-backed expert
 panel around it: experts advise, the Executor decides, implements, verifies,
 and owns rollback.
@@ -64,6 +66,14 @@ The important part is not "more agents." The important part is role discipline:
 - silence is treated as a runtime issue,
 - the Executor rejects scope creep,
 - every serious change ends with validation and rollback.
+
+![Roundtable Skill role collision](../assets/roundtable-role-collision.png)
+
+Good roles create useful tension. A skeptic, practitioner, evidence reviewer,
+and delivery owner should not repeat one another. They should expose different
+ways the same plan can fail.
+
+![Roundtable Skill blind spot map](../assets/roundtable-blindspot-map.png)
 
 ## When To Use It
 
