@@ -1,5 +1,19 @@
 # Changelog
 
+## v0.1.9
+
+First-run fit-check polish.
+
+- Added a 60-second fit check at the top of Quickstart so users decide whether
+  Roundtable is appropriate before installing or running anything.
+- Updated README and Chinese README first-screen copy to point new users to
+  the Quickstart fit check.
+- Updated the GitHub launch checklist to cover the fit-check entry point.
+
+Roundtable Skill still requires Lingtai as the agent runtime. This repository
+does not bundle Lingtai or claim real multi-agent execution without Lingtai
+configured.
+
 ## v0.1.8
 
 Launch conversion polish.
