@@ -140,7 +140,7 @@ text.
 
 ## Still Stuck?
 
-Open an issue with:
+Open a `Setup help` issue with:
 
 - operating system,
 - Executor terminal,
