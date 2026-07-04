@@ -62,6 +62,20 @@ repository does not bundle Lingtai. Without Lingtai configured, this repository
 only provides readable docs and templates; it cannot run a working multi-agent
 Roundtable.
 
+## Who Should Use This?
+
+Use Roundtable when:
+
+- the task has release, security, data, architecture, or user-trust risk,
+- one model reviewing itself is not enough,
+- you need scoped advice, real checks, and rollback.
+
+Do not use it for:
+
+- typo fixes,
+- one-line docs edits,
+- tasks where Lingtai is not configured and you need real expert replies.
+
 ## Why Use It?
 
 Most agentic coding failures are not syntax failures. They are coordination

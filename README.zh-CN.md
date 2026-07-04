@@ -53,6 +53,20 @@ Roundtable 建立在 [Lingtai](https://github.com/LingTai-AI/lingtai) agent
 runtime 之上。本 repo 不内置 Lingtai。没有配置 Lingtai 时，这个 repo 只是
 协议、模板和安装辅助，不是可运行的多 agent Roundtable。
 
+## 适合谁？
+
+适合：
+
+- release、安全、数据、架构、用户信任相关任务；
+- 单模型自审自答不够可靠的任务；
+- 需要明确 scope、真实验证和 rollback 的任务。
+
+不适合：
+
+- typo 或一行文案修改；
+- 普通低风险 docs 小修；
+- 没配置 Lingtai 却需要真实专家回复的场景。
+
 ## 为什么值得用？
 
 很多 AI coding 失败，不是语法失败，而是协作失败：

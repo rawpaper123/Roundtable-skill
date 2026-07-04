@@ -40,6 +40,7 @@ Lingtai-powered multi-agent expert review loop for coding terminals: scoped plan
 - English and Chinese entry points work.
 - Quickstart does not imply Codex is required as the Executor.
 - Quickstart explains what to do when readiness reports `docs_only`.
+- README first screen helps visitors decide when to use or skip Roundtable.
 
 ## Conversion Links
 
