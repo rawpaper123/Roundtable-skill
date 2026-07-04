@@ -48,6 +48,8 @@ Good expert sets should include:
 Do not create five roles because five sounds impressive. Create roles because
 each one can reveal something the others probably miss.
 
+![Roundtable Skill agent roster](../assets/roundtable-agent-roster.png)
+
 ### Example Angle Sets
 
 Development:

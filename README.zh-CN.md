@@ -1,13 +1,25 @@
-# Roundtable Skill
+<p align="center">
+  <img src="assets/roundtable-avatar.png" alt="Roundtable Skill 头像" width="180">
+</p>
 
-中文 | [English](README.md)
+<h1 align="center">Roundtable Skill</h1>
 
-[![GitHub stars](https://img.shields.io/github/stars/rawpaper123/Roundtable-skill?style=social)](https://github.com/rawpaper123/Roundtable-skill/stargazers)
-[![Docs](https://github.com/rawpaper123/Roundtable-skill/actions/workflows/docs.yml/badge.svg)](https://github.com/rawpaper123/Roundtable-skill/actions/workflows/docs.yml)
-[![License: MIT](https://img.shields.io/badge/license-MIT-black.svg)](LICENSE)
-[![Lingtai required](https://img.shields.io/badge/Lingtai-required-black.svg)](https://github.com/LingTai-AI/lingtai)
-[![Executor neutral](https://img.shields.io/badge/executor-neutral-black.svg)](docs/EXECUTOR_SETUP.md)
-[![Codex skill](https://img.shields.io/badge/Codex-skill-black.svg)](skills/codex/roundtable-skill/SKILL.md)
+<p align="center">
+  基于 Lingtai 的多视角 Agent 圆桌工作流。
+</p>
+
+<p align="center">
+  中文 · <a href="README.md">English</a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/rawpaper123/Roundtable-skill/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/rawpaper123/Roundtable-skill?style=social"></a>
+  <a href="https://github.com/rawpaper123/Roundtable-skill/actions/workflows/docs.yml"><img alt="Docs" src="https://github.com/rawpaper123/Roundtable-skill/actions/workflows/docs.yml/badge.svg"></a>
+  <a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-black.svg"></a>
+  <a href="https://github.com/LingTai-AI/lingtai"><img alt="Lingtai required" src="https://img.shields.io/badge/Lingtai-required-black.svg"></a>
+  <a href="docs/EXECUTOR_SETUP.md"><img alt="Executor neutral" src="https://img.shields.io/badge/executor-neutral-black.svg"></a>
+  <a href="skills/codex/roundtable-skill/SKILL.md"><img alt="Codex skill" src="https://img.shields.io/badge/Codex-skill-black.svg"></a>
+</p>
 
 Roundtable Skill 的意思就是“圆桌会议”。
 
@@ -17,7 +29,7 @@ Roundtable Skill 的意思就是“圆桌会议”。
 
 ![Roundtable Skill 圆桌会议](assets/roundtable-hero.png)
 
-**第一次使用？先看 [Quickstart](QUICKSTART.md) 的 60 秒适配判断。**
+**第一次使用？先看 [一键启动](QUICKSTART.zh-CN.md) 的 60 秒适配判断。**
 
 ## 它解决什么问题
 
@@ -26,6 +38,10 @@ Roundtable Skill 的意思就是“圆桌会议”。
 Roundtable 做的事情很简单：把不同视角放到同一张桌上。实践者会指出一线经验里真正麻烦的地方，怀疑者会追问最强反例，安全审查者会盯住权限和泄露风险，财务视角会看激励和成本，历史视角会提醒你这类问题以前怎么失败过。
 
 这些专家身份不是固定人设。每次任务开始时重新分配，任务结束后就收回。下次任务换一组更合适的视角。
+
+同一组 Agent 可以在不同任务里重新排座位：今天是研究里的怀疑者，明天是发布前的可靠性审查者，后天是商业计划里的客户视角。真正重要的不是角色数量，而是这些角度能不能互相补位、互相拉扯。
+
+![Roundtable Skill 角色阵容](assets/roundtable-agent-roster.png)
 
 ![Roundtable Skill 角色对撞](assets/roundtable-role-collision.png)
 
@@ -79,11 +95,11 @@ tmp="$(mktemp -d)" && git clone --depth 1 https://github.com/rawpaper123/Roundta
 
 完整说明：
 
-- [Quickstart](QUICKSTART.md)
-- [Lingtai 设置](docs/LINGTAI_SETUP.md)
-- [安装路径对照](docs/INSTALL_MATRIX.md)
-- [首次运行检查](docs/FIRST_RUN_CHECKLIST.md)
-- [问题排查](docs/TROUBLESHOOTING.md)
+- [一键启动](QUICKSTART.zh-CN.md)
+- [Lingtai 设置](docs/LINGTAI_SETUP.zh-CN.md)
+- [安装路径对照](docs/INSTALL_MATRIX.zh-CN.md)
+- [首次运行检查](docs/FIRST_RUN_CHECKLIST.zh-CN.md)
+- [问题排查](docs/TROUBLESHOOTING.zh-CN.md)
 
 ## 使用场景
 

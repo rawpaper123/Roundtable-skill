@@ -1,13 +1,25 @@
-# Roundtable Skill
+<p align="center">
+  <img src="assets/roundtable-avatar.png" alt="Roundtable Skill avatar" width="180">
+</p>
 
-[中文](README.zh-CN.md) | English
+<h1 align="center">Roundtable Skill</h1>
 
-[![GitHub stars](https://img.shields.io/github/stars/rawpaper123/Roundtable-skill?style=social)](https://github.com/rawpaper123/Roundtable-skill/stargazers)
-[![Docs](https://github.com/rawpaper123/Roundtable-skill/actions/workflows/docs.yml/badge.svg)](https://github.com/rawpaper123/Roundtable-skill/actions/workflows/docs.yml)
-[![License: MIT](https://img.shields.io/badge/license-MIT-black.svg)](LICENSE)
-[![Lingtai required](https://img.shields.io/badge/Lingtai-required-black.svg)](https://github.com/LingTai-AI/lingtai)
-[![Executor neutral](https://img.shields.io/badge/executor-neutral-black.svg)](docs/EXECUTOR_SETUP.md)
-[![Codex skill](https://img.shields.io/badge/Codex-skill-black.svg)](skills/codex/roundtable-skill/SKILL.md)
+<p align="center">
+  Lingtai-powered expert roundtable for multi-perspective AI review.
+</p>
+
+<p align="center">
+  <a href="README.zh-CN.md">中文</a> · English
+</p>
+
+<p align="center">
+  <a href="https://github.com/rawpaper123/Roundtable-skill/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/rawpaper123/Roundtable-skill?style=social"></a>
+  <a href="https://github.com/rawpaper123/Roundtable-skill/actions/workflows/docs.yml"><img alt="Docs" src="https://github.com/rawpaper123/Roundtable-skill/actions/workflows/docs.yml/badge.svg"></a>
+  <a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-black.svg"></a>
+  <a href="https://github.com/LingTai-AI/lingtai"><img alt="Lingtai required" src="https://img.shields.io/badge/Lingtai-required-black.svg"></a>
+  <a href="docs/EXECUTOR_SETUP.md"><img alt="Executor neutral" src="https://img.shields.io/badge/executor-neutral-black.svg"></a>
+  <a href="skills/codex/roundtable-skill/SKILL.md"><img alt="Codex skill" src="https://img.shields.io/badge/Codex-skill-black.svg"></a>
+</p>
 
 Roundtable Skill turns a single-agent task into a small expert meeting.
 The Executor assigns temporary expert roles to available Lingtai agents, collects their reviews, maps disagreements, then decides what to do next.
@@ -33,6 +45,13 @@ A single agent can sound confident while missing the point.
 Roundtable adds structured disagreement. A practitioner may catch what the paper ignores. A skeptic may find the strongest counterexample. A security reviewer may block a risky merge. A finance voice may notice incentives that the product voice missed.
 
 The roles are not permanent identities. They are assigned for the current task and discarded when the task ends.
+
+The same roster can be reshuffled for every problem: one agent may be a skeptic
+for a research brief, a release reviewer for a deploy gate, and a customer voice
+for a business plan. The value comes from choosing useful tension, not from
+locking agents into permanent personas.
+
+![Roundtable Skill agent roster](assets/roundtable-agent-roster.png)
 
 ![Roundtable Skill role collision](assets/roundtable-role-collision.png)
 

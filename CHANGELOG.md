@@ -1,5 +1,21 @@
 # Changelog
 
+## v0.1.12
+
+Chinese docs and role roster polish.
+
+- Added a Roundtable agent roster image to explain temporary, task-specific
+  expert role assignment.
+- Added a transparent Roundtable avatar image for the centered README header.
+- Linked the roster from README, Chinese README, and the protocol docs.
+- Added Chinese versions of Quickstart, Lingtai setup, install matrix,
+  first-run checklist, and troubleshooting so the Chinese README no longer
+  routes first-time users into English-only setup pages.
+
+Roundtable Skill still requires Lingtai as the agent runtime. This repository
+does not bundle Lingtai or claim real multi-agent execution without Lingtai
+configured.
+
 ## v0.1.11
 
 Roundtable positioning rewrite.
