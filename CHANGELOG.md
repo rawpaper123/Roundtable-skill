@@ -1,5 +1,19 @@
 # Changelog
 
+## v0.1.8
+
+Launch conversion polish.
+
+- Added README guidance for when to use Roundtable and when to skip it.
+- Added matching Chinese README guidance for the same use/skip decision.
+- Added Product Hunt / directory submission copy to the launch copy pack.
+- Updated the GitHub launch checklist to cover first-screen use/skip clarity
+  and directory submission fields.
+
+Roundtable Skill still requires Lingtai as the agent runtime. This repository
+does not bundle Lingtai or claim real multi-agent execution without Lingtai
+configured.
+
 ## v0.1.7
 
 First-run support polish.
