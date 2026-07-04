@@ -56,6 +56,16 @@ cd /path/to/your-project
 Expected: `lingtai_cli: true`, `dot_lingtai: true`, and `agent_manifests: 1`
 or more.
 
+If the check reports `docs_only`:
+
+- do not run a fake Roundtable,
+- open [docs/LINGTAI_SETUP.md](docs/LINGTAI_SETUP.md),
+- configure Lingtai and at least one agent in the target project,
+- rerun the readiness check from that target project root.
+
+If messages queue or agents stay silent after setup, use
+[docs/TROUBLESHOOTING.md](docs/TROUBLESHOOTING.md).
+
 If you only have one agent, start there. See
 [docs/AGENT_ROSTER_GUIDE.md](docs/AGENT_ROSTER_GUIDE.md) for how to grow from
 one agent to a three-agent review panel.
