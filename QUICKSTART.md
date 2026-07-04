@@ -3,6 +3,19 @@
 Goal: choose your Executor path, verify Lingtai, and run your first Roundtable
 in about 5 minutes.
 
+## 0. 60-Second Fit Check
+
+Before installing or running anything, answer:
+
+1. Is this task risky enough that independent expert advice would help?
+2. Is Lingtai configured, or are you ready to configure it before claiming a
+   real expert-panel run?
+3. Is one coding terminal ready to own scope, checks, Git, and rollback?
+
+If any answer is "no", do not force Roundtable. Use the docs as a reference,
+or come back when the task has enough release, security, data, architecture, or
+user-trust risk to justify the loop.
+
 ## 1. Choose Your Executor Path
 
 If your Executor is Codex, install the Codex skill.
